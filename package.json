@@ -1,0 +1,19 @@
+{
+  "name": "hero-idle-game",
+  "uuid": "58448044-5915-4c2a-abad-0049236b8947",
+  "creator": {
+    "version": "3.8.7"
+  },
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
