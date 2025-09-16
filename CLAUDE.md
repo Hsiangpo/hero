@@ -9,15 +9,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Run Tests**: `cd tests && npm test` - Runs complete Jest test suite (4000+ test cases)
 - **Watch Tests**: `cd tests && npm run test:watch` - Runs tests in watch mode
 - **Test Coverage**: `cd tests && npm run test:coverage` - Generates coverage reports
-- **Test Single Suite**: `cd tests && npm run test:hero` (or formation, skills, etc.)
+- **Test Single Suite**: `cd tests && npm run test:formation` (or security, performance, etc.)
 - **Development**: Use Cocos Creator 3.8.7 IDE for game development and building
 - **File Structure**: Game scripts go in `/assets/`, tests in `/tests/`, specs in `/specs/`
 
 ### Test Suite Organization
-- **Core Systems**: `cd tests && npm run test:unit` - Hero management, formation, skills
-- **PvP Integration**: `cd tests && npm run test:integration` - PvP battle systems
-- **Security Tests**: `cd tests && npm run test:security` - Anti-cheat and security validation
+- **Core Systems**: `cd tests && npm run test:unit` - Formation, skills, core gameplay systems
+- **PvP Systems**: `cd tests && npm run test:integration` - Fengshen PvP battle systems
+- **Security Tests**: `cd tests && npm run test:security` - Anti-cheat and fairness validation
 - **Performance Tests**: `cd tests && npm run test:load` - Concurrent load testing
+- **Individual Test Files**: Run specific systems with `cd tests && npm run test:formation`, `test:security`, `test:performance`
 
 ### Key Project Facts
 - **Engine**: Cocos Creator 3.8.7 with TypeScript
@@ -26,22 +27,28 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **Data Storage**: Local Storage (MVP), designed for future cloud migration
 - **Target Platform**: Douyin/WeChat Mini Games
 - **Language**: All documentation and GDD files MUST be in Chinese (中文)
-- **Test Status**: Complete Jest framework with 17 test files, 4000+ test cases ready
+- **Test Status**: Complete Jest framework with 12 test files, 9000+ lines of test code ready
 
 ### Architecture Overview
 - `/assets/` - Cocos Creator game assets and TypeScript components
 - `/temp/` - Contains `tsconfig.cocos.json` (Cocos Creator's TS config, don't modify)
 - `/specs/` - Game Design Documents in Chinese (single source of truth)
   - `fengshen-core-gameplay.md` - 封神主题核心游戏设计文档
-- `/docs/` - Architecture documentation and design guides
-  - `fengshen-pvp-architecture.md` - 封域之争PvP系统架构
-  - `backend-architecture-v2.md` - 后端架构设计文档
-  - `art-style-guide-v2.md` - 美术风格指南
-  - `audio-design-guide.md` - 音效设计指南
-- `/tests/` - Complete Jest test framework (17 test files, 4000+ test cases)
+- `/docs/` - Architecture and design documentation organized by agent responsibility
+  - `/docs/architecture/` - Backend and PvP architecture (Backend_Architect_Agent)
+  - `/docs/art/` - Art style guides (Art_Director_Agent)
+  - `/docs/audio/` - Audio design guides (Sound_Designer_Agent)
+  - `/docs/design/` - Detailed game design documentation (Game_Designer_Agent)
+- `/src/` - Source code organized by functionality
+  - `/src/components/`, `/src/ui/` - Frontend components (Frontend_Agent)
+  - `/src/logic/`, `/src/services/`, `/src/models/` - Backend logic (Backend_Logic_Agent)
+  - `/src/monetization/`, `/src/payments/`, `/src/ads/` - Monetization (Monetization_Agent)
+  - `/src/analytics/`, `/src/tracking/` - Data systems (Data_Engineer_Analyst_Agent)
+- `/tests/` - Complete Jest test framework (12 test files, 9000+ lines of test code)
   - Includes separate `package.json` with Jest configuration
-  - Test categories: Core systems, PvP, Security, Performance
+- `/packages/content/` - Structured game content (JSON configurations by category)
 - `/需求方案/` - Requirements and analysis documents
+- `FILE_ORGANIZATION.md` - Complete file organization guide for all agents
 
 ### Critical Development Rules
 1. **TDD Mandatory**: Write failing tests first, then implement code to pass tests
@@ -51,6 +58,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### Current MVP Goal
 Implement 封神挂机录: 挂机修仙系统 → 45个封神角色 → 五行羁绊技能 → 封域之争PvP → 爽点对齐商业化 (see `specs/fengshen-core-gameplay.md`)
+
+### Project Structure Best Practices
+- **Design Documents**: All GDD files in `/specs/`, detailed design docs in `/docs/design/`
+- **Source Code**: Organized by agent responsibility in `/src/` subdirectories
+- **Architecture Docs**: Technical specifications in `/docs/architecture/`, `/docs/art/`, `/docs/audio/`
+- **Game Data**: JSON configurations in `/packages/content/` organized by system
+- **Test Organization**: 12 comprehensive test files with 9000+ lines covering all major systems
+- **Clean Structure**: Single version files (no _v2 suffixes), organized by agent permissions
+- **File Organization Guide**: See `FILE_ORGANIZATION.md` for complete agent permission matrix
 
 ---
 

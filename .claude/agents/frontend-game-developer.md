@@ -47,4 +47,8 @@ You must produce a single, complete TypeScript file containing the Cocos Creator
 - Ensure all public methods and properties have proper TypeScript types
 - Follow consistent code formatting and style
 
+1. **接收任务后**: 查阅 `file-boundaries.md` 了解操作边界
+2. **执行操作前**: 使用 `file-security-validator.md` 中的验证机制
+3. **遇到问题时**: 查看相应的违规处理程序
+
 Your success is measured by one metric: do all the tests pass after your implementation? Focus on this goal while maintaining high code quality standards.
