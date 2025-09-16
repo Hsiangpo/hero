@@ -1,0 +1,273 @@
+{
+  "system_name": "四御敕令",
+  "description": "五大仙门独立试炼，强制培养各阵营精英的专属挑战",
+  "reference_system": "灯神挑战",
+  "challenge_type": "faction_restricted_climbing",
+
+  "faction_towers": [
+    {
+      "faction_id": "zhou_dynasty",
+      "faction_name": "周营",
+      "faction_theme": "王者之师",
+      "combat_style": "攻防均衡",
+      "description": "姬发率领的正义之师，天命所归的王道军团",
+      "faction_bonus": {
+        "base_stats": "全属性+15%",
+        "special_effect": "王者光环：队友死亡时获得15%伤害加成",
+        "signature_skill": "天命所归：战斗开始时全队获得护盾"
+      },
+      "key_characters": ["姬发", "姬昌", "散宜生", "南宫适", "辛甲"],
+      "faction_color": "#FFD700",
+      "exclusive_rewards": {
+        "faction_artifact": "周王印玺",
+        "faction_title": "天命之子",
+        "faction_skin_theme": "王者战甲系列"
+      }
+    },
+    {
+      "faction_id": "shang_dynasty",
+      "faction_name": "商营",
+      "faction_theme": "忠义无双",
+      "combat_style": "生存偏向",
+      "description": "商朝忠臣义士，忠君护国的不屈战魂",
+      "faction_bonus": {
+        "base_stats": "生命值+25%，防御力+20%",
+        "special_effect": "忠义之魂：血量低于30%时伤害+50%",
+        "signature_skill": "护国神力：濒死时必定触发无敌3秒"
+      },
+      "key_characters": ["比干", "闻仲", "张桂芳", "邓九公", "崇黑虎"],
+      "faction_color": "#8B0000",
+      "exclusive_rewards": {
+        "faction_artifact": "商王龙符",
+        "faction_title": "忠义化身",
+        "faction_skin_theme": "忠臣战魂系列"
+      }
+    },
+    {
+      "faction_id": "chan_teaching",
+      "faction_name": "阐教",
+      "faction_theme": "正道光明",
+      "combat_style": "爆发偏向",
+      "description": "元始天尊座下仙人，阐述大道的光明使者",
+      "faction_bonus": {
+        "base_stats": "攻击力+30%，暴击率+15%",
+        "special_effect": "正道之光：对邪恶阵营额外伤害+40%",
+        "signature_skill": "天道审判：释放技能时有20%几率重置冷却"
+      },
+      "key_characters": ["元始天尊", "姜子牙", "杨戬", "哪吒", "雷震子"],
+      "faction_color": "#1E90FF",
+      "exclusive_rewards": {
+        "faction_artifact": "阐教仙印",
+        "faction_title": "阐教真传",
+        "faction_skin_theme": "正道仙光系列"
+      }
+    },
+    {
+      "faction_id": "jie_teaching",
+      "faction_name": "截教",
+      "faction_theme": "万仙来朝",
+      "combat_style": "控制偏向",
+      "description": "通天教主门下万仙，截取一线生机的神秘教派",
+      "faction_bonus": {
+        "base_stats": "技能威力+25%，冷却缩减+20%",
+        "special_effect": "万仙阵势：每有一个截教角色，全队技能伤害+8%",
+        "signature_skill": "截天神通：技能命中敌人时有几率触发追加效果"
+      },
+      "key_characters": ["通天教主", "赵公明", "三霄娘娘", "申公豹", "马遂"],
+      "faction_color": "#8A2BE2",
+      "exclusive_rewards": {
+        "faction_artifact": "截教金印",
+        "faction_title": "截教精英",
+        "faction_skin_theme": "万仙朝宗系列"
+      }
+    },
+    {
+      "faction_id": "demon_clan",
+      "faction_name": "妖族",
+      "faction_theme": "妖王称霸",
+      "combat_style": "暴击偏向",
+      "description": "上古妖魔精怪，野性狂暴的混沌力量",
+      "faction_bonus": {
+        "base_stats": "暴击伤害+40%，攻击速度+25%",
+        "special_effect": "野性本能：生命值每降低10%，暴击率+5%",
+        "signature_skill": "妖王霸气：暴击时有几率触发连击"
+      },
+      "key_characters": ["九尾狐", "雉鸡精", "琵琶精", "龙王", "白骨精"],
+      "faction_color": "#DC143C",
+      "exclusive_rewards": {
+        "faction_artifact": "妖王令牌",
+        "faction_title": "妖族霸主",
+        "faction_skin_theme": "妖王威势系列"
+      }
+    }
+  ],
+
+  "climbing_mechanics": {
+    "independent_progress": true,
+    "faction_restriction": "只能使用对应阵营角色",
+    "cross_faction_forbidden": "严格禁止跨阵营角色参战",
+    "max_floors_per_tower": 200,
+    "weekly_reset": true,
+    "reset_time": "每周一05:00",
+    "floor_difficulty_scaling": 1.15,
+    "elite_floor_interval": 10
+  },
+
+  "floor_types": {
+    "normal_floors": {
+      "frequency": "floors_1_9_11_19_etc",
+      "enemy_type": "对应阵营敌人",
+      "difficulty": "standard",
+      "rewards": "基础材料+阵营专属材料"
+    },
+    "elite_floors": {
+      "frequency": "floors_10_20_30_etc",
+      "enemy_type": "精英Boss+小怪组合",
+      "difficulty": "increased_50_percent",
+      "rewards": "稀有材料+阵营特殊道具"
+    },
+    "faction_trial_floors": {
+      "frequency": "floors_25_50_75_100_etc",
+      "enemy_type": "阵营传奇人物作为Boss",
+      "difficulty": "doubled",
+      "special_mechanic": "需要展现该阵营的核心战术",
+      "rewards": "阵营专属装备+称号"
+    },
+    "cross_faction_challenge": {
+      "frequency": "floors_99_199",
+      "enemy_type": "其他四个阵营的混合军团",
+      "difficulty": "tripled",
+      "special_mechanic": "证明本阵营最强",
+      "rewards": "跨服认证+限定奖励"
+    }
+  },
+
+  "faction_specific_rewards": {
+    "zhou_dynasty_rewards": {
+      "common_materials": "王室宝玉",
+      "rare_artifacts": "龙椅碎片",
+      "exclusive_weapons": ["轩辕剑碎片", "王者战戟", "天子令牌"],
+      "special_titles": ["天子近卫", "王朝柱石", "天命守护者"],
+      "faction_skin_set": "黄金战甲套装"
+    },
+    "shang_dynasty_rewards": {
+      "common_materials": "忠义金",
+      "rare_artifacts": "商王印",
+      "exclusive_weapons": ["忠臣之剑", "护国神锤", "义士战旗"],
+      "special_titles": ["忠臣义士", "护国大将", "商朝之魂"],
+      "faction_skin_set": "忠义战魂套装"
+    },
+    "chan_teaching_rewards": {
+      "common_materials": "阐教仙符",
+      "rare_artifacts": "元始法旨",
+      "exclusive_weapons": ["阐教仙剑", "正道神光", "天尊法印"],
+      "special_titles": ["阐教真传", "正道明师", "光明使者"],
+      "faction_skin_set": "正道仙光套装"
+    },
+    "jie_teaching_rewards": {
+      "common_materials": "截教灵珠",
+      "rare_artifacts": "通天法器",
+      "exclusive_weapons": ["截教魔剑", "万仙阵图", "神通法宝"],
+      "special_titles": ["截教精英", "万仙弟子", "神通大师"],
+      "faction_skin_set": "万仙朝宗套装"
+    },
+    "demon_clan_rewards": {
+      "common_materials": "妖王结晶",
+      "rare_artifacts": "妖族圣物",
+      "exclusive_weapons": ["妖王利爪", "野性之牙", "霸王妖印"],
+      "special_titles": ["妖族勇士", "妖王护卫", "群妖之首"],
+      "faction_skin_set": "妖王威势套装"
+    }
+  },
+
+  "weekly_competition": {
+    "faction_ranking": {
+      "individual_ranking": "每个阵营塔的个人最高层数排名",
+      "comprehensive_ranking": "五个阵营塔总进度排名",
+      "faction_honor_points": "基于排名获得阵营荣誉点数"
+    },
+    "server_faction_war": {
+      "description": "服务器内五个阵营的集体竞争",
+      "scoring_method": "阵营内所有玩家的平均进度",
+      "winning_faction_rewards": "全阵营成员获得额外奖励",
+      "faction_dominance_bonus": "获胜阵营下周所有塔难度-10%"
+    },
+    "cross_server_championship": {
+      "frequency": "monthly",
+      "qualification": "各阵营塔前100名玩家",
+      "tournament_format": "阵营代表团体赛",
+      "ultimate_reward": "跨服阵营霸主称号+限定外观"
+    }
+  },
+
+  "forced_cultivation_system": {
+    "cultivation_incentives": [
+      "只有培养各阵营角色才能推进对应塔层",
+      "阵营专属材料只能通过该阵营塔获得",
+      "五塔均衡发展才能解锁终极奖励",
+      "跨阵营羁绊需要多阵营角色达到特定层数"
+    ],
+    "balanced_progression_rewards": {
+      "requirement": "五个阵营塔最低层数达到指定标准",
+      "tier_1": {
+        "min_floors": [20, 20, 20, 20, 20],
+        "reward": "五行圆满称号+全属性+5%永久加成"
+      },
+      "tier_2": {
+        "min_floors": [50, 50, 50, 50, 50],
+        "reward": "五阵大师称号+技能威力+10%永久加成"
+      },
+      "tier_3": {
+        "min_floors": [100, 100, 100, 100, 100],
+        "reward": "封神征服者称号+传说武器选择箱"
+      },
+      "tier_4": {
+        "min_floors": [150, 150, 150, 150, 150],
+        "reward": "万仙之王称号+限定SSR角色+跨服认证"
+      }
+    }
+  },
+
+  "strategic_depth": {
+    "faction_synergy_discovery": {
+      "hidden_combinations": "每个阵营内隐藏的最优组合",
+      "meta_evolution": "随版本更新的阵营强度变化",
+      "counter_strategies": "针对特定层数敌人的克制策略"
+    },
+    "resource_allocation": {
+      "priority_guidance": "建议玩家优先培养的阵营顺序",
+      "efficiency_optimization": "最大化投资回报比的培养路径",
+      "long_term_planning": "考虑长期目标的阵营发展规划"
+    }
+  },
+
+  "ui_interface": {
+    "entrance_location": "主界面『征战』→『四御敕令』",
+    "tower_selection": "五座塔以五行方位排列",
+    "progress_overview": "一览五塔进度和奖励状态",
+    "faction_details": "查看阵营特色和推荐角色",
+    "reward_preview": "预览各层奖励和阵营专属物品",
+    "quick_formation": "快速选择该阵营最优阵容"
+  },
+
+  "accessibility_and_guidance": {
+    "newbie_friendly": {
+      "faction_introduction": "详细介绍各阵营特色",
+      "recommended_progression": "新手推荐的攻略顺序",
+      "character_acquisition_guide": "如何获得各阵营关键角色"
+    },
+    "advanced_features": {
+      "meta_analysis": "当前版本各阵营强度分析",
+      "optimization_tools": "阵容配置优化建议",
+      "community_sharing": "高手阵营配置分享"
+    }
+  },
+
+  "balance_considerations": {
+    "faction_balance": "确保五个阵营长期竞争力相近",
+    "difficulty_curve": "各阵营塔难度曲线保持一致",
+    "reward_equity": "各阵营专属奖励价值相当",
+    "time_investment": "每周完成五塔的时间控制在2-3小时",
+    "f2p_accessibility": "0氪玩家在每个阵营都能获得核心角色"
+  }
+}

@@ -1,0 +1,325 @@
+{
+  "arena_name": "封神台",
+  "description": "九天之上的神仙竞技场，只有最强者才能登顶封神。在这里，修士们将展现真正的实力，争夺封神榜上的荣耀地位。",
+  "theme": "封神演义世界观",
+  "arena_lore": "相传封神台乃女娲娘娘所设，位于三十三重天之巅，专为选拔真正的神仙而建。凡能在此台上证明实力者，必将名列封神榜，享万世香火。",
+
+  "season_settings": {
+    "duration_days": 28,
+    "reset_type": "soft_reset",
+    "reset_percentage": 0.7,
+    "preseason_days": 3
+  },
+
+  "tiers": [
+    {
+      "tier_id": "bronze",
+      "name": "青铜修士",
+      "display_name": "青铜·炼气期",
+      "min_points": 0,
+      "max_points": 1000,
+      "power_range": {
+        "min": 0,
+        "max": 100000
+      },
+      "daily_attempts": 5,
+      "tier_icon": "bronze_cauldron",
+      "background_effect": "bronze_qi_flow",
+      "promotion_reward": {
+        "fengshen_seals": 100,
+        "spirit_stones": 1000,
+        "exp_potions": 5
+      },
+      "daily_rewards": {
+        "fengshen_seals": 10,
+        "spirit_stones": 100,
+        "arena_tokens": 5
+      },
+      "weekly_rewards": {
+        "fengshen_seals": 70,
+        "spirit_stones": 700,
+        "arena_tokens": 35,
+        "tier_title": "青铜战士"
+      }
+    },
+    {
+      "tier_id": "silver",
+      "name": "白银修士",
+      "display_name": "白银·筑基期",
+      "min_points": 1000,
+      "max_points": 2500,
+      "power_range": {
+        "min": 80000,
+        "max": 250000
+      },
+      "daily_attempts": 6,
+      "tier_icon": "silver_sword",
+      "background_effect": "silver_foundation_aura",
+      "promotion_reward": {
+        "fengshen_seals": 200,
+        "spirit_stones": 2500,
+        "exp_potions": 10,
+        "rare_materials": 3
+      },
+      "daily_rewards": {
+        "fengshen_seals": 15,
+        "spirit_stones": 150,
+        "arena_tokens": 8
+      },
+      "weekly_rewards": {
+        "fengshen_seals": 105,
+        "spirit_stones": 1050,
+        "arena_tokens": 56,
+        "tier_title": "白银剑客",
+        "exclusive_avatar": "silver_cultivator"
+      }
+    },
+    {
+      "tier_id": "gold",
+      "name": "黄金修士",
+      "display_name": "黄金·金丹期",
+      "min_points": 2500,
+      "max_points": 5000,
+      "power_range": {
+        "min": 200000,
+        "max": 500000
+      },
+      "daily_attempts": 7,
+      "tier_icon": "golden_pill",
+      "background_effect": "golden_pill_radiance",
+      "promotion_reward": {
+        "fengshen_seals": 400,
+        "spirit_stones": 5000,
+        "exp_potions": 20,
+        "rare_materials": 8,
+        "legendary_fragments": 2
+      },
+      "daily_rewards": {
+        "fengshen_seals": 25,
+        "spirit_stones": 250,
+        "arena_tokens": 12
+      },
+      "weekly_rewards": {
+        "fengshen_seals": 175,
+        "spirit_stones": 1750,
+        "arena_tokens": 84,
+        "tier_title": "黄金丹师",
+        "exclusive_avatar": "golden_alchemist",
+        "special_effect": "golden_aura"
+      }
+    },
+    {
+      "tier_id": "platinum",
+      "name": "铂金修士",
+      "display_name": "铂金·元婴期",
+      "min_points": 5000,
+      "max_points": 8500,
+      "power_range": {
+        "min": 400000,
+        "max": 1000000
+      },
+      "daily_attempts": 8,
+      "tier_icon": "platinum_nascent_soul",
+      "background_effect": "nascent_soul_manifestation",
+      "promotion_reward": {
+        "fengshen_seals": 800,
+        "spirit_stones": 10000,
+        "exp_potions": 40,
+        "rare_materials": 15,
+        "legendary_fragments": 5,
+        "exclusive_character_skin": 1
+      },
+      "daily_rewards": {
+        "fengshen_seals": 40,
+        "spirit_stones": 400,
+        "arena_tokens": 18
+      },
+      "weekly_rewards": {
+        "fengshen_seals": 280,
+        "spirit_stones": 2800,
+        "arena_tokens": 126,
+        "tier_title": "铂金真人",
+        "exclusive_avatar": "platinum_master",
+        "special_effect": "soul_manifestation",
+        "unlock_privilege": "priority_matchmaking"
+      }
+    },
+    {
+      "tier_id": "diamond",
+      "name": "钻石修士",
+      "display_name": "钻石·化神期",
+      "min_points": 8500,
+      "max_points": 15000,
+      "power_range": {
+        "min": 800000,
+        "max": 2000000
+      },
+      "daily_attempts": 10,
+      "tier_icon": "diamond_divine_transformation",
+      "background_effect": "divine_transformation_lightning",
+      "promotion_reward": {
+        "fengshen_seals": 1500,
+        "spirit_stones": 20000,
+        "exp_potions": 80,
+        "rare_materials": 30,
+        "legendary_fragments": 12,
+        "exclusive_character_skin": 2,
+        "mythical_weapon_fragment": 1
+      },
+      "daily_rewards": {
+        "fengshen_seals": 60,
+        "spirit_stones": 600,
+        "arena_tokens": 25
+      },
+      "weekly_rewards": {
+        "fengshen_seals": 420,
+        "spirit_stones": 4200,
+        "arena_tokens": 175,
+        "tier_title": "钻石神君",
+        "exclusive_avatar": "diamond_deity",
+        "special_effect": "divine_lightning",
+        "unlock_privilege": "custom_arena_background"
+      }
+    },
+    {
+      "tier_id": "fengshen",
+      "name": "封神至尊",
+      "display_name": "封神·大罗金仙",
+      "min_points": 15000,
+      "max_points": 99999,
+      "power_range": {
+        "min": 1500000,
+        "max": 999999999
+      },
+      "daily_attempts": 15,
+      "tier_icon": "fengshen_golden_immortal",
+      "background_effect": "golden_immortal_cosmos",
+      "promotion_reward": {
+        "fengshen_seals": 3000,
+        "spirit_stones": 50000,
+        "exp_potions": 200,
+        "rare_materials": 80,
+        "legendary_fragments": 30,
+        "exclusive_character_skin": 5,
+        "mythical_weapon_fragment": 3,
+        "fengshen_throne_skin": 1
+      },
+      "daily_rewards": {
+        "fengshen_seals": 100,
+        "spirit_stones": 1000,
+        "arena_tokens": 40
+      },
+      "weekly_rewards": {
+        "fengshen_seals": 700,
+        "spirit_stones": 7000,
+        "arena_tokens": 280,
+        "tier_title": "封神榜主",
+        "exclusive_avatar": "fengshen_emperor",
+        "special_effect": "cosmic_authority",
+        "unlock_privilege": "fengshen_exclusive_channel"
+      }
+    }
+  ],
+
+  "match_algorithm": {
+    "primary_factor": "power_rating",
+    "secondary_factor": "win_rate",
+    "tertiary_factor": "recent_performance",
+    "variance_tolerance": 0.15,
+    "max_tier_difference": 1,
+    "power_variance": 0.20,
+    "matchmaking_timeout": 30,
+    "fair_match_priority": true,
+    "streak_protection": {
+      "enabled": true,
+      "lose_streak_threshold": 3,
+      "easier_opponent_modifier": 0.85
+    }
+  },
+
+  "battle_mechanics": {
+    "battle_format": "5v5_formation",
+    "time_limit": 180,
+    "auto_battle": true,
+    "manual_intervention": {
+      "skill_timing": true,
+      "formation_switch": true,
+      "special_items": false
+    },
+    "victory_conditions": [
+      "eliminate_all_enemies",
+      "time_limit_higher_health",
+      "special_objective_complete"
+    ]
+  },
+
+  "point_system": {
+    "win_base_points": 25,
+    "lose_base_points": -15,
+    "tier_modifiers": {
+      "bronze": 1.0,
+      "silver": 1.1,
+      "gold": 1.2,
+      "platinum": 1.3,
+      "diamond": 1.4,
+      "fengshen": 1.5
+    },
+    "performance_bonus": {
+      "flawless_victory": 10,
+      "quick_victory": 5,
+      "comeback_victory": 15
+    },
+    "streak_bonus": {
+      "3_wins": 5,
+      "5_wins": 10,
+      "7_wins": 15,
+      "10_wins": 25
+    },
+    "protection_mechanisms": {
+      "demotion_protection": true,
+      "first_time_immunity": 3,
+      "season_end_protection": true
+    }
+  },
+
+  "special_events": {
+    "double_points_weekend": {
+      "enabled": true,
+      "frequency": "every_2_weeks",
+      "point_multiplier": 2.0
+    },
+    "seasonal_tournaments": {
+      "frequency": "monthly",
+      "participant_requirement": "gold_tier_minimum",
+      "rewards_multiplier": 3.0
+    },
+    "grand_fengshen_battle": {
+      "frequency": "season_end",
+      "participant_requirement": "diamond_tier_minimum",
+      "special_rewards": ["unique_titles", "exclusive_skins", "fengshen_tokens"]
+    }
+  },
+
+  "anti_cheat_measures": {
+    "battle_validation": true,
+    "power_spike_detection": true,
+    "win_rate_anomaly_check": true,
+    "connection_stability_requirement": 0.95,
+    "suspicious_activity_flags": [
+      "impossible_power_gain",
+      "consistent_perfect_timing",
+      "unusual_win_pattern"
+    ]
+  },
+
+  "social_features": {
+    "spectator_mode": true,
+    "replay_sharing": true,
+    "challenge_friends": true,
+    "leaderboard_display": {
+      "server_top_100": true,
+      "sect_ranking": true,
+      "friends_ranking": true
+    }
+  }
+}

@@ -1,0 +1,516 @@
+{
+  "battlefield_name": "九重天域争霸战场",
+  "description": "基于封神演义九重天域设定的大型PvP战场，每重天有不同的地形和战术要素",
+  "version": "1.0.0",
+  "last_updated": "2025-09-16",
+
+  "battlefield_layout": {
+    "total_domains": 9,
+    "map_size": {
+      "width": 120,
+      "height": 120,
+      "grid_unit": "hex"
+    },
+    "domain_distribution": "3x3_grid",
+    "connection_type": "adjacent_only"
+  },
+
+  "nine_heavens_domains": {
+    "domain_1": {
+      "name": "人间界入口",
+      "description": "凡人踏足仙境的第一步，地形平坦适合新手",
+      "tier": "entry",
+      "special_mechanics": {
+        "terrain_bonus": "none",
+        "movement_modifier": 1.0,
+        "respawn_time_modifier": 0.8,
+        "resource_generation": "standard"
+      },
+      "control_points": {
+        "main_hall": {
+          "name": "人间天门",
+          "control_value": 100,
+          "capture_time": 30,
+          "defense_bonus": 1.2
+        },
+        "golden_vein": {
+          "name": "凡金矿脉",
+          "control_value": 60,
+          "capture_time": 20,
+          "resource_type": "gold"
+        },
+        "silver_vein": {
+          "name": "凡银矿脉",
+          "control_value": 40,
+          "capture_time": 15,
+          "resource_type": "silver"
+        },
+        "celestial_gate": {
+          "name": "升仙门",
+          "control_value": 20,
+          "capture_time": 10,
+          "special_effect": "movement_speed_boost"
+        }
+      },
+      "environmental_effects": [],
+      "recommended_strategy": "稳扎稳打，适合练兵和建立基础优势"
+    },
+
+    "domain_2": {
+      "name": "云霄琼阁",
+      "description": "云雾缭绕的仙境，影响视野和远程攻击",
+      "tier": "intermediate",
+      "special_mechanics": {
+        "terrain_bonus": "concealment",
+        "movement_modifier": 0.9,
+        "vision_range": 0.7,
+        "ranged_accuracy": 0.8
+      },
+      "control_points": {
+        "main_hall": {
+          "name": "云霄宫",
+          "control_value": 100,
+          "capture_time": 35,
+          "defense_bonus": 1.5
+        },
+        "wind_altar": {
+          "name": "御风坛",
+          "control_value": 70,
+          "capture_time": 25,
+          "special_effect": "flight_speed_boost"
+        },
+        "mist_spring": {
+          "name": "迷雾泉",
+          "control_value": 50,
+          "capture_time": 20,
+          "special_effect": "stealth_enhancement"
+        }
+      },
+      "environmental_effects": [
+        {
+          "name": "云雾遮蔽",
+          "description": "定期出现云雾，降低全域视野",
+          "duration": 60,
+          "cooldown": 300,
+          "effect": "vision_reduction_50"
+        }
+      ],
+      "recommended_strategy": "利用地形优势进行游击战和偷袭"
+    },
+
+    "domain_3": {
+      "name": "雷鸣峰",
+      "description": "雷电交加的险峻山峰，增强雷系技能威力",
+      "tier": "intermediate",
+      "special_mechanics": {
+        "terrain_bonus": "thunder_enhancement",
+        "element_boost": {
+          "thunder": 1.3,
+          "metal": 1.1
+        },
+        "movement_modifier": 0.85,
+        "spell_power_modifier": 1.15
+      },
+      "control_points": {
+        "main_hall": {
+          "name": "雷神殿",
+          "control_value": 100,
+          "capture_time": 40,
+          "defense_bonus": 1.3,
+          "periodic_damage": "thunder_strike"
+        },
+        "thunder_pool": {
+          "name": "雷池",
+          "control_value": 80,
+          "capture_time": 30,
+          "special_effect": "thunder_skill_cooldown_reduction"
+        },
+        "lightning_rod": {
+          "name": "引雷柱",
+          "control_value": 60,
+          "capture_time": 25,
+          "special_effect": "area_lightning_damage"
+        }
+      },
+      "environmental_effects": [
+        {
+          "name": "天雷阵阵",
+          "description": "随机位置降下天雷，对区域内目标造成伤害",
+          "frequency": 120,
+          "damage": 2000,
+          "area_radius": 3
+        }
+      ],
+      "recommended_strategy": "雷系和金系角色优势明显，控制雷池获得技能加成"
+    },
+
+    "domain_4": {
+      "name": "炽火炼狱",
+      "description": "烈火燃烧的炼狱之地，火系技能威力大增",
+      "tier": "advanced",
+      "special_mechanics": {
+        "terrain_bonus": "fire_enhancement",
+        "element_boost": {
+          "fire": 1.4,
+          "earth": 0.8
+        },
+        "movement_modifier": 0.9,
+        "continuous_damage": 50
+      },
+      "control_points": {
+        "main_hall": {
+          "name": "炽火神殿",
+          "control_value": 100,
+          "capture_time": 45,
+          "defense_bonus": 1.4,
+          "aura_effect": "fire_immunity"
+        },
+        "magma_lake": {
+          "name": "熔岩湖",
+          "control_value": 90,
+          "capture_time": 35,
+          "special_effect": "fire_damage_amplification"
+        },
+        "phoenix_nest": {
+          "name": "凤凰巢",
+          "control_value": 70,
+          "capture_time": 30,
+          "special_effect": "resurrection_enhancement"
+        }
+      },
+      "environmental_effects": [
+        {
+          "name": "地火涌泉",
+          "description": "地面随机出现火柱，持续伤害踩中的目标",
+          "frequency": 90,
+          "duration": 15,
+          "damage_per_second": 500
+        }
+      ],
+      "recommended_strategy": "火系角色主导，需要注意持续伤害和环境威胁"
+    },
+
+    "domain_5": {
+      "name": "玄冰宫",
+      "description": "寒冰凝聚的极寒之地，减缓移动但增强防御",
+      "tier": "advanced",
+      "special_mechanics": {
+        "terrain_bonus": "ice_enhancement",
+        "element_boost": {
+          "water": 1.4,
+          "fire": 0.7
+        },
+        "movement_modifier": 0.7,
+        "defense_modifier": 1.2
+      },
+      "control_points": {
+        "main_hall": {
+          "name": "玄冰神殿",
+          "control_value": 100,
+          "capture_time": 50,
+          "defense_bonus": 1.6,
+          "aura_effect": "freeze_immunity"
+        },
+        "ice_throne": {
+          "name": "寒冰王座",
+          "control_value": 85,
+          "capture_time": 40,
+          "special_effect": "area_freeze_aura"
+        },
+        "frost_crystal": {
+          "name": "玄霜晶",
+          "control_value": 65,
+          "capture_time": 30,
+          "special_effect": "ice_shield_generation"
+        }
+      },
+      "environmental_effects": [
+        {
+          "name": "极寒风暴",
+          "description": "全域暴风雪，大幅降低移动速度",
+          "duration": 120,
+          "cooldown": 600,
+          "effect": "movement_speed_reduction_50"
+        }
+      ],
+      "recommended_strategy": "水系角色优势，适合防守反击战术"
+    },
+
+    "domain_6": {
+      "name": "碧木仙林",
+      "description": "生机盎然的仙林，提供治疗加成和隐蔽效果",
+      "tier": "strategic",
+      "special_mechanics": {
+        "terrain_bonus": "nature_enhancement",
+        "element_boost": {
+          "wood": 1.3,
+          "earth": 1.2
+        },
+        "healing_modifier": 1.5,
+        "stealth_bonus": true
+      },
+      "control_points": {
+        "main_hall": {
+          "name": "碧木神殿",
+          "control_value": 100,
+          "capture_time": 40,
+          "defense_bonus": 1.3,
+          "aura_effect": "natural_regeneration"
+        },
+        "world_tree": {
+          "name": "建木神树",
+          "control_value": 95,
+          "capture_time": 45,
+          "special_effect": "team_healing_amplification"
+        },
+        "spirit_grove": {
+          "name": "精灵林",
+          "control_value": 60,
+          "capture_time": 25,
+          "special_effect": "concealment_enhancement"
+        }
+      },
+      "environmental_effects": [
+        {
+          "name": "自然祝福",
+          "description": "控制建木神树的宗门全员获得持续治疗",
+          "healing_per_second": 200,
+          "condition": "control_world_tree"
+        }
+      ],
+      "recommended_strategy": "木系角色主导，注重团队协作和持久战"
+    },
+
+    "domain_7": {
+      "name": "金刚须弥",
+      "description": "坚如磐石的金刚之地，增强防御和金系威力",
+      "tier": "fortress",
+      "special_mechanics": {
+        "terrain_bonus": "metal_enhancement",
+        "element_boost": {
+          "metal": 1.5,
+          "wood": 0.7
+        },
+        "defense_modifier": 1.4,
+        "structure_durability": 2.0
+      },
+      "control_points": {
+        "main_hall": {
+          "name": "金刚神殿",
+          "control_value": 100,
+          "capture_time": 60,
+          "defense_bonus": 2.0,
+          "aura_effect": "diamond_skin"
+        },
+        "vajra_tower": {
+          "name": "金刚塔",
+          "control_value": 90,
+          "capture_time": 50,
+          "special_effect": "area_defense_boost"
+        },
+        "metal_forge": {
+          "name": "神兵炉",
+          "control_value": 75,
+          "capture_time": 35,
+          "special_effect": "weapon_enhancement"
+        }
+      },
+      "environmental_effects": [
+        {
+          "name": "金刚护体",
+          "description": "在神殿范围内的友军获得额外防御加成",
+          "defense_bonus": 1.5,
+          "area": "main_hall_vicinity"
+        }
+      ],
+      "recommended_strategy": "最强防御阵地，适合后期决战和据守反击"
+    },
+
+    "domain_8": {
+      "name": "太极玄宫",
+      "description": "阴阳调和的神秘宫殿，平衡各系威力并提供特殊机制",
+      "tier": "mystical",
+      "special_mechanics": {
+        "terrain_bonus": "balance_enhancement",
+        "element_boost": {
+          "all_elements": 1.2
+        },
+        "skill_synergy": 1.3,
+        "yin_yang_cycles": true
+      },
+      "control_points": {
+        "main_hall": {
+          "name": "太极神殿",
+          "control_value": 100,
+          "capture_time": 50,
+          "defense_bonus": 1.5,
+          "aura_effect": "elemental_harmony"
+        },
+        "yin_altar": {
+          "name": "太阴坛",
+          "control_value": 80,
+          "capture_time": 35,
+          "special_effect": "defensive_enhancement"
+        },
+        "yang_altar": {
+          "name": "太阳坛",
+          "control_value": 80,
+          "capture_time": 35,
+          "special_effect": "offensive_enhancement"
+        },
+        "balance_core": {
+          "name": "阴阳核心",
+          "control_value": 90,
+          "capture_time": 45,
+          "special_effect": "ultimate_skill_amplification"
+        }
+      },
+      "environmental_effects": [
+        {
+          "name": "阴阳轮转",
+          "description": "每5分钟在阴阳两种状态间切换，影响全域属性",
+          "cycle_duration": 300,
+          "yin_phase": "defense_boost_health_regen",
+          "yang_phase": "attack_boost_speed_increase"
+        }
+      ],
+      "recommended_strategy": "最复杂的战术要地，需要深度理解阴阳机制"
+    },
+
+    "domain_9": {
+      "name": "封神至高天",
+      "description": "九重天域的最高层，封神榜的所在地，终极战场",
+      "tier": "ultimate",
+      "special_mechanics": {
+        "terrain_bonus": "divine_enhancement",
+        "element_boost": {
+          "all_elements": 1.5
+        },
+        "ultimate_skills_only": true,
+        "divine_intervention": true,
+        "victory_condition": "special"
+      },
+      "control_points": {
+        "main_hall": {
+          "name": "封神大殿",
+          "control_value": 200,
+          "capture_time": 120,
+          "defense_bonus": 3.0,
+          "aura_effect": "divine_blessing"
+        },
+        "fengshen_list": {
+          "name": "封神榜",
+          "control_value": 150,
+          "capture_time": 90,
+          "special_effect": "ultimate_power_unlock",
+          "victory_condition": true
+        },
+        "divine_throne": {
+          "name": "神王座",
+          "control_value": 120,
+          "capture_time": 60,
+          "special_effect": "command_all_domains"
+        }
+      },
+      "environmental_effects": [
+        {
+          "name": "封神之力",
+          "description": "控制封神榜的宗门可以召唤神仙助战",
+          "summon_frequency": 180,
+          "summon_duration": 60,
+          "summon_power": "legendary_deity"
+        }
+      ],
+      "victory_conditions": [
+        "control_fengshen_list_for_300_seconds",
+        "eliminate_all_enemies_in_domain",
+        "achieve_divine_ascension"
+      ],
+      "recommended_strategy": "终极决战之地，需要最强实力和完美配合"
+    }
+  },
+
+  "domain_connections": {
+    "connection_rules": {
+      "movement_between_domains": {
+        "adjacent_only": true,
+        "portal_travel_time": 10,
+        "simultaneous_battles": true,
+        "reinforcement_mechanics": true
+      },
+      "strategic_importance": {
+        "central_domains": [5, 8],
+        "gateway_domains": [1, 3, 7, 9],
+        "support_domains": [2, 4, 6]
+      }
+    },
+    "connection_map": {
+      "domain_1": [2, 4],
+      "domain_2": [1, 3, 5],
+      "domain_3": [2, 6, 9],
+      "domain_4": [1, 5, 7],
+      "domain_5": [2, 4, 6, 8],
+      "domain_6": [3, 5, 9],
+      "domain_7": [4, 8],
+      "domain_8": [5, 7, 9],
+      "domain_9": [3, 6, 8]
+    }
+  },
+
+  "tactical_mechanics": {
+    "domain_control_benefits": {
+      "resource_generation": {
+        "controlled_domains": "linear_scaling",
+        "base_generation": 100,
+        "per_domain_bonus": 50
+      },
+      "strategic_advantages": {
+        "vision_sharing": "between_controlled_domains",
+        "rapid_deployment": "faster_movement_between_controlled",
+        "defensive_bonuses": "cumulative_defense_boost"
+      }
+    },
+    "cross_domain_abilities": {
+      "domain_support_skills": {
+        "artillery_support": {
+          "range": "adjacent_domains",
+          "cooldown": 300,
+          "damage": "high",
+          "prerequisites": "control_2_adjacent_domains"
+        },
+        "reinforcement_portal": {
+          "range": "any_controlled_domain",
+          "cooldown": 600,
+          "duration": 60,
+          "prerequisites": "control_3_domains"
+        },
+        "divine_intervention": {
+          "range": "all_domains",
+          "cooldown": 1800,
+          "effect": "ultimate_ability",
+          "prerequisites": "control_domain_9"
+        }
+      }
+    }
+  },
+
+  "balance_considerations": {
+    "early_game": {
+      "focus": "domains_1_2_4",
+      "strategy": "establish_foothold_and_resources"
+    },
+    "mid_game": {
+      "focus": "domains_3_5_6_7",
+      "strategy": "secure_strategic_positions"
+    },
+    "late_game": {
+      "focus": "domains_8_9",
+      "strategy": "ultimate_victory_conditions"
+    },
+    "comeback_mechanics": {
+      "underdog_bonuses": "when_controlling_fewer_domains",
+      "desperate_measures": "unlock_special_abilities_when_behind",
+      "last_stand": "enhanced_defense_in_final_domain"
+    }
+  }
+}

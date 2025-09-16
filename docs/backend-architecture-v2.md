@@ -1,21 +1,21 @@
-# Hero Idle Game 后端架构设计文档 V2.0
-**版本**: 2.0 (重构版)
+# 《封神挂机录》后端架构设计文档 V2.1
+**版本**: 2.1 (封神主题更新版)
 **日期**: 2025-09-16
 **架构师**: Backend_Architect_Agent
-**项目**: 代号：英雄挂机啦 (英雄主题 + 咸鱼之王PvP机制)
+**项目**: 《封神挂机录》(封神演义主题 + 封域之争PvP系统)
 
 ---
 
 ## 📋 架构重构概述
 
 ### 重构目标
-基于全新的英雄挂机核心玩法GDD，重构整个游戏的技术架构，重点支持《咸鱼之王》的盐场/盐罐PvP机制，特别是盐场的俱乐部大地图占点玩法。目标支持1万用户规模的并发访问。
+基于全新的封神挂机核心玩法GDD，重构整个游戏的技术架构，重点支持封神演义题材的封域之争PvP机制，特别是九重天域的宗门大地图占点玩法。目标支持1万用户规模的并发访问。
 
 ### 核心PvP机制支持
-- **盐场系统**: 六边格大地图占点，20个俱乐部同图竞技
-- **盐罐系统**: 客厅访问机制，轻度PvP资源争夺
-- **英雄觉醒系统**: 三品质觉醒石的时效和状态管理
-- **实时战斗计算**: 精力衰减、属性递减、连杀机制
+- **封域之争系统**: 九重天域六边格地图占点，20个宗门同图竞技
+- **修仙系统**: 挂机修炼机制，轻度休闲体验
+- **角色觉醒系统**: 45位封神角色的境界突破和成长管理
+- **实时战斗计算**: 法力衰减、属性递减、羁绊技能机制
 
 ---
 
@@ -98,16 +98,16 @@ class HybridDataManager {
 
 ---
 
-## 2. 盐场系统架构设计 (Salt Field System)
+## 2. 封域之争系统架构设计 (Fengyu Battle System)
 
-### 2.1 六边格地图数据结构
+### 2.1 九重天域地图数据结构
 
 ```typescript
-// 盐场地图核心数据模型
-interface SaltFieldMap {
+// 九重天域地图核心数据模型
+interface FengyuBattleMap {
   mapId: string;              // 地图唯一标识
   season: number;             // 当前赛季
-  clubs: ClubParticipant[];   // 参与俱乐部列表(20个)
+  sects: SectParticipant[];   // 参与宗门列表(20个)
   hexagons: HexagonTile[];    // 六边形地块数组
   battleQueue: BattleEvent[]; // 战斗队列
   weeklySchedule: WeeklyEvent; // 每周六20:00-21:00赛制
@@ -523,10 +523,10 @@ class GameEventBus {
 ```typescript
 // Redis数据结构设计
 interface RedisDataStructure {
-  // 盐场实时状态 (高频读写)
-  saltfield_state: {
-    key: `saltfield:${mapId}:state`;
-    data: SaltFieldMap;
+  // 封域之争实时状态 (高频读写)
+  fengyu_state: {
+    key: `fengyu:${mapId}:state`;
+    data: FengyuBattleMap;
     ttl: 3600; // 1小时过期
   };
 
@@ -545,9 +545,9 @@ interface RedisDataStructure {
   };
 
   // 排行榜缓存
-  club_rankings: {
-    key: `rankings:clubs:weekly`;
-    data: ClubScore[];
+  sect_rankings: {
+    key: `rankings:sects:weekly`;
+    data: SectScore[];
     structure: 'SORTED_SET';
     ttl: 600; // 10分钟刷新
   };
@@ -558,25 +558,25 @@ interface RedisDataStructure {
 
 ## 7. API端点设计重构 (API Endpoints V2.0)
 
-### 7.1 盐场系统API
+### 7.1 封域之争系统API
 
 | HTTP方法 | 端点路径 | 描述 | 请求体 | 成功响应 | 错误响应 |
 |---------|----------|------|--------|----------|----------|
-| **盐场系统** |
-| GET | `/api/v2/saltfield/map` | 获取盐场地图状态 | 无 | `{map: SaltFieldMap, userClubStatus}` | `{code: 8001, message: "地图数据获取失败"}` |
-| POST | `/api/v2/saltfield/attack` | 发起占领攻击 | `{targetTileId, heroSquad}` | `{battleResult, newMapState}` | `{code: 8002, message: "战斗力不足"}` |
-| GET | `/api/v2/saltfield/rankings` | 获取俱乐部排行榜 | 无 | `{weeklyRanking, seasonRanking}` | `{code: 8003, message: "排行榜服务异常"}` |
-| POST | `/api/v2/saltfield/join-club` | 加入俱乐部 | `{clubId, applicationMessage}` | `{joinStatus, clubInfo}` | `{code: 8004, message: "俱乐部已满"}` |
+| **封域之争系统** |
+| GET | `/api/v2/fengyu/map` | 获取九重天域地图状态 | 无 | `{map: FengyuBattleMap, userSectStatus}` | `{code: 8001, message: "地图数据获取失败"}` |
+| POST | `/api/v2/fengyu/attack` | 发起据点攻击 | `{targetTileId, heroSquad}` | `{battleResult, newMapState}` | `{code: 8002, message: "战斗力不足"}` |
+| GET | `/api/v2/fengyu/rankings` | 获取宗门排行榜 | 无 | `{weeklyRanking, seasonRanking}` | `{code: 8003, message: "排行榜服务异常"}` |
+| POST | `/api/v2/fengyu/join-sect` | 加入宗门 | `{sectId, applicationMessage}` | `{joinStatus, sectInfo}` | `{code: 8004, message: "宗门已满"}` |
 
-### 7.2 盐罐系统API
+### 7.2 洞府系统API
 
 | HTTP方法 | 端点路径 | 描述 | 请求体 | 成功响应 | 错误响应 |
 |---------|----------|------|--------|----------|----------|
-| **盐罐系统** |
-| GET | `/api/v2/saltjar/lobby/{userId}` | 访问用户客厅 | 无 | `{lobby: PlayerLobby, availableJars}` | `{code: 9001, message: "客厅不存在"}` |
-| POST | `/api/v2/saltjar/occupy` | 占领盐罐 | `{jarId, targetUserId}` | `{occupationResult, battleNeeded}` | `{code: 9002, message: "盐罐已被占领"}` |
-| POST | `/api/v2/saltjar/collect` | 收集盐罐奖励 | `{jarId}` | `{rewards, collectionSuccess}` | `{code: 9003, message: "收集时间未到"}` |
-| POST | `/api/v2/saltjar/battle` | 盐罐PvP战斗 | `{jarId, attackSquad}` | `{battleResult, jarOwnership}` | `{code: 9004, message: "今日挑战次数耗尽"}` |
+| **洞府系统** |
+| GET | `/api/v2/cave/lobby/{userId}` | 访问用户洞府 | 无 | `{cave: PlayerCave, availableTreasures}` | `{code: 9001, message: "洞府不存在"}` |
+| POST | `/api/v2/cave/occupy` | 占领灵宝 | `{treasureId, targetUserId}` | `{occupationResult, battleNeeded}` | `{code: 9002, message: "灵宝已被占领"}` |
+| POST | `/api/v2/cave/collect` | 收集灵宝奖励 | `{treasureId}` | `{rewards, collectionSuccess}` | `{code: 9003, message: "收集时间未到"}` |
+| POST | `/api/v2/cave/battle` | 洞府PvP战斗 | `{treasureId, attackSquad}` | `{battleResult, treasureOwnership}` | `{code: 9004, message: "今日挑战次数耗尽"}` |
 
 ### 7.3 觉醒系统API
 
@@ -592,8 +592,8 @@ interface RedisDataStructure {
 | HTTP方法 | 端点路径 | 描述 | 请求体 | 成功响应 | 错误响应 |
 |---------|----------|------|--------|----------|----------|
 | **实时系统** |
-| WS | `/ws/saltfield` | 盐场实时更新连接 | 无 | 实时事件流 | 连接超时 |
-| WS | `/ws/lobby` | 客厅访问实时通知 | 无 | 访客通知事件 | 权限不足 |
+| WS | `/ws/fengyu` | 封域之争实时更新连接 | 无 | 实时事件流 | 连接超时 |
+| WS | `/ws/cave` | 洞府访问实时通知 | 无 | 访客通知事件 | 权限不足 |
 | POST | `/api/v2/events/subscribe` | 订阅特定事件 | `{eventTypes, userId}` | `{subscriptionId}` | `{code: 11001, message: "订阅失败"}` |
 
 ---
@@ -612,7 +612,7 @@ interface LoadBalancingStrategy {
     keyFunction: (userId: string) => hash(userId) % 10;
   };
 
-  // 盐场地图分区
+  // 封域之争地图分区
   mapPartitioning: {
     strategy: 'geographic_regions';
     regionsPerMap: 4;
@@ -705,14 +705,14 @@ interface MiniProgramOptimization {
       contents: ['基础UI', '登录模块', '单人挂机'];
     };
 
-    saltfield_package: {
+    fengyu_package: {
       size_limit: '2MB';
-      contents: ['六边格地图资源', '盐场UI组件'];
+      contents: ['九重天域地图资源', '封域之争UI组件'];
     };
 
     social_package: {
       size_limit: '2MB';
-      contents: ['客厅场景', '社交界面', '盐罐模型'];
+      contents: ['洞府场景', '社交界面', '灵宝模型'];
     };
   };
 
@@ -725,8 +725,8 @@ interface MiniProgramOptimization {
 
   // 懒加载策略
   lazy_loading: {
-    saltfield_map: '进入盐场时加载';
-    lobby_scenes: '访问客厅时加载';
+    fengyu_map: '进入封域之争时加载';
+    cave_scenes: '访问洞府时加载';
     battle_effects: '战斗开始时加载';
   };
 }
@@ -763,9 +763,9 @@ class AntiCheatSystem {
     const recentOps = await this.getRecentOperations(userId, operation, 60000); // 1分钟内
 
     const limits = {
-      'SALTFIELD_ATTACK': 10,    // 每分钟最多10次攻击
-      'SALTJAR_OCCUPY': 5,       // 每分钟最多5次占领
-      'LOBBY_VISIT': 20          // 每分钟最多20次访问
+      'FENGYU_ATTACK': 10,    // 每分钟最多10次攻击
+      'TREASURE_OCCUPY': 5,       // 每分钟最多5次占领
+      'CAVE_VISIT': 20          // 每分钟最多20次访问
     };
 
     if (recentOps.length > limits[operation]) {

@@ -1,0 +1,516 @@
+{
+  "system_name": "封神灵玩系统",
+  "description": "封神法宝为引，多段被动助力，影响全队战斗节奏的战略系统",
+  "reference_system": "咸鱼之王玩具系统",
+  "gadget_type": "team_wide_passive",
+  "max_equipped_gadgets": 4,
+
+  "unlock_mechanism": {
+    "description": "灵玩随上阵队伍总星级解锁多段被动效果",
+    "star_requirements": {
+      "first_passive": 60,
+      "second_passive": 120,
+      "third_passive": 180,
+      "fourth_passive": 240
+    },
+    "calculation_method": "上阵5位角色星级总和（1星=20星级点数）",
+    "examples": {
+      "early_game": "5个3星角色 = 300星级点数，解锁前2段被动",
+      "mid_game": "5个6星角色 = 600星级点数，解锁前3段被动",
+      "late_game": "5个12星角色 = 1200星级点数，解锁全部4段被动"
+    }
+  },
+
+  "gadget_database": [
+    {
+      "id": "zhenyaoling",
+      "name": "镇妖铃",
+      "mythology_origin": "太上老君炼制的降妖法宝",
+      "description": "古朴神铃，一摇镇万邪，专克妖魔鬼怪",
+      "unlock_condition": "天阶1级后开启",
+      "passives": [
+        {
+          "unlock_stars": 60,
+          "name": "镇妖神威",
+          "description": "全队对妖魔阵营角色命中率+8%",
+          "icon": "🔔",
+          "effect_type": "precision_boost"
+        },
+        {
+          "unlock_stars": 120,
+          "name": "铃声护体",
+          "description": "战斗开始时，全队获得15点怒气值",
+          "icon": "⚡",
+          "effect_type": "energy_boost"
+        },
+        {
+          "unlock_stars": 180,
+          "name": "除魔净世",
+          "description": "全队终结技冷却时间-10%",
+          "icon": "💫",
+          "effect_type": "cooldown_reduction"
+        },
+        {
+          "unlock_stars": 240,
+          "name": "仙音渡世",
+          "description": "全队受到治疗效果+12%",
+          "icon": "🌟",
+          "effect_type": "healing_amplify"
+        }
+      ],
+      "acquisition": "主线任务奖励",
+      "synergy_elements": ["仙家阵营", "控制型角色"],
+      "visual_effect": "金色神铃悬浮在战场上方，战斗时轻摇发光"
+    },
+    {
+      "id": "zhuixinghammer",
+      "name": "坠星锤",
+      "mythology_origin": "天界神兵，重如星辰",
+      "description": "巨大战锤蕴含星辰之力，每一击都有开天裂地之威",
+      "unlock_condition": "完成『力拔山河』成就",
+      "passives": [
+        {
+          "unlock_stars": 60,
+          "name": "星辰重压",
+          "description": "全队暴击伤害+10%",
+          "icon": "⭐",
+          "effect_type": "damage_amplify"
+        },
+        {
+          "unlock_stars": 120,
+          "name": "坠星一击",
+          "description": "暴击时有15%几率触发范围伤害",
+          "icon": "💥",
+          "effect_type": "splash_damage"
+        },
+        {
+          "unlock_stars": 180,
+          "name": "碎星裂空",
+          "description": "全队攻击附带10%真实伤害",
+          "icon": "⚡",
+          "effect_type": "true_damage"
+        },
+        {
+          "unlock_stars": 240,
+          "name": "天外陨石",
+          "description": "每场战斗随机触发1次陨石天降",
+          "icon": "☄️",
+          "effect_type": "special_event"
+        }
+      ],
+      "acquisition": "封神天梯150层奖励",
+      "synergy_elements": ["力量型角色", "金系属性"],
+      "visual_effect": "巨锤悬浮发出星光，暴击时有流星划过效果"
+    },
+    {
+      "id": "shanhe_shejitu",
+      "name": "山河社稷图",
+      "mythology_origin": "女娲娘娘的镇国之宝",
+      "description": "展开即现山河美景，蕴含无尽空间奥秘",
+      "unlock_condition": "VIP5级解锁",
+      "passives": [
+        {
+          "unlock_stars": 60,
+          "name": "山河护佑",
+          "description": "全队最大生命值+8%",
+          "icon": "🏔️",
+          "effect_type": "health_boost"
+        },
+        {
+          "unlock_stars": 120,
+          "name": "社稷之力",
+          "description": "五行相克伤害加成+5%（从30%提升到35%）",
+          "icon": "🌍",
+          "effect_type": "element_enhance"
+        },
+        {
+          "unlock_stars": 180,
+          "name": "空间挪移",
+          "description": "全队有10%几率闪避致命伤害",
+          "icon": "🌀",
+          "effect_type": "evasion"
+        },
+        {
+          "unlock_stars": 240,
+          "name": "山河倒转",
+          "description": "濒死时触发，重置全队技能冷却",
+          "icon": "🔄",
+          "effect_type": "reset_cooldowns"
+        }
+      ],
+      "acquisition": "充值累计达到500元",
+      "synergy_elements": ["防御型角色", "土系属性"],
+      "visual_effect": "背景展现山河画卷，技能释放时山川变幻"
+    },
+    {
+      "id": "fengshen_bang",
+      "name": "封神榜",
+      "mythology_origin": "姜子牙封神的神榜",
+      "description": "记录封神英雄的神圣卷轴，蕴含封神之力",
+      "unlock_condition": "完成主线『封神大业』",
+      "passives": [
+        {
+          "unlock_stars": 60,
+          "name": "封神威压",
+          "description": "全队角色等级+2（视为等级提升，影响属性）",
+          "icon": "📜",
+          "effect_type": "level_boost"
+        },
+        {
+          "unlock_stars": 120,
+          "name": "神榜庇护",
+          "description": "死亡角色有20%几率立即复活",
+          "icon": "✨",
+          "effect_type": "resurrection"
+        },
+        {
+          "unlock_stars": 180,
+          "name": "封神神通",
+          "description": "羁绊技能威力+15%",
+          "icon": "🔗",
+          "effect_type": "bond_enhance"
+        },
+        {
+          "unlock_stars": 240,
+          "name": "榜上有名",
+          "description": "获胜后全队经验+30%，战败也+10%",
+          "icon": "🏆",
+          "effect_type": "exp_bonus"
+        }
+      ],
+      "acquisition": "主线剧情必得",
+      "synergy_elements": ["全阵营角色", "羁绊组合"],
+      "visual_effect": "金色卷轴悬浮，战斗时展现英雄名录"
+    },
+    {
+      "id": "qiankun_quan",
+      "name": "乾坤圈",
+      "mythology_origin": "哪吒的三件法宝之一",
+      "description": "太乙真人所赐，蕴含乾坤之力的神环",
+      "unlock_condition": "获得哪吒角色后解锁",
+      "passives": [
+        {
+          "unlock_stars": 60,
+          "name": "乾坤一掷",
+          "description": "全队先手几率+15%",
+          "icon": "🎯",
+          "effect_type": "initiative_boost"
+        },
+        {
+          "unlock_stars": 120,
+          "name": "环回护体",
+          "description": "受到攻击时有25%几率反弹10%伤害",
+          "icon": "🔄",
+          "effect_type": "damage_reflect"
+        },
+        {
+          "unlock_stars": 180,
+          "name": "破甲神环",
+          "description": "全队攻击无视敌方20%防御",
+          "icon": "⚔️",
+          "effect_type": "armor_penetration"
+        },
+        {
+          "unlock_stars": 240,
+          "name": "乾坤颠倒",
+          "description": "每回合有5%几率使一个敌人行动顺序置后",
+          "icon": "🌀",
+          "effect_type": "turn_manipulation"
+        }
+      ],
+      "acquisition": "首充6元礼包附赠",
+      "synergy_elements": ["火系角色", "速度型角色"],
+      "visual_effect": "金环环绕全队，攻击时环状光波扩散"
+    },
+    {
+      "id": "taiji_tu",
+      "name": "太极图",
+      "mythology_origin": "太上老君的无上法宝",
+      "description": "阴阳流转，蕴含天地至理的玄妙图案",
+      "unlock_condition": "宗门等级达到5级",
+      "passives": [
+        {
+          "unlock_stars": 60,
+          "name": "阴阳调和",
+          "description": "全队属性相克伤害减免+10%",
+          "icon": "☯️",
+          "effect_type": "element_resistance"
+        },
+        {
+          "unlock_stars": 120,
+          "name": "太极轮回",
+          "description": "技能冷却时，有30%几率立即刷新1个技能",
+          "icon": "🔄",
+          "effect_type": "cooldown_refresh"
+        },
+        {
+          "unlock_stars": 180,
+          "name": "两仪生四象",
+          "description": "五行大阵效果提升50%",
+          "icon": "🌟",
+          "effect_type": "formation_amplify"
+        },
+        {
+          "unlock_stars": 240,
+          "name": "无极之境",
+          "description": "战斗中每过30秒，全队属性提升5%（可叠加）",
+          "icon": "♾️",
+          "effect_type": "progressive_buff"
+        }
+      ],
+      "acquisition": "宗门商店·珍稀区",
+      "synergy_elements": ["平衡型阵容", "长期战斗"],
+      "visual_effect": "太极图缓缓旋转，黑白气息环绕全队"
+    },
+    {
+      "id": "jiulong_shenhuo_zhao",
+      "name": "九龙神火罩",
+      "mythology_origin": "太乙真人的防护法宝",
+      "description": "九条火龙盘绕的神罩，能抵御一切邪祟",
+      "unlock_condition": "完成『九龙试炼』副本",
+      "passives": [
+        {
+          "unlock_stars": 60,
+          "name": "神火护身",
+          "description": "全队免疫首次受到的负面状态",
+          "icon": "🔥",
+          "effect_type": "debuff_immunity"
+        },
+        {
+          "unlock_stars": 120,
+          "name": "九龙咆哮",
+          "description": "释放技能时有20%几率使敌人恐惧1秒",
+          "icon": "🐉",
+          "effect_type": "fear_inducement"
+        },
+        {
+          "unlock_stars": 180,
+          "name": "神火焚敌",
+          "description": "攻击敌人时附加持续灼烧效果",
+          "icon": "🔥",
+          "effect_type": "burn_application"
+        },
+        {
+          "unlock_stars": 240,
+          "name": "九龙守护",
+          "description": "全队生命值低于30%时，获得无敌状态3秒",
+          "icon": "🛡️",
+          "effect_type": "emergency_shield"
+        }
+      ],
+      "acquisition": "特殊副本通关奖励",
+      "synergy_elements": ["火系角色", "生存能力"],
+      "visual_effect": "九条火龙环绕战场，形成火焰保护圈"
+    },
+    {
+      "id": "dinghaishen_zhen",
+      "name": "定海神针",
+      "mythology_origin": "东海龙宫的镇海之宝",
+      "description": "孙悟空的如意金箍棒原型，能大能小的神兵",
+      "unlock_condition": "征战模式获胜100场",
+      "passives": [
+        {
+          "unlock_stars": 60,
+          "name": "定海之威",
+          "description": "水系角色技能威力+20%",
+          "icon": "🌊",
+          "effect_type": "water_enhance"
+        },
+        {
+          "unlock_stars": 120,
+          "name": "如意变化",
+          "description": "暴击时攻击范围扩大，可击中更多敌人",
+          "icon": "📏",
+          "effect_type": "range_expansion"
+        },
+        {
+          "unlock_stars": 180,
+          "name": "镇压四海",
+          "description": "全队控制技能持续时间+30%",
+          "icon": "⚓",
+          "effect_type": "control_duration"
+        },
+        {
+          "unlock_stars": 240,
+          "name": "神针乱舞",
+          "description": "每场战斗最多触发3次：随机攻击所有敌人",
+          "icon": "💫",
+          "effect_type": "random_strike"
+        }
+      ],
+      "acquisition": "PvP征战奖励",
+      "synergy_elements": ["水系角色", "控制流阵容"],
+      "visual_effect": "金色神针时大时小，攻击时延伸覆盖敌阵"
+    },
+    {
+      "id": "qixing_baojian",
+      "name": "七星宝剑",
+      "mythology_origin": "王母娘娘赐予的仙剑",
+      "description": "剑身镶嵌北斗七星，锋芒毕露的神兵利器",
+      "unlock_condition": "角色平均星级达到8星",
+      "passives": [
+        {
+          "unlock_stars": 60,
+          "name": "七星连珠",
+          "description": "连续攻击7次后，下次攻击必定暴击",
+          "icon": "⭐",
+          "effect_type": "combo_crit"
+        },
+        {
+          "unlock_stars": 120,
+          "name": "斗转星移",
+          "description": "暴击后有40%几率获得额外行动机会",
+          "icon": "🌟",
+          "effect_type": "extra_turn"
+        },
+        {
+          "unlock_stars": 180,
+          "name": "星辰剑气",
+          "description": "全队暴击率+8%，暴击伤害+20%",
+          "icon": "✨",
+          "effect_type": "crit_mastery"
+        },
+        {
+          "unlock_stars": 240,
+          "name": "北斗诛邪",
+          "description": "对阵容星级低于我方的敌人，伤害+25%",
+          "icon": "💫",
+          "effect_type": "star_dominance"
+        }
+      ],
+      "acquisition": "高级成就奖励",
+      "synergy_elements": ["高星角色", "暴击流阵容"],
+      "visual_effect": "七颗星辰围绕剑身闪烁，暴击时星光大作"
+    },
+    {
+      "id": "huntianzhu",
+      "name": "混天珠",
+      "mythology_origin": "哪吒的随身法宝",
+      "description": "内含混天之力的神珠，变化莫测",
+      "unlock_condition": "抽取角色达到100次",
+      "passives": [
+        {
+          "unlock_stars": 60,
+          "name": "混天一击",
+          "description": "攻击时有12%几率触发二连击",
+          "icon": "💎",
+          "effect_type": "double_attack"
+        },
+        {
+          "unlock_stars": 120,
+          "name": "珠光宝气",
+          "description": "战斗胜利后额外获得10%金币和经验",
+          "icon": "💰",
+          "effect_type": "reward_bonus"
+        },
+        {
+          "unlock_stars": 180,
+          "name": "混沌之力",
+          "description": "随机获得一种元素加成（每场战斗变化）",
+          "icon": "🌀",
+          "effect_type": "random_element"
+        },
+        {
+          "unlock_stars": 240,
+          "name": "天珠显威",
+          "description": "每击杀一个敌人，全队攻击力永久+3%（本场战斗）",
+          "icon": "🔮",
+          "effect_type": "kill_scaling"
+        }
+      ],
+      "acquisition": "召唤达成里程碑奖励",
+      "synergy_elements": ["随机性", "收益优化"],
+      "visual_effect": "彩色神珠环绕，每次变化都有不同光芒"
+    }
+  ],
+
+  "strategic_combinations": {
+    "defensive_setup": {
+      "gadgets": ["山河社稷图", "九龙神火罩", "太极图"],
+      "synergy": "最大化生存能力和持续作战",
+      "suitable_for": "长期消耗战，PvP防守阵容"
+    },
+    "aggressive_setup": {
+      "gadgets": ["坠星锤", "七星宝剑", "混天珠"],
+      "synergy": "暴击和伤害最大化",
+      "suitable_for": "快速击败敌人，PvE推进"
+    },
+    "control_setup": {
+      "gadgets": ["镇妖铃", "定海神针", "乾坤圈"],
+      "synergy": "控制技能和先手优势",
+      "suitable_for": "PvP控制流，技巧型战斗"
+    },
+    "balanced_setup": {
+      "gadgets": ["封神榜", "太极图", "乾坤圈"],
+      "synergy": "全面发展，适应性强",
+      "suitable_for": "新手玩家，稳定推进"
+    }
+  },
+
+  "unlock_progression": {
+    "early_game_gadgets": {
+      "timeline": "1-30级",
+      "available": ["封神榜", "乾坤圈"],
+      "focus": "基础能力提升，学习系统机制"
+    },
+    "mid_game_expansion": {
+      "timeline": "30-60级",
+      "available": ["镇妖铃", "混天珠", "太极图"],
+      "focus": "策略分化，选择专精方向"
+    },
+    "late_game_mastery": {
+      "timeline": "60级以上",
+      "available": ["坠星锤", "七星宝剑", "九龙神火罩"],
+      "focus": "高端玩法，极限配置优化"
+    },
+    "endgame_collection": {
+      "timeline": "深度游戏",
+      "available": ["山河社稷图", "定海神针"],
+      "focus": "收集完善，个性化配置"
+    }
+  },
+
+  "daily_interaction": {
+    "gadget_resonance": {
+      "description": "每日灵玩调谐",
+      "requirement": "使用4个灵玩进行10场战斗",
+      "reward": "调谐石×3，用于强化灵玩效果",
+      "bonus_condition": "胜率80%以上额外奖励"
+    },
+    "combination_mastery": {
+      "description": "组合精通度",
+      "mechanism": "相同4个灵玩组合使用次数越多，效果越强",
+      "progression": [
+        {"uses": 10, "bonus": "效果+5%"},
+        {"uses": 50, "bonus": "效果+10%"},
+        {"uses": 100, "bonus": "效果+15%"}
+      ]
+    }
+  },
+
+  "ui_design": {
+    "gadget_selection_interface": {
+      "layout": "4×3网格展示所有灵玩",
+      "filter_options": ["已解锁", "未解锁", "按效果类型"],
+      "preview_mode": "选择灵玩即时预览4段被动效果",
+      "star_requirement_display": "明确显示当前队伍星级和解锁进度"
+    },
+    "battle_effect_display": {
+      "passive_icons": "战斗界面左侧显示已激活的被动图标",
+      "effect_notifications": "被动触发时屏幕提示效果名称",
+      "progress_bar": "显示距离下一段被动解锁还需的星级"
+    },
+    "collection_progress": {
+      "gadget_gallery": "灵玩图鉴，展示收集进度和获取方式",
+      "combination_guide": "推荐组合配置，适用场景说明",
+      "achievement_tracking": "灵玩相关成就进度追踪"
+    }
+  },
+
+  "balance_philosophy": {
+    "power_scaling": "灵玩提供10-20%整体战力提升，重点在于多样化策略",
+    "progression_gating": "通过星级要求自然限制进度，避免过早获得强力效果",
+    "meta_diversity": "每种灵玩组合都有特定优势场景，避免一套配置碾压",
+    "accessibility": "核心灵玩通过正常游戏进程解锁，付费主要提供便利性"
+  }
+}

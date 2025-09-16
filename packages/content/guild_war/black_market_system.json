@@ -1,0 +1,509 @@
+{
+  "system_name": "仙域黑市商贸系统",
+  "description": "动态定价、折扣礼包、掉落兑换的综合商业化系统，满足不同层次玩家的消费需求",
+  "version": "1.0.0",
+  "last_updated": "2025-09-16",
+
+  "black_market_core": {
+    "market_concept": {
+      "theme": "仙域黑市",
+      "description": "神秘商人云游三界，售卖珍稀仙品",
+      "refresh_mechanics": {
+        "daily_refresh": {
+          "time": "05:00",
+          "free_refresh_count": 1,
+          "paid_refresh_cost": "increasing_crystal_cost",
+          "cost_progression": [50, 100, 200, 500, 1000]
+        },
+        "manual_refresh": {
+          "crystal_cost": "dynamic_based_on_refresh_count",
+          "vip_discount": "vip_level_based_reduction"
+        }
+      }
+    },
+
+    "merchant_types": {
+      "xuanming_trader": {
+        "name": "玄冥商贾",
+        "description": "专售高级强化材料",
+        "appearance_rate": 0.4,
+        "specialty_items": [
+          "legendary_enhancement_stones",
+          "divine_materials",
+          "cultivation_pills"
+        ],
+        "discount_range": "10%-30%"
+      },
+      "lingbao_master": {
+        "name": "灵宝大师",
+        "description": "出售稀有装备和法宝",
+        "appearance_rate": 0.3,
+        "specialty_items": [
+          "epic_equipment",
+          "artifact_fragments",
+          "weapon_skins"
+        ],
+        "discount_range": "15%-40%"
+      },
+      "wuxing_sage": {
+        "name": "五行仙人",
+        "description": "五行属性专属物品",
+        "appearance_rate": 0.2,
+        "specialty_items": [
+          "elemental_crystals",
+          "bond_enhancement_items",
+          "formation_scrolls"
+        ],
+        "discount_range": "20%-50%"
+      },
+      "mysterious_collector": {
+        "name": "神秘收藏家",
+        "description": "极稀有物品，限时出现",
+        "appearance_rate": 0.1,
+        "specialty_items": [
+          "ssr_hero_fragments",
+          "exclusive_skins",
+          "legendary_pets"
+        ],
+        "discount_range": "25%-60%"
+      }
+    },
+
+    "dynamic_pricing": {
+      "base_pricing_factors": {
+        "item_rarity": {
+          "common": 1.0,
+          "rare": 2.5,
+          "epic": 6.0,
+          "legendary": 15.0,
+          "mythical": 35.0
+        },
+        "demand_multiplier": {
+          "description": "基于购买频率的动态定价",
+          "calculation": "base_price * (1 + purchase_frequency * 0.1)",
+          "max_multiplier": 2.0,
+          "min_multiplier": 0.5
+        },
+        "time_based_discount": {
+          "flash_sale": {
+            "duration": "2_hours",
+            "discount": "40%-70%",
+            "frequency": "twice_daily"
+          },
+          "midnight_special": {
+            "time_window": "00:00-06:00",
+            "discount": "20%-35%",
+            "daily_occurrence": true
+          }
+        }
+      },
+
+      "personalized_pricing": {
+        "spending_tier_adjustment": {
+          "whale_players": {
+            "monthly_spending": ">5000_rmb",
+            "price_adjustment": "+10%",
+            "exclusive_items": true
+          },
+          "dolphin_players": {
+            "monthly_spending": "500-5000_rmb",
+            "price_adjustment": "0%",
+            "standard_access": true
+          },
+          "minnow_players": {
+            "monthly_spending": "50-500_rmb",
+            "price_adjustment": "-5%",
+            "beginner_bundles": true
+          },
+          "f2p_players": {
+            "monthly_spending": "<50_rmb",
+            "price_adjustment": "-15%",
+            "f2p_friendly_items": true
+          }
+        },
+        "activity_based_pricing": {
+          "active_player_discount": "daily_login_streak_bonus",
+          "returning_player_bonus": "special_comeback_prices",
+          "achievement_discounts": "progression_milestone_rewards"
+        }
+      }
+    }
+  },
+
+  "item_categories": {
+    "enhancement_materials": {
+      "legendary_stones": {
+        "item_id": "legendary_enhancement_stone",
+        "base_price": 500,
+        "currency": "crystals",
+        "daily_limit": 5,
+        "discount_potential": "15%-40%",
+        "bundle_options": {
+          "small_pack": {"quantity": 5, "bonus": "1_extra"},
+          "medium_pack": {"quantity": 15, "bonus": "5_extra"},
+          "large_pack": {"quantity": 50, "bonus": "20_extra"}
+        }
+      },
+      "divine_essence": {
+        "item_id": "divine_cultivation_essence",
+        "base_price": 200,
+        "currency": "crystals",
+        "daily_limit": 20,
+        "special_effect": "double_exp_gain_30min"
+      },
+      "wuxing_crystals": {
+        "metal_crystal": {"base_price": 150, "enhances": "metal_heroes"},
+        "wood_crystal": {"base_price": 150, "enhances": "wood_heroes"},
+        "water_crystal": {"base_price": 150, "enhances": "water_heroes"},
+        "fire_crystal": {"base_price": 150, "enhances": "fire_heroes"},
+        "earth_crystal": {"base_price": 150, "enhances": "earth_heroes"}
+      }
+    },
+
+    "hero_fragments": {
+      "ssr_fragments": {
+        "nezha_fragments": {
+          "base_price": 1000,
+          "currency": "crystals",
+          "weekly_limit": 3,
+          "appearance_rate": 0.05
+        },
+        "yangjian_fragments": {
+          "base_price": 1200,
+          "currency": "crystals",
+          "weekly_limit": 2,
+          "appearance_rate": 0.03
+        }
+      },
+      "sr_fragments": {
+        "general_sr_fragments": {
+          "base_price": 300,
+          "currency": "crystals",
+          "daily_limit": 10,
+          "appearance_rate": 0.2
+        }
+      }
+    },
+
+    "equipment_and_artifacts": {
+      "legendary_equipment": {
+        "price_range": "2000-8000_crystals",
+        "random_stats": true,
+        "reroll_option": "additional_crystal_cost",
+        "set_bonuses": "available_for_complete_sets"
+      },
+      "artifact_fragments": {
+        "completion_bonus": "full_artifact_when_collected",
+        "fragment_price": "100-500_crystals",
+        "collection_progress": "tracked_per_artifact"
+      }
+    },
+
+    "convenience_items": {
+      "auto_battle_tickets": {
+        "base_price": 50,
+        "currency": "crystals",
+        "bulk_discounts": "progressive_savings",
+        "daily_limit": 50
+      },
+      "instant_completion_scrolls": {
+        "base_price": 100,
+        "currency": "crystals",
+        "usage": "skip_waiting_times",
+        "popularity": "high_among_time_constrained_players"
+      },
+      "double_reward_potions": {
+        "base_price": 200,
+        "currency": "crystals",
+        "duration": "1_hour",
+        "stackable": false
+      }
+    }
+  },
+
+  "bundle_system": {
+    "flash_bundles": {
+      "daily_steal": {
+        "name": "每日神偷",
+        "description": "限时超值礼包，每日6小时",
+        "contents": {
+          "crystals": 1000,
+          "legendary_stones": 10,
+          "hero_fragments": 5,
+          "equipment_chest": 1
+        },
+        "original_value": 2500,
+        "bundle_price": 999,
+        "discount_percentage": 60,
+        "time_window": "6_hours_daily",
+        "purchase_limit": 1
+      },
+      "weekend_warrior": {
+        "name": "周末仙侠",
+        "description": "周末专属战力提升包",
+        "contents": {
+          "cultivation_boosters": 20,
+          "wuxing_crystals": 25,
+          "divine_essence": 50,
+          "premium_summon_tickets": 3
+        },
+        "original_value": 1800,
+        "bundle_price": 688,
+        "discount_percentage": 62,
+        "availability": "saturday_sunday_only"
+      }
+    },
+
+    "progression_bundles": {
+      "newbie_immortal": {
+        "name": "新手修仙包",
+        "target_audience": "level_1_to_30",
+        "price_progression": "increasing_value_better_rewards",
+        "level_gates": [10, 20, 30],
+        "bundle_evolution": "adapts_to_player_progress"
+      },
+      "veteran_master": {
+        "name": "老仙尊包",
+        "target_audience": "level_60_plus",
+        "focus": "endgame_materials_and_prestige_items",
+        "exclusive_access": "high_level_players_only"
+      }
+    },
+
+    "seasonal_collections": {
+      "spring_festival": {
+        "theme": "新春封神",
+        "duration": "15_days",
+        "special_currency": "festival_tokens",
+        "exclusive_rewards": "limited_time_skins_and_heroes",
+        "bundle_tiers": "bronze_silver_gold_diamond"
+      },
+      "mid_autumn": {
+        "theme": "中秋团圆",
+        "duration": "10_days",
+        "focus": "bond_enhancement_and_family_themes",
+        "special_mechanic": "friend_referral_bonuses"
+      }
+    }
+  },
+
+  "skin_shop_system": {
+    "skin_categories": {
+      "premium_skins": {
+        "ssr_hero_skins": {
+          "nezha_demon_king": {
+            "name": "魔王哪吒",
+            "description": "黑化版哪吒，红莲业火缠身",
+            "price": 1988,
+            "currency": "crystals",
+            "special_effects": ["new_skill_animations", "voice_lines", "victory_pose"],
+            "rarity": "legendary",
+            "limited_edition": false
+          },
+          "yangjian_heavenly_eye": {
+            "name": "天眼杨戬",
+            "description": "第三只眼开启，洞察三界",
+            "price": 2388,
+            "currency": "crystals",
+            "special_effects": ["third_eye_glow", "enhanced_animations", "unique_audio"],
+            "rarity": "mythical",
+            "limited_edition": true,
+            "availability_window": "30_days"
+          }
+        },
+        "sr_hero_skins": {
+          "pricing_range": "888-1388_crystals",
+          "features": ["visual_upgrades", "basic_effect_enhancements"],
+          "accessibility": "more_affordable_for_mid_spenders"
+        }
+      },
+
+      "seasonal_skins": {
+        "chinese_new_year": {
+          "theme": "传统节庆",
+          "hero_coverage": "all_ssr_heroes",
+          "special_pricing": "limited_time_discount",
+          "exclusive_features": "festival_specific_animations"
+        },
+        "summer_beach": {
+          "theme": "仙界避暑",
+          "style": "casual_summer_outfits",
+          "target_audience": "broader_appeal_including_female_players"
+        }
+      },
+
+      "achievement_skins": {
+        "unlock_conditions": {
+          "combat_master": "achieve_1000_pvp_victories",
+          "cultivation_sage": "reach_max_level_with_20_heroes",
+          "bond_master": "unlock_all_wuxing_bond_combinations"
+        },
+        "prestige_value": "cannot_be_purchased_only_earned",
+        "social_recognition": "exclusive_titles_and_frames"
+      }
+    },
+
+    "skin_coin_system": {
+      "currency_name": "仙衣币 (Immortal Garment Coins)",
+      "earning_methods": {
+        "daily_tasks": "5-15_coins_per_task",
+        "weekly_challenges": "50-100_coins_per_challenge",
+        "event_participation": "bonus_coins_during_events",
+        "duplicate_skin_compensation": "coins_for_owned_skins_in_draws"
+      },
+      "spending_options": {
+        "skin_fragments": "collect_10_fragments_for_1_complete_skin",
+        "skin_upgrade_materials": "enhance_existing_skins",
+        "exclusive_shop_access": "special_skin_shop_with_coin_only_items"
+      },
+      "conversion_rates": {
+        "crystals_to_coins": "100_crystals_to_50_coins",
+        "coins_to_skin_fragments": "100_coins_to_1_fragment",
+        "premium_conversion": "better_rates_for_vip_players"
+      }
+    }
+  },
+
+  "drop_exchange_system": {
+    "exchange_concept": {
+      "theme": "万宝阁兑换",
+      "description": "将战斗掉落材料兑换为商店货币或直接兑换商品",
+      "core_philosophy": "让所有掉落都有价值，增加农材意义"
+    },
+
+    "exchangeable_materials": {
+      "common_drops": {
+        "spirit_stones": {
+          "drop_source": "all_battles",
+          "exchange_rate": "100_stones_to_50_crystals",
+          "daily_exchange_limit": 500
+        },
+        "monster_essence": {
+          "drop_source": "pve_battles",
+          "exchange_rate": "50_essence_to_1_enhancement_stone",
+          "weekly_exchange_limit": 100
+        }
+      },
+      "rare_drops": {
+        "divine_fragments": {
+          "drop_source": "elite_battles_and_bosses",
+          "exchange_rate": "10_fragments_to_1_legendary_item",
+          "monthly_exchange_limit": 20
+        },
+        "chaos_crystals": {
+          "drop_source": "pvp_victories",
+          "exchange_rate": "5_crystals_to_1_pvp_exclusive_item",
+          "unlimited_exchange": true
+        }
+      }
+    },
+
+    "exchange_shop_tiers": {
+      "basic_exchange": {
+        "unlock_condition": "complete_tutorial",
+        "available_items": "common_enhancement_materials",
+        "refresh_frequency": "daily"
+      },
+      "advanced_exchange": {
+        "unlock_condition": "player_level_30",
+        "available_items": "rare_materials_and_equipment",
+        "refresh_frequency": "weekly"
+      },
+      "master_exchange": {
+        "unlock_condition": "complete_chapter_8",
+        "available_items": "legendary_items_and_hero_fragments",
+        "refresh_frequency": "monthly"
+      }
+    },
+
+    "special_exchange_events": {
+      "material_surge": {
+        "description": "双倍兑换效率活动",
+        "frequency": "monthly",
+        "duration": "3_days",
+        "benefit": "所有兑换比率提升100%"
+      },
+      "treasure_hunt": {
+        "description": "限时稀有物品兑换",
+        "frequency": "bi_monthly",
+        "duration": "7_days",
+        "exclusive_items": "event_only_skins_and_heroes"
+      }
+    }
+  },
+
+  "vip_integration": {
+    "vip_benefits": {
+      "vip_1_3": {
+        "black_market_discount": "5%-10%",
+        "daily_free_refreshes": "+1",
+        "bundle_exclusive_access": "basic_vip_bundles"
+      },
+      "vip_4_6": {
+        "black_market_discount": "10%-15%",
+        "daily_free_refreshes": "+2",
+        "skin_coin_bonus": "20%_more_from_all_sources",
+        "early_access": "new_skins_24h_early"
+      },
+      "vip_7_9": {
+        "black_market_discount": "15%-20%",
+        "daily_free_refreshes": "+3",
+        "skin_coin_bonus": "40%_more_from_all_sources",
+        "exclusive_shop": "vip_only_premium_items",
+        "personal_shopper": "ai_recommended_daily_deals"
+      },
+      "vip_10_plus": {
+        "black_market_discount": "20%-25%",
+        "unlimited_refreshes": "free_market_refreshes",
+        "skin_coin_bonus": "60%_more_from_all_sources",
+        "custom_bundles": "personalized_bundle_creation",
+        "concierge_service": "priority_customer_support"
+      }
+    }
+  },
+
+  "psychological_mechanics": {
+    "fomo_triggers": {
+      "countdown_timers": "visible_on_all_limited_offers",
+      "stock_limitations": "only_x_remaining_indicators",
+      "flash_notifications": "popup_alerts_for_special_deals"
+    },
+    "social_proof": {
+      "purchase_announcements": "guild_members_see_premium_purchases",
+      "popularity_indicators": "most_bought_items_highlighted",
+      "whale_showcases": "premium_skin_display_in_rankings"
+    },
+    "progression_psychology": {
+      "completion_meters": "show_progress_toward_bundle_goals",
+      "milestone_rewards": "bonus_items_at_spending_thresholds",
+      "achievement_unlocks": "new_shop_tiers_feel_like_progression"
+    }
+  },
+
+  "analytics_tracking": {
+    "key_metrics": {
+      "conversion_rates": "percentage_of_players_making_purchases",
+      "average_revenue_per_user": "arpu_tracking_by_player_segment",
+      "item_popularity": "which_items_sell_best_in_each_category",
+      "price_sensitivity": "optimal_pricing_through_ab_testing"
+    },
+    "behavioral_tracking": {
+      "browse_patterns": "which_sections_players_visit_most",
+      "comparison_shopping": "items_viewed_before_purchase",
+      "abandonment_analysis": "where_players_drop_off_in_purchase_flow"
+    }
+  },
+
+  "technical_implementation": {
+    "server_architecture": {
+      "real_time_pricing": "dynamic_price_calculation_engine",
+      "inventory_management": "stock_tracking_and_refresh_scheduling",
+      "purchase_validation": "fraud_prevention_and_receipt_verification"
+    },
+    "client_optimization": {
+      "asset_preloading": "skin_preview_images_cached_locally",
+      "smooth_animations": "purchase_confirmation_feedback",
+      "offline_capability": "view_owned_items_without_connection"
+    }
+  }
+}

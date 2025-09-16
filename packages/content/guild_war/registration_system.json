@@ -1,0 +1,398 @@
+{
+  "system_name": "封域之争报名入围系统",
+  "description": "管理宗门报名、资格审核、预选赛和最终入围的完整流程",
+  "version": "1.0.0",
+  "last_updated": "2025-09-16",
+
+  "registration_system": {
+    "registration_window": {
+      "start_time": "monday_00:00",
+      "end_time": "friday_18:00",
+      "duration_hours": 114,
+      "early_bird_period": {
+        "end_time": "wednesday_23:59",
+        "benefits": ["priority_seeding", "extra_preparation_time"]
+      },
+      "last_minute_period": {
+        "start_time": "friday_12:00",
+        "penalties": ["random_seeding", "limited_preparation_time"]
+      }
+    },
+
+    "eligibility_requirements": {
+      "basic_requirements": {
+        "guild_level": {
+          "minimum": 5,
+          "description": "宗门等级必须达到5级以上"
+        },
+        "member_count": {
+          "minimum": 20,
+          "active_minimum": 15,
+          "description": "至少20名成员，其中15名本周活跃"
+        },
+        "guild_age": {
+          "minimum_days": 30,
+          "description": "宗门存在时间至少30天"
+        },
+        "total_power": {
+          "minimum": 5000000,
+          "description": "宗门总战力不低于500万"
+        }
+      },
+      "conduct_requirements": {
+        "no_major_violations": {
+          "description": "近30天内无重大违规记录",
+          "check_period_days": 30
+        },
+        "fair_play_rating": {
+          "minimum": 3.0,
+          "max_scale": 5.0,
+          "description": "公平竞技评分不低于3.0分"
+        },
+        "leadership_stability": {
+          "description": "宗主在位时间不少于7天",
+          "minimum_days": 7
+        }
+      },
+      "competitive_requirements": {
+        "previous_participation": {
+          "bonus_qualification": true,
+          "description": "曾参与封域之争的宗门可获得资格加分"
+        },
+        "regular_pvp_activity": {
+          "minimum_battles": 10,
+          "period_days": 30,
+          "description": "近30天内至少参与10场PvP战斗"
+        },
+        "guild_cohesion": {
+          "metric": "member_participation_rate",
+          "minimum_rate": 0.7,
+          "description": "成员参与率不低于70%"
+        }
+      }
+    },
+
+    "registration_process": {
+      "step_1_application": {
+        "required_info": {
+          "guild_basic_info": ["name", "level", "member_count", "total_power"],
+          "member_roster": ["player_id", "level", "role", "last_active"],
+          "leader_declaration": ["guild_motto", "strategic_focus", "commitment_statement"],
+          "emergency_contacts": ["primary_contact", "backup_contact", "contact_method"]
+        },
+        "auto_validation": {
+          "basic_requirements_check": true,
+          "member_verification": true,
+          "power_calculation": true,
+          "violation_history_check": true
+        }
+      },
+      "step_2_documentation": {
+        "required_documents": {
+          "guild_charter": {
+            "description": "宗门章程，包含管理制度和行为准则",
+            "max_length": 1000
+          },
+          "roster_confirmation": {
+            "description": "20名正式参赛成员+5名替补成员名单",
+            "includes": ["roles", "specializations", "backup_plans"]
+          },
+          "strategic_declaration": {
+            "description": "战略声明，展示宗门的战术理念",
+            "max_length": 500
+          }
+        }
+      },
+      "step_3_verification": {
+        "automated_checks": [
+          "member_activity_verification",
+          "power_level_confirmation",
+          "violation_record_scan",
+          "duplicate_registration_check"
+        ],
+        "manual_review": {
+          "triggers": [
+            "borderline_qualifications",
+            "suspicious_activity_patterns",
+            "previous_violation_history",
+            "unusual_power_growth"
+          ],
+          "review_time": "24_to_48_hours"
+        }
+      }
+    },
+
+    "application_status": {
+      "pending_review": {
+        "description": "申请已提交，等待系统验证",
+        "typical_duration": "1-6小时"
+      },
+      "under_manual_review": {
+        "description": "需要人工审核，通常因为边界情况",
+        "typical_duration": "24-48小时"
+      },
+      "approved": {
+        "description": "报名成功，等待预选赛分组",
+        "next_steps": ["receive_qualification_schedule", "prepare_team_composition"]
+      },
+      "conditionally_approved": {
+        "description": "条件通过，需要补充材料或达成特定条件",
+        "common_conditions": ["increase_active_members", "improve_fair_play_rating"]
+      },
+      "rejected": {
+        "description": "报名被拒绝",
+        "common_reasons": ["insufficient_qualifications", "violation_history", "incomplete_application"],
+        "appeal_process": true
+      }
+    }
+  },
+
+  "qualification_system": {
+    "qualification_overview": {
+      "purpose": "从64个报名宗门中选出16强进入正赛",
+      "timeline": "周五20:00-周六18:00",
+      "format": "多轮积分赛+淘汰机制",
+      "advancement_slots": 16
+    },
+
+    "seeding_mechanism": {
+      "tier_1_seeds": {
+        "count": 4,
+        "criteria": "上届冠亚季军+最高评分宗门",
+        "advantage": "直接进入16强，无需预选赛"
+      },
+      "tier_2_seeds": {
+        "count": 12,
+        "criteria": "上届4-16名宗门",
+        "advantage": "预选赛第一轮轮空"
+      },
+      "general_participants": {
+        "count": 48,
+        "criteria": "其他合格宗门",
+        "format": "完整预选赛流程"
+      }
+    },
+
+    "qualification_format": {
+      "round_1": {
+        "name": "资格轮",
+        "participants": 48,
+        "format": "8组，每组6个宗门",
+        "battle_type": "mini_battle_royale",
+        "duration": "每组15分钟",
+        "advancement": "每组前3名晋级（24名）"
+      },
+      "round_2": {
+        "name": "晋级轮",
+        "participants": 36,
+        "format": "6组，每组6个宗门（24新+12种子）",
+        "battle_type": "territory_control",
+        "duration": "每组20分钟",
+        "advancement": "每组前2名晋级（12名）"
+      },
+      "round_3": {
+        "name": "决定轮",
+        "participants": 16,
+        "format": "4组，每组4个宗门（12新+4顶级种子）",
+        "battle_type": "full_pvp_simulation",
+        "duration": "每组25分钟",
+        "advancement": "每组第1名直接晋级，第2名进入复活赛"
+      },
+      "resurrection_round": {
+        "name": "复活赛",
+        "participants": 4,
+        "format": "单组4宗门决斗",
+        "battle_type": "sudden_death",
+        "duration": "30分钟",
+        "advancement": "冠军获得最后一个16强席位"
+      }
+    },
+
+    "battle_configurations": {
+      "mini_battle_royale": {
+        "map_size": "small",
+        "team_size": 10,
+        "respawn_limit": 1,
+        "victory_conditions": ["elimination", "highest_score_at_timeout"],
+        "special_rules": ["shared_spawn_points", "limited_resources"]
+      },
+      "territory_control": {
+        "map_size": "medium",
+        "team_size": 15,
+        "respawn_limit": 2,
+        "victory_conditions": ["control_majority_points", "eliminate_enemies"],
+        "special_rules": ["control_point_scoring", "resource_generation"]
+      },
+      "full_pvp_simulation": {
+        "map_size": "large",
+        "team_size": 20,
+        "respawn_limit": 3,
+        "victory_conditions": ["standard_pvp_rules"],
+        "special_rules": ["full_mechanics", "bond_skills_enabled"]
+      },
+      "sudden_death": {
+        "map_size": "medium",
+        "team_size": 20,
+        "respawn_limit": 0,
+        "victory_conditions": ["last_team_standing"],
+        "special_rules": ["no_respawn", "increasing_damage_over_time"]
+      }
+    }
+  },
+
+  "group_assignment": {
+    "assignment_algorithm": {
+      "primary_factors": {
+        "power_rating": {
+          "weight": 0.4,
+          "description": "宗门综合实力评估"
+        },
+        "historical_performance": {
+          "weight": 0.3,
+          "description": "历史战绩和表现"
+        },
+        "recent_activity": {
+          "weight": 0.2,
+          "description": "近期活跃度和参与情况"
+        },
+        "regional_balance": {
+          "weight": 0.1,
+          "description": "地区分布平衡"
+        }
+      },
+      "balancing_rules": {
+        "avoid_same_region_clusters": true,
+        "power_gap_limitation": "max_30_percent_difference",
+        "historical_rivalry_consideration": true,
+        "timezone_optimization": true
+      }
+    },
+
+    "group_validation": {
+      "balance_checks": [
+        "average_power_within_15_percent",
+        "no_more_than_2_same_region",
+        "historical_performance_spread",
+        "active_timezone_overlap"
+      ],
+      "manual_adjustment_triggers": [
+        "extreme_power_imbalance",
+        "geographical_clustering",
+        "known_rivalry_conflicts",
+        "technical_infrastructure_issues"
+      ]
+    }
+  },
+
+  "communication_system": {
+    "notification_channels": {
+      "in_game_announcements": {
+        "registration_reminders": "daily_during_registration_period",
+        "status_updates": "real_time_application_status",
+        "schedule_notifications": "qualification_battle_times"
+      },
+      "guild_messages": {
+        "official_communications": "system_messages_to_guild_leaders",
+        "preparation_guides": "tactical_advice_and_rule_clarifications",
+        "schedule_confirmations": "battle_time_confirmations"
+      },
+      "external_channels": {
+        "website_updates": "official_tournament_webpage",
+        "social_media": "announcement_on_official_accounts",
+        "email_notifications": "critical_updates_to_registered_contacts"
+      }
+    },
+
+    "information_transparency": {
+      "public_information": [
+        "total_registered_guilds",
+        "qualification_schedule",
+        "general_battle_rules",
+        "prize_structure"
+      ],
+      "participant_only_information": [
+        "specific_group_assignments",
+        "detailed_battle_times",
+        "opponent_information",
+        "tactical_briefings"
+      ],
+      "confidential_information": [
+        "individual_application_details",
+        "review_comments",
+        "appeal_processes",
+        "technical_infrastructure_details"
+      ]
+    }
+  },
+
+  "appeal_and_support": {
+    "appeal_process": {
+      "eligible_appeals": [
+        "qualification_decision_disputes",
+        "technical_issues_during_application",
+        "unfair_treatment_claims",
+        "group_assignment_concerns"
+      ],
+      "appeal_timeline": {
+        "submission_deadline": "48_hours_after_decision",
+        "review_period": "24_to_72_hours",
+        "final_decision": "binding_and_final"
+      },
+      "appeal_review_board": {
+        "composition": ["senior_game_masters", "community_representatives", "technical_experts"],
+        "decision_criteria": ["rule_compliance", "fairness", "precedent", "community_benefit"]
+      }
+    },
+
+    "technical_support": {
+      "common_issues": [
+        "application_submission_problems",
+        "member_verification_failures",
+        "power_calculation_discrepancies",
+        "communication_delivery_issues"
+      ],
+      "support_channels": {
+        "in_game_support": "24_7_during_registration_period",
+        "dedicated_email": "tournament_support_team",
+        "live_chat": "business_hours_during_critical_periods"
+      },
+      "escalation_procedures": {
+        "level_1": "automated_system_checks",
+        "level_2": "specialist_technical_review",
+        "level_3": "senior_game_master_intervention"
+      }
+    }
+  },
+
+  "fraud_prevention": {
+    "detection_mechanisms": {
+      "artificial_power_inflation": {
+        "checks": ["sudden_power_spikes", "unusual_member_additions", "fake_activity_patterns"],
+        "thresholds": ["30_percent_power_increase_in_7_days", "5_new_high_level_members"]
+      },
+      "multiple_registrations": {
+        "checks": ["duplicate_member_participation", "similar_guild_names", "shared_contact_information"],
+        "prevention": ["unique_player_constraint", "verification_systems"]
+      },
+      "collusion_detection": {
+        "patterns": ["coordinated_applications", "unusual_member_transfers", "suspicious_communication_patterns"],
+        "monitoring": ["cross_guild_activity_analysis", "timing_pattern_recognition"]
+      }
+    },
+
+    "consequences": {
+      "minor_violations": {
+        "actions": ["warning", "mandatory_review_period", "probationary_participation"],
+        "examples": ["incomplete_documentation", "minor_rule_misunderstandings"]
+      },
+      "major_violations": {
+        "actions": ["disqualification", "temporary_ban_from_tournaments", "power_audit_requirement"],
+        "examples": ["fraudulent_applications", "artificial_power_inflation", "multiple_registrations"]
+      },
+      "severe_violations": {
+        "actions": ["permanent_tournament_ban", "guild_dissolution_consideration", "member_individual_penalties"],
+        "examples": ["systematic_cheating", "organized_fraud", "repeated_major_violations"]
+      }
+    }
+  }
+}

@@ -1,0 +1,280 @@
+{
+  "tournament_name": "封域之争",
+  "description": "九重天域的最高荣耀之战，各大宗门争夺天界统治权的终极竞技",
+  "version": "1.0.0",
+  "last_updated": "2025-09-16",
+
+  "tournament_config": {
+    "max_guilds": 64,
+    "qualified_guilds": 16,
+    "members_per_guild": 20,
+    "substitute_members": 5,
+    "battle_duration": 3600,
+    "battlefield_count": 4
+  },
+
+  "schedule": {
+    "registration": {
+      "start": "monday_00:00",
+      "end": "friday_18:00",
+      "duration_hours": 114,
+      "requirements": {
+        "guild_level": 5,
+        "member_count": 20,
+        "active_rate": 0.7,
+        "total_power": 5000000
+      }
+    },
+    "qualification": {
+      "start": "friday_20:00",
+      "end": "saturday_18:00",
+      "duration_hours": 22,
+      "format": "qualification_battles",
+      "battle_rounds": 3,
+      "advancement_rate": 0.25
+    },
+    "main_event": {
+      "start": "saturday_20:00",
+      "end": "saturday_21:00",
+      "duration_hours": 1,
+      "format": "elimination_bracket",
+      "phases": [
+        {
+          "name": "十六进八",
+          "duration": 15,
+          "battles": 8
+        },
+        {
+          "name": "八进四",
+          "duration": 15,
+          "battles": 4
+        },
+        {
+          "name": "四进二",
+          "duration": 15,
+          "battles": 2
+        },
+        {
+          "name": "决赛",
+          "duration": 15,
+          "battles": 1
+        }
+      ]
+    }
+  },
+
+  "participation": {
+    "seeding_system": {
+      "top_4_previous": {
+        "description": "上届前四名直接入围决赛",
+        "auto_qualify": true,
+        "seed_positions": [1, 2, 3, 4]
+      },
+      "top_12_previous": {
+        "description": "上届5-16名直接入围16强",
+        "auto_qualify": true,
+        "seed_positions": [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+      },
+      "new_qualifiers": {
+        "description": "新晋宗门通过预选赛入围",
+        "qualification_required": true,
+        "available_spots": 48
+      }
+    },
+    "power_tiers": {
+      "tier_1": {
+        "name": "封神至尊",
+        "power_range": [50000000, 999999999],
+        "max_guilds": 16,
+        "priority": 1
+      },
+      "tier_2": {
+        "name": "仙家宗师",
+        "power_range": [20000000, 49999999],
+        "max_guilds": 24,
+        "priority": 2
+      },
+      "tier_3": {
+        "name": "修仙精英",
+        "power_range": [5000000, 19999999],
+        "max_guilds": 24,
+        "priority": 3
+      }
+    }
+  },
+
+  "tournament_format": {
+    "bracket_type": "single_elimination",
+    "bracket_seeding": "power_based",
+    "battle_format": {
+      "battlefield_type": "nine_heavens_domains",
+      "battle_duration": 900,
+      "team_size": 20,
+      "respawn_limit": 3,
+      "victory_conditions": [
+        "eliminate_all_enemies",
+        "control_all_main_halls",
+        "highest_score_at_timeout"
+      ]
+    },
+    "tiebreaker_rules": [
+      "head_to_head_record",
+      "total_eliminations",
+      "average_survival_time",
+      "guild_power_rating"
+    ]
+  },
+
+  "rewards": {
+    "championship_rewards": {
+      "rank_1": {
+        "title": "封神霸主",
+        "crystal_reward": 100000,
+        "exclusive_skin": "golden_phoenix_banner",
+        "trophy": "nine_heavens_crown",
+        "season_points": 1000
+      },
+      "rank_2": {
+        "title": "天界亚王",
+        "crystal_reward": 75000,
+        "exclusive_skin": "silver_dragon_banner",
+        "trophy": "celestial_blade",
+        "season_points": 750
+      },
+      "rank_3": {
+        "title": "仙域季军",
+        "crystal_reward": 50000,
+        "exclusive_skin": "bronze_tiger_banner",
+        "trophy": "immortal_shield",
+        "season_points": 500
+      },
+      "rank_4": {
+        "title": "神州四强",
+        "crystal_reward": 30000,
+        "exclusive_skin": "jade_banner",
+        "trophy": "sacred_pearl",
+        "season_points": 350
+      }
+    },
+    "participation_rewards": {
+      "top_8": {
+        "crystal_reward": 20000,
+        "season_points": 200,
+        "special_items": ["legendary_enhancement_stone"]
+      },
+      "top_16": {
+        "crystal_reward": 10000,
+        "season_points": 100,
+        "special_items": ["epic_enhancement_stone"]
+      },
+      "qualified": {
+        "crystal_reward": 5000,
+        "season_points": 50,
+        "special_items": ["rare_enhancement_stone"]
+      },
+      "registered": {
+        "crystal_reward": 1000,
+        "season_points": 10,
+        "special_items": ["participation_badge"]
+      }
+    },
+    "individual_rewards": {
+      "mvp_awards": {
+        "most_eliminations": {
+          "title": "杀神",
+          "crystal_reward": 5000,
+          "exclusive_skin": "blood_demon_avatar"
+        },
+        "best_support": {
+          "title": "战神助手",
+          "crystal_reward": 3000,
+          "exclusive_skin": "divine_support_avatar"
+        },
+        "longest_survival": {
+          "title": "不死战神",
+          "crystal_reward": 3000,
+          "exclusive_skin": "immortal_warrior_avatar"
+        }
+      },
+      "achievement_rewards": {
+        "perfect_game": {
+          "description": "一场比赛无死亡",
+          "crystal_reward": 2000,
+          "title": "完美战士"
+        },
+        "comeback_victory": {
+          "description": "落后15分以上逆转获胜",
+          "crystal_reward": 3000,
+          "title": "逆转大师"
+        },
+        "dominant_victory": {
+          "description": "领先50%以上获胜",
+          "crystal_reward": 2000,
+          "title": "碾压王者"
+        }
+      }
+    }
+  },
+
+  "special_features": {
+    "spectator_mode": {
+      "enabled": true,
+      "max_spectators": 1000,
+      "commentary_ai": true,
+      "replay_available": true,
+      "highlights_generation": true
+    },
+    "betting_system": {
+      "enabled": false,
+      "description": "玩家可使用封域令对比赛结果进行预测投注",
+      "max_bet_amount": 1000,
+      "minimum_odds": 1.1
+    },
+    "live_statistics": {
+      "real_time_leaderboard": true,
+      "player_performance_tracking": true,
+      "battle_replay_system": true,
+      "highlight_moments": true
+    }
+  },
+
+  "anti_cheat": {
+    "server_authority": true,
+    "real_time_monitoring": true,
+    "behavior_analysis": true,
+    "automated_detection": {
+      "speed_hacking": true,
+      "damage_manipulation": true,
+      "position_teleporting": true,
+      "resource_hacking": true
+    },
+    "punishment_system": {
+      "warning": "temporary_spectator_mode",
+      "minor_violation": "match_suspension",
+      "major_violation": "tournament_ban",
+      "severe_violation": "permanent_ban"
+    }
+  },
+
+  "technical_requirements": {
+    "server_capacity": {
+      "max_concurrent_battles": 8,
+      "max_players_per_battle": 40,
+      "total_concurrent_players": 320,
+      "spectator_capacity": 8000
+    },
+    "network_requirements": {
+      "latency_target": 50,
+      "latency_warning": 100,
+      "latency_critical": 150,
+      "bandwidth_per_player": "128kbps",
+      "server_locations": ["asia-east", "asia-southeast"]
+    },
+    "failover_mechanisms": {
+      "battle_server_redundancy": true,
+      "automatic_reconnection": true,
+      "state_recovery": true,
+      "emergency_pause": true
+    }
+  }
+}

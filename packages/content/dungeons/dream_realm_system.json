@@ -1,0 +1,320 @@
+{
+  "system_name": "幻境迷梦限时副本系统",
+  "description": "基于封神神话的梦境主题限时副本，提供独特挑战和专属稀有物资奖励",
+  "version": "1.0.0",
+  "last_updated": "2025-09-16",
+
+  "core_concept": {
+    "theme_foundation": "dream_realms_from_fengshen_mythology",
+    "narrative_basis": "players_enter_dreams_of_legendary_figures",
+    "mechanical_uniqueness": "reality_vs_dream_mechanics_affect_gameplay",
+    "exclusivity_factor": "limited_time_availability_creates_urgency_and_value"
+  },
+
+  "dungeon_categories": {
+    "deity_dreamscapes": {
+      "nezha_fire_dream": {
+        "name": "哪吒烈火梦境",
+        "availability": "monthly_3_days",
+        "theme": "chaotic_rebellious_fire_realm",
+        "mechanics": {
+          "flame_immunity_phases": "periodically_all_fire_damage_heals_instead",
+          "rebellion_stacks": "attacking_enemies_builds_rebellion_reducing_their_authority",
+          "lotus_body_transformation": "at_50%_health_player_heroes_become_lotus_constructs"
+        },
+        "exclusive_drops": {
+          "nezha_soul_essence": "enhance_nezha_specifically_and_fire_heroes_generally",
+          "rebellion_flame_crystal": "craft_anti_authority_weapons_effective_against_bosses",
+          "lotus_body_fragments": "permanent_health_regeneration_enhancement"
+        },
+        "boss_mechanics": {
+          "dragon_king_nightmare": "represents_nezha_trauma_from_dragon_palace_incident",
+          "authority_pressure": "boss_deals_more_damage_based_on_hero_rarity_level",
+          "flame_sanctuary": "fire_attacks_heal_party_while_water_attacks_deal_double_damage"
+        }
+      },
+
+      "yangjian_insight_dream": {
+        "name": "杨戬天眼洞察梦",
+        "availability": "monthly_4_days",
+        "theme": "perception_truth_and_hidden_reality",
+        "mechanics": {
+          "true_sight_phases": "reveal_hidden_enemies_and_environmental_secrets",
+          "illusion_breaking": "dispel_enemy_buffs_and_false_terrain_obstacles",
+          "heavenly_eye_focus": "target_enemy_weak_points_for_critical_damage_bonuses"
+        },
+        "exclusive_drops": {
+          "heavenly_eye_lens": "permanent_critical_hit_rate_increase_for_all_heroes",
+          "truth_seeker_scroll": "ability_to_see_through_enemy_stealth_and_deception",
+          "divine_perception_orb": "reveals_optimal_battle_strategies_in_other_content"
+        },
+        "boss_mechanics": {
+          "shapeshifter_demon": "constantly_changes_form_requiring_true_sight_to_damage",
+          "mirror_realm": "battlefield_splits_into_real_and_mirror_versions",
+          "perception_test": "players_must_identify_real_boss_among_multiple_illusions"
+        }
+      },
+
+      "daji_seduction_dream": {
+        "name": "妲己魅惑心魔梦",
+        "availability": "bi_monthly_5_days",
+        "theme": "temptation_desire_and_mental_resistance",
+        "mechanics": {
+          "charm_resistance": "heroes_must_resist_charm_effects_or_attack_allies",
+          "desire_manifestation": "player_desires_become_obstacles_and_enemies",
+          "willpower_system": "mental_fortitude_stat_determines_resistance_to_effects"
+        },
+        "exclusive_drops": {
+          "fox_spirit_essence": "enhance_charm_and_seduction_based_abilities",
+          "iron_will_amulet": "permanent_mental_status_effect_resistance",
+          "heart_demon_crystal": "turn_enemy_buffs_into_debuffs_through_corrupted_desire"
+        },
+        "boss_mechanics": {
+          "mirror_of_desires": "boss_creates_corrupted_versions_of_player_heroes",
+          "seduction_aura": "proximity_to_boss_causes_heroes_to_lose_control",
+          "temptation_trials": "resist_specific_temptations_to_unlock_damage_phases"
+        }
+      }
+    },
+
+    "legendary_battlegrounds": {
+      "fengshen_war_memory": {
+        "name": "封神大战记忆",
+        "availability": "quarterly_7_days",
+        "theme": "recreation_of_iconic_battles_from_fengshen_war",
+        "mechanics": {
+          "faction_allegiance": "choose_chanjiao_or_jiejiao_side_affecting_available_buffs",
+          "war_momentum": "successful_battles_build_momentum_for_stronger_abilities",
+          "divine_intervention": "random_deity_assistance_during_critical_moments"
+        },
+        "exclusive_drops": {
+          "war_chronicle_pages": "unlock_historical_battle_recreations_in_other_modes",
+          "veteran_warrior_badge": "permanent_combat_experience_and_skill_bonuses",
+          "divine_favor_token": "rare_currency_for_purchasing_deity_blessed_items"
+        },
+        "multi_stage_progression": {
+          "stage_1": "battle_of_merchants_and_farmers",
+          "stage_2": "siege_of_xiqi_recreation",
+          "stage_3": "ten_grand_formations_challenge",
+          "stage_4": "final_battle_at_muye_plains",
+          "final_stage": "ascension_to_godhood_trial"
+        }
+      },
+
+      "chaos_primordial_realm": {
+        "name": "混沌太初境",
+        "availability": "seasonally_10_days",
+        "theme": "pre_creation_chaos_where_normal_rules_don_t_apply",
+        "mechanics": {
+          "reality_flux": "battlefield_rules_change_randomly_every_few_minutes",
+          "elemental_chaos": "wuxing_elements_randomly_strengthen_or_weaken",
+          "primordial_energy": "special_energy_type_that_powers_unique_abilities"
+        },
+        "exclusive_drops": {
+          "chaos_essence": "material_for_crafting_reality_altering_equipment",
+          "primordial_seed": "grows_into_custom_realm_for_guild_base_enhancement",
+          "void_walker_cloak": "ability_to_phase_through_certain_attacks_and_obstacles"
+        },
+        "environmental_hazards": {
+          "reality_storms": "areas_where_physics_work_differently",
+          "time_distortions": "zones_where_cooldowns_are_affected",
+          "elemental_reversals": "fire_becomes_ice_earth_becomes_air_etc"
+        }
+      }
+    },
+
+    "inner_demons_trials": {
+      "hero_shadow_confrontations": {
+        "name": "英雄心魔试炼",
+        "availability": "weekly_2_days",
+        "theme": "face_corrupted_versions_of_your_own_heroes",
+        "mechanics": {
+          "shadow_mirroring": "shadow_heroes_have_inverted_strengths_and_weaknesses",
+          "internal_conflict": "using_hero_against_their_shadow_causes_psychological_damage",
+          "self_acceptance": "embracing_shadow_aspects_grants_temporary_power_boosts"
+        },
+        "exclusive_drops": {
+          "shadow_integration_crystal": "allows_heroes_to_use_both_light_and_dark_abilities",
+          "psychological_armor": "defense_against_mental_and_emotional_attacks",
+          "inner_harmony_scroll": "balances_hero_stats_for_more_consistent_performance"
+        },
+        "personalized_content": {
+          "content_adapts_to_player_roster": "shadows_based_on_player_most_used_heroes",
+          "difficulty_scaling": "challenge_increases_with_hero_development_level",
+          "narrative_customization": "story_elements_reflect_player_choices_and_progression"
+        }
+      }
+    }
+  },
+
+  "availability_schedule": {
+    "rotation_calendar": {
+      "week_1": "nezha_fire_dream_available",
+      "week_2": "yangjian_insight_dream_available",
+      "week_3": "hero_shadow_confrontations_available",
+      "week_4": "special_event_or_rotating_legendary_battleground",
+      "monthly_special": "daji_seduction_dream_full_moon_weekend",
+      "quarterly_epic": "fengshen_war_memory_season_finale",
+      "annual_ultimate": "chaos_primordial_realm_anniversary_event"
+    },
+    "announcement_system": {
+      "advance_notice": "7_days_warning_for_upcoming_dream_realms",
+      "preparation_guidance": "recommended_team_compositions_and_strategies",
+      "lore_teasers": "story_snippets_and_background_information",
+      "community_hype": "leaderboards_and_social_media_promotion"
+    }
+  },
+
+  "difficulty_scaling": {
+    "adaptive_challenge": {
+      "player_power_assessment": "dungeon_difficulty_scales_with_account_strength",
+      "team_composition_factor": "optimal_strategies_vary_based_on_available_heroes",
+      "previous_performance": "difficulty_increases_for_players_who_consistently_succeed"
+    },
+    "difficulty_tiers": {
+      "ethereal_novice": {
+        "target_audience": "new_players_levels_1_30",
+        "power_requirement": "100k_total_team_power",
+        "reward_modifier": "100%_base_rewards"
+      },
+      "dream_walker": {
+        "target_audience": "intermediate_players_levels_31_50",
+        "power_requirement": "500k_total_team_power",
+        "reward_modifier": "150%_base_rewards"
+      },
+      "nightmare_slayer": {
+        "target_audience": "advanced_players_levels_51_70",
+        "power_requirement": "2m_total_team_power",
+        "reward_modifier": "200%_base_rewards"
+      },
+      "void_master": {
+        "target_audience": "elite_players_level_70_plus",
+        "power_requirement": "10m_total_team_power",
+        "reward_modifier": "300%_base_rewards_plus_exclusive_items"
+      },
+      "transcendent_sage": {
+        "target_audience": "whale_players_maximum_progression",
+        "power_requirement": "50m_total_team_power",
+        "reward_modifier": "500%_rewards_plus_prestige_items"
+      }
+    }
+  },
+
+  "exclusive_reward_system": {
+    "dream_fragments": {
+      "fragment_types": {
+        "memory_fragments": "used_to_craft_experience_enhancement_items",
+        "essence_fragments": "enhance_specific_hero_abilities_permanently",
+        "reality_fragments": "modify_equipment_stats_beyond_normal_limits",
+        "void_fragments": "rarest_fragments_for_transcendent_level_enhancements"
+      },
+      "collection_mechanics": {
+        "fragment_synthesis": "combine_multiple_fragments_for_higher_tier_items",
+        "dream_journal": "track_fragment_collection_progress_across_all_dungeons",
+        "trading_system": "limited_trading_of_certain_fragments_between_players"
+      }
+    },
+
+    "mythical_materials": {
+      "chaos_ore": {
+        "source": "chaos_primordial_realm_exclusive",
+        "usage": "forge_equipment_that_ignores_elemental_resistances",
+        "rarity": "extremely_rare_1_in_50_runs"
+      },
+      "dream_silk": {
+        "source": "daji_seduction_dream_exclusive",
+        "usage": "craft_armor_that_provides_mental_status_immunity",
+        "rarity": "rare_1_in_20_runs"
+      },
+      "phoenix_ash": {
+        "source": "nezha_fire_dream_exclusive",
+        "usage": "enable_hero_resurrection_with_full_health_once_per_battle",
+        "rarity": "uncommon_1_in_10_runs"
+      },
+      "truth_crystal": {
+        "source": "yangjian_insight_dream_exclusive",
+        "usage": "craft_accessories_that_reveal_all_enemy_information",
+        "rarity": "rare_1_in_15_runs"
+      }
+    },
+
+    "prestige_cosmetics": {
+      "dream_walker_titles": "exclusive_titles_showing_mastery_of_specific_dream_realms",
+      "nightmare_conquerer_frames": "special_avatar_frames_for_high_difficulty_completion",
+      "void_master_emotes": "unique_emotes_and_animations_for_ultimate_achievements",
+      "transcendent_auras": "permanent_visual_effects_for_transcendent_tier_completion"
+    }
+  },
+
+  "social_and_cooperative_elements": {
+    "dream_sharing_system": {
+      "dream_recording": "players_can_record_and_share_successful_strategies",
+      "collaborative_analysis": "guild_members_analyze_dreams_together_for_optimal_approaches",
+      "mentor_guidance": "experienced_players_guide_newcomers_through_dream_mechanics"
+    },
+    "competitive_elements": {
+      "speed_run_leaderboards": "fastest_completion_times_for_each_dream_realm",
+      "flawless_victory_rankings": "completion_without_losing_any_heroes",
+      "efficiency_competitions": "highest_reward_to_time_investment_ratios",
+      "innovation_challenges": "creative_strategy_contests_with_community_voting"
+    },
+    "guild_cooperation": {
+      "shared_dream_preparation": "guild_pools_resources_to_help_members_prepare",
+      "collective_achievements": "guild_wide_goals_for_dream_realm_participation",
+      "knowledge_sharing": "guild_libraries_containing_dream_strategy_guides",
+      "group_celebrations": "guild_events_celebrating_member_dream_achievements"
+    }
+  },
+
+  "progression_and_mastery": {
+    "dream_mastery_levels": {
+      "novice_dreamer": "first_successful_completion_of_any_dream_realm",
+      "experienced_voyager": "complete_10_different_dream_realm_instances",
+      "nightmare_veteran": "complete_nightmare_difficulty_in_all_available_realms",
+      "void_walker": "achieve_perfect_scores_in_transcendent_difficulty",
+      "dream_lord": "ultimate_mastery_title_for_exceptional_achievement"
+    },
+    "permanent_progression": {
+      "dream_attunement": "each_dream_completion_slightly_increases_overall_power",
+      "realm_familiarity": "repeated_completions_provide_small_permanent_bonuses",
+      "nightmare_resistance": "build_resistance_to_various_status_effects_over_time",
+      "transcendent_insights": "unlock_advanced_game_mechanics_and_strategies"
+    }
+  },
+
+  "technical_considerations": {
+    "server_load_management": {
+      "instanced_dungeons": "each_player_or_team_gets_private_dream_realm_instance",
+      "scalable_difficulty": "real_time_adjustment_based_on_player_performance",
+      "efficient_asset_streaming": "download_dream_assets_on_demand_to_save_space"
+    },
+    "client_optimization": {
+      "dream_state_transitions": "smooth_visual_effects_for_entering_leaving_dreams",
+      "performance_scaling": "adjust_visual_quality_based_on_device_capabilities",
+      "memory_management": "efficiently_load_unload_dream_specific_assets"
+    },
+    "data_integrity": {
+      "progress_verification": "server_side_validation_of_dream_completion_claims",
+      "reward_security": "anti_cheat_measures_for_exclusive_material_drops",
+      "backup_systems": "protect_player_dream_progress_from_data_corruption"
+    }
+  },
+
+  "monetization_integration": {
+    "optional_enhancements": {
+      "dream_preparation_kits": "purchasable_bundles_with_helpful_items_for_specific_dreams",
+      "additional_attempts": "purchase_extra_daily_attempts_for_popular_dream_realms",
+      "premium_analysis": "detailed_post_completion_analysis_and_improvement_suggestions"
+    },
+    "cosmetic_opportunities": {
+      "dream_themed_skins": "exclusive_skins_inspired_by_each_dream_realm_aesthetic",
+      "nightmare_weapon_effects": "visual_enhancements_for_weapons_used_in_dreams",
+      "void_mastery_indicators": "permanent_visual_markers_of_transcendent_achievements"
+    },
+    "value_proposition": {
+      "exclusive_content_access": "unique_gameplay_experiences_not_available_elsewhere",
+      "prestige_and_recognition": "social_status_and_achievement_recognition_systems",
+      "long_term_investment": "permanent_character_improvements_and_exclusive_materials"
+    }
+  }
+}

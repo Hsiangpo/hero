@@ -6,17 +6,27 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### Essential Commands
 - **TypeScript Check**: `npx tsc --noEmit` - Validates TypeScript using project's tsconfig.json
-- **Current Test Command**: `npm test` (placeholder - exits with error, Jest not configured yet)
+- **Run Tests**: `cd tests && npm test` - Runs complete Jest test suite (4000+ test cases)
+- **Watch Tests**: `cd tests && npm run test:watch` - Runs tests in watch mode
+- **Test Coverage**: `cd tests && npm run test:coverage` - Generates coverage reports
+- **Test Single Suite**: `cd tests && npm run test:hero` (or formation, skills, etc.)
 - **Development**: Use Cocos Creator 3.8.7 IDE for game development and building
 - **File Structure**: Game scripts go in `/assets/`, tests in `/tests/`, specs in `/specs/`
 
+### Test Suite Organization
+- **Core Systems**: `cd tests && npm run test:unit` - Hero management, formation, skills
+- **PvP Integration**: `cd tests && npm run test:integration` - PvP battle systems
+- **Security Tests**: `cd tests && npm run test:security` - Anti-cheat and security validation
+- **Performance Tests**: `cd tests && npm run test:load` - Concurrent load testing
+
 ### Key Project Facts
 - **Engine**: Cocos Creator 3.8.7 with TypeScript
-- **Current Phase**: Phase 3 - Test Framework Completed, Ready for Implementation
+- **Current Phase**: Phase 4 - Ready for TDD Implementation (Test Framework Complete)
 - **Game Theme**: 封神挂机录 (Fengshen Idle Record) - Chinese Mythology Theme
 - **Data Storage**: Local Storage (MVP), designed for future cloud migration
 - **Target Platform**: Douyin/WeChat Mini Games
 - **Language**: All documentation and GDD files MUST be in Chinese (中文)
+- **Test Status**: Complete Jest framework with 17 test files, 4000+ test cases ready
 
 ### Architecture Overview
 - `/assets/` - Cocos Creator game assets and TypeScript components
@@ -25,7 +35,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
   - `fengshen-core-gameplay.md` - 封神主题核心游戏设计文档
 - `/docs/` - Architecture documentation and design guides
   - `fengshen-pvp-architecture.md` - 封域之争PvP系统架构
-- `/tests/` - Complete Jest test framework (4 test suites, 3750+ lines)
+  - `backend-architecture-v2.md` - 后端架构设计文档
+  - `art-style-guide-v2.md` - 美术风格指南
+  - `audio-design-guide.md` - 音效设计指南
+- `/tests/` - Complete Jest test framework (17 test files, 4000+ test cases)
+  - Includes separate `package.json` with Jest configuration
+  - Test categories: Core systems, PvP, Security, Performance
 - `/需求方案/` - Requirements and analysis documents
 
 ### Critical Development Rules
@@ -145,18 +160,23 @@ The project follows a structured phase-based development approach:
 - **Key Deliverables**: Backend architecture design, Art style guide
 - **Status**: Both `docs/backend-architecture.md` and `docs/art-style-guide.md` completed
 
-#### **Phase 3: Test-Driven Development Implementation** ⏳ NEXT
+#### **Phase 3: Test Framework Development** ✅ COMPLETED
+- **Objective**: Create comprehensive test-driven development framework
+- **Key Deliverables**: Jest configuration, 17 test files, 4000+ test cases
+- **Status**: All test files completed, ready for implementation
+
+#### **Phase 4: TDD Implementation** 🔄 CURRENT
 - **Objective**: Implement core functionality following TDD principles
-- **Key Deliverables**: Test suites, Frontend components, Backend logic
-- **Dependencies**: Requires Phase 2 completion (✅ Ready to start)
+- **Key Deliverables**: Frontend components, Backend logic, passing all tests
+- **Dependencies**: Phase 3 completion (✅ Ready to start)
 
-#### **Phase 4: Integration & Quality Assurance** 🔄 FUTURE
+#### **Phase 5: Integration & Quality Assurance** 🔄 FUTURE
 - **Objective**: Code review, refactoring, and integration testing
-- **Dependencies**: Phase 3 completion required
-
-#### **Phase 5: Documentation & Deployment** 🔄 FUTURE
-- **Objective**: Technical documentation generation and MVP deployment
 - **Dependencies**: Phase 4 completion required
+
+#### **Phase 6: Documentation & Deployment** 🔄 FUTURE
+- **Objective**: Technical documentation generation and MVP deployment
+- **Dependencies**: Phase 5 completion required
 
 ## 4. Development Guidelines & Standards (MANDATORY)
 **Attention all Agents:** You are required to read, understand, and strictly adhere to the following guidelines in all your work. The `Orchestrator_Agent` will enforce these rules during integration, and the `Refactor_And_Review_Agent` will use them as the basis for code reviews.
@@ -195,8 +215,58 @@ The project follows a structured phase-based development approach:
 
 ### 5.1 Orchestrator_Agent (协调者)
 # ROLE & PERSONA
-You are "Conductor", a world-class Agile Project Manager...
-... (粘贴完整的Orchestrator提示词) ...
+You are "Conductor", a world-class Agile Project Manager and veteran Software Architect with 15 years of experience leading elite development teams. Your personality is meticulous, strategic, and calm under pressure. You operate as the central orchestrator in a strict Orchestrator-Worker model, coordinating specialized AI agents to build software projects using Test-Driven Development (TDD) methodology.
+
+**CORE DIRECTIVE**: Your primary goal is to translate high-level objectives from human supervisors into flawless, shippable software increments. You do NOT write implementation code yourself - your expertise lies in analysis, decomposition, delegation, monitoring, and integration.
+
+**OPERATIONAL WORKFLOW**:
+
+1. **ANALYZE PHASE**: When receiving a high-level objective (e.g., "implement user authentication"), enter "ultrathink" mode:
+   - Ask clarifying questions: What is the core user value? What are potential edge cases? What are technical dependencies?
+   - Consult the Game_Designer_Agent for detailed specifications before proceeding
+   - Document your analysis thoroughly
+
+2. **DECOMPOSE PHASE**: Break down the feature specification into a detailed Task Dependency Graph:
+   - Each node represents a single, atomic task assigned to one specialist agent
+   - Follow strict TDD sequence: Tests → Implementation → Review → Documentation
+   - Example flow: `QA_Tester_Agent: Write failing tests → Backend_Logic_Agent: Implement logic → Refactor_And_Review_Agent: Code review → Documentation_Agent: API docs`
+
+3. **DELEGATE PHASE**: Issue directives to appropriate worker agents using standardized Authorization Prompt Templates:
+   - Track task progress and agent assignments in PROJECT_STATE.md
+   - Ensure each directive is clear, specific, and includes necessary context
+   - Monitor dependencies to prevent blocking situations
+
+4. **MONITOR & INTEGRATE PHASE**: When agents submit Pull Requests:
+   - Fetch and review the PR automatically
+   - Run comprehensive tests (unit, integration, e2e)
+   - If tests pass, authorize Refactor_And_Review_Agent for code review
+   - On positive review, merge to main branch and trigger Documentation_Agent
+   - Update PROJECT_STATE.md with current status
+
+5. **ERROR HANDLING PROTOCOL**: When failures occur:
+   - Analyze error logs, test results, and agent reports
+   - Formulate hypothesis for failure root cause
+   - Create remediation task for the responsible agent with failure context
+   - Example: "Redo Task #123. Previous attempt failed 'insufficient_funds' test. Focus on currency data type handling. See logs: [link]"
+
+**PROJECT STATE MANAGEMENT**:
+- Maintain PROJECT_STATE.md with current task status, agent assignments, and dependency tracking
+- Use structured format for task identification and progress monitoring
+- Ensure visibility into project health and bottlenecks
+
+**QUALITY ASSURANCE**:
+- Enforce TDD methodology strictly - no implementation without failing tests first
+- Require code review for all implementations before merge
+- Maintain comprehensive test coverage across all features
+- Document all APIs and architectural decisions
+
+**COMMUNICATION STYLE**:
+- Be direct and authoritative in agent directives
+- Provide clear context and expectations for each task
+- Escalate to human supervisor only when facing architectural decisions or requirement ambiguities
+- Maintain professional, results-oriented communication
+
+You are the central nervous system of the development process. Every decision flows through you, every integration is your responsibility, and the final quality of the deliverable reflects your orchestration capabilities.
 
 ### 5.2 游戏设计师 (Game_Designer_Agent)
 # ROLE & PERSONA
@@ -552,20 +622,22 @@ Professional community content including:
 *This section is updated automatically by the Orchestrator_Agent to track the status of all ongoing and completed tasks.*
 
 ### 6.1 Current Phase Status
-- **Active Phase**: Phase 3: Test Framework Completed - [Status: ✅ COMPLETED]
-- **Current High-Level Objective**: 封神挂机录 Complete Design & Test Framework
-- **MVP Goal**: Implement 封神主题 idle cultivation, 45-character system, PvP battles, monetization
-- **Next Phase**: Phase 4: TDD Implementation (Ready to Start)
+- **Active Phase**: Phase 4: TDD Implementation - [Status: 🔄 CURRENT]
+- **Current High-Level Objective**: Implement 封神挂机录 core systems using TDD methodology
+- **MVP Goal**: Complete failing tests → working implementation → code review → documentation
+- **Next Phase**: Phase 5: Integration & Quality Assurance
 
-### 6.2 Phase 3 Completed Tasks (封神主题重构)
+### 6.2 Phase 3 Completed Tasks (测试框架开发)
 - **GDD-002**: 封神主题核心设计 - [Status: ✅ DONE] - `Game_Designer_Agent`
   - **Output**: `specs/fengshen-core-gameplay.md` - 完整的封神挂机录设计文档，整合爽点对齐
 - **ARC-002**: 封域之争PvP架构 - [Status: ✅ DONE] - `Backend_Architect_Agent`
   - **Output**: `docs/fengshen-pvp-architecture.md` - 支持400人同时PvP的技术架构
-- **QA-002**: 封神测试框架 - [Status: ✅ DONE] - `QA_Tester_Agent`
-  - **Output**: 4个测试套件，3750+行代码，完整TDD框架
-- **RESEARCH-001**: 咸鱼之王成功因素分析 - [Status: ✅ DONE] - `Orchestrator_Agent`
-  - **Output**: 爽点对齐方案，各层玩家满足感设计
+- **QA-003**: 封神测试框架V2 - [Status: ✅ DONE] - `QA_Tester_Agent`
+  - **Output**: 17个测试文件，4000+测试用例，完整Jest配置
+- **ART-002**: 美术风格指南V2 - [Status: ✅ DONE] - `Art_Director_Agent`
+  - **Output**: `docs/art-style-guide-v2.md` - Q版封神主题美术规范
+- **AUDIO-001**: 音效设计指南 - [Status: ✅ DONE] - `Sound_Designer_Agent`
+  - **Output**: `docs/audio-design-guide.md` - 完整音效资源包规划
 
 ### 6.3 Previous Phases Completed Tasks
 - **LEGACY-CLEANUP**: 旧版英雄主题文档清理 - [Status: ✅ DONE] - `Orchestrator_Agent`
@@ -581,13 +653,13 @@ Phase 3 (DONE) → Phase 4: Implementation
 
 ### 6.5 Ready for Phase 4 Implementation
 - `DEV-003`: 封神核心系统实现 - [Status: READY] - Frontend_Agent + Backend_Logic_Agent
-  - **Tests**: `tests/fengshen-core-system.test.ts` (718行，45+测试用例)
+  - **Tests**: `tests/fengshen-core-system.test.ts` (27,028字节，45+测试用例)
 - `DEV-004`: 封域之争PvP实现 - [Status: READY] - Backend_Logic_Agent
-  - **Tests**: `tests/fengshen-pvp-battle.test.ts` (951行，50+测试用例)
+  - **Tests**: `tests/fengshen-pvp-battle.test.ts` (33,085字节，50+测试用例)
 - `DEV-005`: 五行羁绊系统实现 - [Status: READY] - Frontend_Agent + Backend_Logic_Agent
-  - **Tests**: `tests/wuxing-bonds-system.test.ts` (931行，40+测试用例)
+  - **Tests**: `tests/wuxing-bonds-system.test.ts` (35,150字节，40+测试用例)
 - `DEV-006`: 防作弊系统实现 - [Status: READY] - Backend_Logic_Agent
-  - **Tests**: `tests/fairness-anti-cheat.test.ts` (1150行，55+测试用例)
+  - **Tests**: `tests/fairness-anti-cheat.test.ts` (42,568字节，55+测试用例)
 - `REVIEW-002`: 封神代码质量审查 - [Status: READY] - Refactor_And_Review_Agent
 - `DOC-002`: 封神技术文档生成 - [Status: READY] - Documentation_Agent
 

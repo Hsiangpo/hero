@@ -1,0 +1,286 @@
+{
+  "system_name": "天条考验",
+  "description": "挑战天庭五帝，证明修仙者实力的每日试炼",
+  "reference_system": "咸王考验",
+  "challenge_type": "daily_boss_rotation",
+
+  "boss_rotation": {
+    "cycle_pattern": "5_day_rotation",
+    "bosses": [
+      {
+        "boss_id": "qinglong_general",
+        "name": "青龙将军",
+        "element": "wood",
+        "type": "control_specialist",
+        "description": "东方青龙之力化身，擅长控制战场局势",
+        "special_mechanics": [
+          "龙吟镇魂：每30秒眩晕全队3秒",
+          "青木缠绕：随机控制2名角色，持续5秒",
+          "苍龙破云：突进攻击，造成大量伤害并击退"
+        ],
+        "recommended_counter": ["高抗性角色", "净化技能", "位移技能"],
+        "weakness": "火系角色额外伤害+50%"
+      },
+      {
+        "boss_id": "baihu_killing_formation",
+        "name": "白虎杀阵",
+        "element": "metal",
+        "type": "burst_specialist",
+        "description": "西方白虎煞气凝聚，爆发力极其恐怖",
+        "special_mechanics": [
+          "虎啸山林：每20秒全屏AOE，伤害递增",
+          "金戈铁马：连续5次攻击，每次伤害+25%",
+          "白虎噬魂：标记血量最低角色，5秒后秒杀"
+        ],
+        "recommended_counter": ["高血量坦克", "护盾技能", "复活技能"],
+        "weakness": "木系角色额外伤害+50%"
+      },
+      {
+        "boss_id": "zhuque_flame_spirit",
+        "name": "朱雀炎灵",
+        "element": "fire",
+        "type": "mana_drain_specialist",
+        "description": "南方朱雀神火，焚烧敌人法力精神",
+        "special_mechanics": [
+          "凤凰涅槃：死亡时复活并恢复50%血量",
+          "烈火焚心：持续燃烧，每秒减少法力值10点",
+          "火海炼狱：场地持续燃烧，站立扣血"
+        ],
+        "recommended_counter": ["法力恢复技能", "火抗角色", "远程输出"],
+        "weakness": "水系角色额外伤害+50%"
+      },
+      {
+        "boss_id": "xuanwu_guardian",
+        "name": "玄武守卫",
+        "element": "water",
+        "type": "reflect_damage_specialist",
+        "description": "北方玄武龟蛇，防御无双反伤致命",
+        "special_mechanics": [
+          "龟甲护体：受到伤害减少70%",
+          "蛇尾反击：反射所受伤害的150%",
+          "玄冰护盾：每30秒获得免疫物理伤害护盾"
+        ],
+        "recommended_counter": ["真实伤害", "法术输出", "破甲技能"],
+        "weakness": "土系角色额外伤害+50%"
+      },
+      {
+        "boss_id": "wuxiang_tianmo",
+        "name": "无相天魔",
+        "element": "chaos",
+        "type": "comprehensive_specialist",
+        "description": "混沌魔王，集合四象之力的终极考验",
+        "special_mechanics": [
+          "四象轮转：每25秒切换属性，获得对应能力",
+          "无相领域：场地效果随属性变化",
+          "天魔解体：血量低于25%时狂暴，全属性+100%"
+        ],
+        "recommended_counter": ["万能阵容", "高适应性", "爆发输出"],
+        "weakness": "五行齐全的队伍额外伤害+30%"
+      }
+    ]
+  },
+
+  "difficulty_tiers": {
+    "tier_1_mortal": {
+      "name": "凡人境",
+      "boss_level": 60,
+      "required_power": 50000,
+      "damage_threshold": 500000,
+      "rewards": {
+        "base_spirit_stones": 2000,
+        "experience_potions": 5,
+        "enhancement_materials": {"type": "common", "quantity": 10}
+      }
+    },
+    "tier_2_cultivator": {
+      "name": "修真境",
+      "boss_level": 80,
+      "required_power": 150000,
+      "damage_threshold": 1500000,
+      "rewards": {
+        "base_spirit_stones": 5000,
+        "experience_potions": 10,
+        "enhancement_materials": {"type": "rare", "quantity": 8},
+        "fengshen_seals": 100
+      }
+    },
+    "tier_3_immortal": {
+      "name": "仙人境",
+      "boss_level": 100,
+      "required_power": 400000,
+      "damage_threshold": 4000000,
+      "rewards": {
+        "base_spirit_stones": 10000,
+        "experience_potions": 15,
+        "enhancement_materials": {"type": "epic", "quantity": 6},
+        "fengshen_seals": 200,
+        "character_fragments": {"rarity": "SR", "quantity": 10}
+      }
+    },
+    "tier_4_golden_immortal": {
+      "name": "金仙境",
+      "boss_level": 120,
+      "required_power": 800000,
+      "damage_threshold": 8000000,
+      "rewards": {
+        "base_spirit_stones": 20000,
+        "experience_potions": 25,
+        "enhancement_materials": {"type": "legendary", "quantity": 4},
+        "fengshen_seals": 400,
+        "character_fragments": {"rarity": "SSR", "quantity": 5}
+      }
+    },
+    "tier_5_saint": {
+      "name": "圣人境",
+      "boss_level": 150,
+      "required_power": 1500000,
+      "damage_threshold": 15000000,
+      "rewards": {
+        "base_spirit_stones": 50000,
+        "experience_potions": 50,
+        "enhancement_materials": {"type": "mythical", "quantity": 3},
+        "fengshen_seals": 800,
+        "character_fragments": {"rarity": "SSR", "quantity": 10},
+        "exclusive_artifact": "天条圣印"
+      }
+    }
+  },
+
+  "challenge_mechanics": {
+    "unlimited_attempts": true,
+    "attempt_cost": "免费，无次数限制",
+    "scoring_system": "damage_based",
+    "time_limit_seconds": 300,
+    "revival_allowed": false,
+    "formation_lock": "战斗开始后不可更换阵容"
+  },
+
+  "weekly_accumulation": {
+    "weekly_score_calculation": "sum_of_daily_best_scores",
+    "score_tiers": [
+      {
+        "tier": "bronze",
+        "min_score": 2000000,
+        "weekly_reward": {
+          "spirit_stones": 20000,
+          "fengshen_seals": 200,
+          "weekly_treasure_box": "青铜宝箱"
+        }
+      },
+      {
+        "tier": "silver",
+        "min_score": 8000000,
+        "weekly_reward": {
+          "spirit_stones": 50000,
+          "fengshen_seals": 500,
+          "weekly_treasure_box": "白银宝箱",
+          "character_choice_ticket": "SR角色选择券"
+        }
+      },
+      {
+        "tier": "gold",
+        "min_score": 20000000,
+        "weekly_reward": {
+          "spirit_stones": 100000,
+          "fengshen_seals": 1000,
+          "weekly_treasure_box": "黄金宝箱",
+          "character_choice_ticket": "SSR角色选择券"
+        }
+      },
+      {
+        "tier": "platinum",
+        "min_score": 50000000,
+        "weekly_reward": {
+          "spirit_stones": 200000,
+          "fengshen_seals": 2000,
+          "weekly_treasure_box": "铂金宝箱",
+          "exclusive_title": "天条征服者",
+          "limited_skin": "天帝战甲"
+        }
+      },
+      {
+        "tier": "diamond",
+        "min_score": 100000000,
+        "weekly_reward": {
+          "spirit_stones": 500000,
+          "fengshen_seals": 5000,
+          "weekly_treasure_box": "钻石宝箱",
+          "exclusive_title": "无上仙尊",
+          "limited_artifact": "天条权杖",
+          "cross_server_recognition": true
+        }
+      }
+    ]
+  },
+
+  "personal_ranking": {
+    "daily_leaderboard": {
+      "display_top": 500,
+      "refresh_time": "每日05:00",
+      "ranking_rewards": [
+        {"rank": 1, "reward": "传说法宝碎片×50，专属称号『今日最强』"},
+        {"rank": "2-10", "reward": "史诗法宝碎片×30，封神印×300"},
+        {"rank": "11-50", "reward": "稀有法宝碎片×20，封神印×200"},
+        {"rank": "51-100", "reward": "普通法宝碎片×10，封神印×100"},
+        {"rank": "101-500", "reward": "封神印×50"}
+      ]
+    },
+    "weekly_championship": {
+      "qualification": "weekly_total_score_top_1000",
+      "tournament_format": "bracket_elimination",
+      "championship_rewards": {
+        "champion": "跨服称号『天条霸主』，限定外观，10000封域令",
+        "runner_up": "跨服称号『天条亚圣』，限定武器，5000封域令",
+        "top_4": "跨服称号『天条战神』，限定特效，3000封域令",
+        "top_8": "跨服称号『天条英豪』，稀有材料，2000封域令"
+      }
+    }
+  },
+
+  "strategy_elements": {
+    "boss_intel_system": {
+      "damage_analysis": "显示各角色对Boss造成的伤害占比",
+      "survival_report": "统计角色生存时间和死亡原因",
+      "skill_effectiveness": "分析各技能对Boss的有效性",
+      "recommended_adjustments": "AI推荐阵容优化建议"
+    },
+    "community_sharing": {
+      "strategy_guides": "玩家分享攻略心得",
+      "formation_templates": "一键导入高分阵容",
+      "video_replays": "观看高手挑战录像",
+      "discussion_forum": "Boss机制讨论区"
+    }
+  },
+
+  "seasonal_variations": {
+    "boss_enhancement_seasons": {
+      "frequency": "quarterly",
+      "effect": "Boss获得特殊强化机制",
+      "examples": [
+        "青龙觉醒季：青龙将军额外技能『苍龙升天』",
+        "白虎狂怒季：白虎杀阵攻击速度+100%",
+        "朱雀涅槃季：朱雀炎灵可复活2次",
+        "玄武永恒季：玄武守卫获得持续回血",
+        "天魔降世季：无相天魔开局即为狂暴状态"
+      ],
+      "season_exclusive_rewards": "赛季专属称号、限定皮肤、纪念徽章"
+    }
+  },
+
+  "ui_design": {
+    "entrance_location": "主界面『征战』→『天条考验』",
+    "boss_rotation_display": "显示今日Boss及未来4日轮换",
+    "damage_meter": "实时显示伤害统计",
+    "personal_best_tracker": "记录个人最高伤害记录",
+    "quick_retry": "战斗结束后快速重新挑战",
+    "formation_presets": "针对不同Boss的预设阵容"
+  },
+
+  "accessibility_features": {
+    "auto_battle_option": "托管战斗，适合休闲玩家",
+    "skip_animation": "跳过技能动画，节省时间",
+    "damage_number_options": "伤害数字显示设置",
+    "colorblind_support": "色盲友好的UI配色",
+    "one_handed_operation": "单手操作优化"
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "first_clear_rewards": {
+    "per_stage": {
+      "ch01": {"gem": 50, "gold": 2000, "exp": 500},
+      "ch02": {"gem": 75, "gold": 3500, "exp": 800},
+      "ch03": {"gem": 100, "gold": 5000, "exp": 1200},
+      "ch04": {"gem": 150, "gold": 8000, "exp": 2000},
+      "ch05": {"gem": 200, "gold": 12000, "exp": 3000},
+      "ch06": {"gem": 250, "gold": 18000, "exp": 4500},
+      "ch07": {"gem": 300, "gold": 25000, "exp": 6250},
+      "ch08": {"gem": 400, "gold": 35000, "exp": 8750},
+      "ch09": {"gem": 500, "gold": 48000, "exp": 12000},
+      "ch10": {"gem": 600, "gold": 65000, "exp": 16250},
+      "ch11": {"gem": 700, "gold": 85000, "exp": 21250},
+      "ch12": {"gem": 1000, "gold": 120000, "exp": 30000}
+    }
+  },
+  "chapter_completion_rewards": {
+    "ch01": {
+      "title": "西岐先锋",
+      "gem": 500,
+      "hero_shard": "jifa_sr",
+      "equipment": "bronze_commander_seal",
+      "achievement_points": 100
+    },
+    "ch02": {
+      "title": "游魂破关者",
+      "gem": 600,
+      "hero_shard": "jiangziya_sr",
+      "equipment": "silver_strategy_scroll",
+      "achievement_points": 150
+    },
+    "ch03": {
+      "title": "岐山盟主",
+      "gem": 700,
+      "hero_shard": "huangfeihu_sr",
+      "equipment": "golden_alliance_banner",
+      "achievement_points": 200
+    },
+    "ch04": {
+      "title": "雷法见证者",
+      "gem": 800,
+      "hero_shard": "wenzhong_ssr",
+      "equipment": "thunder_master_whip",
+      "achievement_points": 300
+    },
+    "ch05": {
+      "title": "截教克星",
+      "gem": 900,
+      "hero_shard": "zhaogongming_ssr",
+      "equipment": "ocean_stabilizing_pearl",
+      "achievement_points": 400
+    },
+    "ch06": {
+      "title": "阐教英雄",
+      "gem": 1000,
+      "hero_shard": "guangchengzi_ssr",
+      "equipment": "heaven_flipping_seal",
+      "achievement_points": 500
+    },
+    "ch07": {
+      "title": "万仙阵破阵者",
+      "gem": 1200,
+      "hero_shard": "tongtian_jiaozhu_ssr",
+      "equipment": "qingping_divine_sword",
+      "achievement_points": 700
+    },
+    "ch08": {
+      "title": "圣人见证者",
+      "gem": 1500,
+      "hero_shard": "yuanshi_tianzun_ssr",
+      "equipment": "pangu_chaos_banner",
+      "achievement_points": 1000
+    },
+    "ch09": {
+      "title": "西方佛缘",
+      "gem": 1800,
+      "hero_shard": "jieyin_daoren_ssr",
+      "equipment": "lotus_platform",
+      "achievement_points": 1300
+    },
+    "ch10": {
+      "title": "朝歌征服者",
+      "gem": 2000,
+      "hero_shard": "nezha_ssr",
+      "equipment": "universe_ring",
+      "achievement_points": 1600
+    },
+    "ch11": {
+      "title": "商朝终结者",
+      "gem": 2500,
+      "hero_shard": "zhouwang_ssr",
+      "equipment": "human_emperor_seal",
+      "achievement_points": 2000
+    },
+    "ch12": {
+      "title": "封神使者",
+      "gem": 3000,
+      "hero_shard": "fengshen_bang",
+      "equipment": "conferred_god_platform",
+      "achievement_points": 3000
+    }
+  },
+  "star_collection_rewards": {
+    "milestones": {
+      "50_stars": {"gem": 200, "gold": 50000, "hero_exp_potion": 10},
+      "100_stars": {"gem": 500, "gold": 150000, "hero_shard": "random_sr"},
+      "200_stars": {"gem": 800, "gold": 300000, "upgrade_stone": 20},
+      "300_stars": {"gem": 1200, "gold": 500000, "hero_shard": "random_ssr"},
+      "400_stars": {"gem": 1500, "gold": 800000, "equipment": "legendary_weapon"},
+      "500_stars": {"gem": 2000, "gold": 1200000, "title": "三星征服者"},
+      "600_stars": {"gem": 3000, "gold": 2000000, "hero_shard": "limited_ssr"}
+    },
+    "perfect_chapter_bonus": {
+      "description": "单章节全三星奖励",
+      "reward_multiplier": 1.5,
+      "special_title": true,
+      "exclusive_avatar": true
+    }
+  },
+  "progression_milestones": {
+    "stage_counts": {
+      "10_stages": {
+        "title": "初出茅庐",
+        "gem": 200,
+        "gold": 20000,
+        "avatar_frame": "bronze_explorer"
+      },
+      "25_stages": {
+        "title": "小有所成",
+        "gem": 500,
+        "gold": 75000,
+        "hero_shard": "random_sr",
+        "avatar_frame": "silver_warrior"
+      },
+      "50_stages": {
+        "title": "渐入佳境",
+        "gem": 1000,
+        "gold": 200000,
+        "hero_shard": "random_ssr",
+        "avatar_frame": "gold_hero"
+      },
+      "100_stages": {
+        "title": "百战不殆",
+        "gem": 2000,
+        "gold": 500000,
+        "equipment": "milestone_weapon",
+        "avatar_frame": "platinum_legend"
+      },
+      "150_stages": {
+        "title": "征战四方",
+        "gem": 3000,
+        "gold": 1000000,
+        "hero_shard": "legendary_character",
+        "avatar_frame": "diamond_conqueror"
+      },
+      "200_stages": {
+        "title": "封神传说",
+        "gem": 5000,
+        "gold": 2000000,
+        "hero_shard": "fengshen_bang",
+        "avatar_frame": "mythic_god",
+        "special_effect": "golden_aura"
+      }
+    }
+  },
+  "seasonal_rewards": {
+    "monthly_clear_bonus": {
+      "description": "每月全章节重新挑战奖励",
+      "reset_day": 1,
+      "bonus_multiplier": 0.5,
+      "special_currency": "monthly_tokens"
+    },
+    "event_themed_rewards": {
+      "spring_festival": {"bonus_multiplier": 2.0, "special_items": "festival_decorations"},
+      "mid_autumn": {"bonus_multiplier": 1.5, "special_items": "moon_cake_tokens"},
+      "new_year": {"bonus_multiplier": 3.0, "special_items": "new_year_blessing"}
+    }
+  },
+  "reward_delivery": {
+    "auto_claim": false,
+    "mail_system": true,
+    "expiry_days": 7,
+    "batch_claim": true,
+    "preview_system": true
+  }
+}

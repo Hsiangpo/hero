@@ -1,0 +1,339 @@
+{
+  "system_name": "仙域商店限时活动系统",
+  "description": "黑市和皮肤商店的促销活动、限时折扣和特殊事件管理",
+  "version": "1.0.0",
+  "last_updated": "2025-09-16",
+
+  "daily_events": {
+    "flash_sales": {
+      "morning_rush": {
+        "time_window": "08:00-10:00",
+        "frequency": "daily",
+        "discount_range": "40%-60%",
+        "featured_categories": ["enhancement_materials", "convenience_items"],
+        "player_notification": "push_notification_30min_before",
+        "purchase_limit": "per_player_limit_applies"
+      },
+      "lunch_break_special": {
+        "time_window": "12:00-14:00",
+        "frequency": "weekdays_only",
+        "discount_range": "30%-50%",
+        "featured_categories": ["hero_fragments", "cultivation_items"],
+        "office_worker_targeting": true
+      },
+      "midnight_madness": {
+        "time_window": "00:00-02:00",
+        "frequency": "daily",
+        "discount_range": "50%-70%",
+        "featured_categories": ["premium_skins", "legendary_items"],
+        "night_owl_targeting": true,
+        "special_rewards": "bonus_skin_coins_for_purchases"
+      }
+    },
+
+    "merchant_rotations": {
+      "monday_xuanming": {
+        "primary_merchant": "xuanming_trader",
+        "specialty_day": "enhancement_monday",
+        "bonus_discount": "additional_10%_off_enhancement_items",
+        "exclusive_stock": "legendary_stones_increased_limit"
+      },
+      "tuesday_lingbao": {
+        "primary_merchant": "lingbao_master",
+        "specialty_day": "equipment_tuesday",
+        "bonus_discount": "additional_15%_off_equipment",
+        "exclusive_stock": "epic_equipment_chest_guaranteed_drop"
+      },
+      "wednesday_wuxing": {
+        "primary_merchant": "wuxing_sage",
+        "specialty_day": "elemental_wednesday",
+        "bonus_discount": "buy_2_get_1_free_elemental_crystals",
+        "exclusive_stock": "rainbow_crystal_bundle_available"
+      },
+      "thursday_mysterious": {
+        "primary_merchant": "mysterious_collector",
+        "specialty_day": "fragment_thursday",
+        "bonus_discount": "double_fragment_value",
+        "exclusive_stock": "ssr_fragment_selection_box"
+      },
+      "friday_mixed": {
+        "primary_merchant": "rotating_daily",
+        "specialty_day": "variety_friday",
+        "bonus_discount": "surprise_discount_on_random_category",
+        "exclusive_stock": "mystery_mega_bundle"
+      }
+    }
+  },
+
+  "weekly_events": {
+    "skin_showcase_week": {
+      "theme": "皮肤狂欢周",
+      "duration": "7_days",
+      "frequency": "monthly",
+      "featured_content": {
+        "new_skin_releases": "3_new_skins_launched",
+        "skin_bundles": "faction_themed_skin_collections",
+        "preview_events": "free_skin_trial_for_24_hours"
+      },
+      "special_offers": {
+        "first_purchase_bonus": "50%_extra_skin_coins",
+        "bundle_discounts": "20%_off_complete_collections",
+        "loyalty_rewards": "exclusive_skin_for_veterans"
+      }
+    },
+
+    "enhancement_week": {
+      "theme": "强化大师周",
+      "duration": "7_days",
+      "frequency": "monthly",
+      "featured_content": {
+        "enhancement_materials": "all_enhancement_items_discounted",
+        "success_rate_bonus": "20%_higher_enhancement_success",
+        "master_challenges": "special_enhancement_missions"
+      },
+      "special_mechanics": {
+        "guaranteed_success": "one_guaranteed_enhancement_per_day",
+        "bulk_discounts": "progressive_discounts_for_bulk_purchases",
+        "failure_protection": "refund_materials_on_enhancement_failure"
+      }
+    },
+
+    "hero_recruitment_week": {
+      "theme": "英雄召集周",
+      "duration": "7_days",
+      "frequency": "monthly",
+      "featured_content": {
+        "fragment_bonuses": "double_fragment_drops_from_battles",
+        "summon_discounts": "reduced_crystal_cost_for_summons",
+        "rate_up_events": "increased_ssr_summon_rates"
+      },
+      "special_rewards": {
+        "fragment_exchange": "special_fragment_to_hero_conversion",
+        "newbie_bonuses": "extra_rewards_for_new_players",
+        "completion_rewards": "exclusive_hero_for_event_completion"
+      }
+    }
+  },
+
+  "monthly_campaigns": {
+    "seasonal_festivals": {
+      "spring_festival": {
+        "chinese_name": "新春封神节",
+        "duration": "15_days",
+        "timing": "lunar_new_year_period",
+        "theme_elements": {
+          "red_and_gold_ui": "festival_themed_shop_decoration",
+          "fireworks_effects": "special_purchase_animations",
+          "traditional_music": "festival_background_audio"
+        },
+        "exclusive_content": {
+          "festival_skins": "limited_edition_new_year_themed_skins",
+          "lucky_bags": "mystery_bundles_with_guaranteed_value",
+          "red_envelope_system": "daily_login_crystal_bonuses"
+        },
+        "cultural_activities": {
+          "dragon_dance_event": "community_participation_for_shop_discounts",
+          "lantern_festival": "solve_riddles_for_exclusive_items",
+          "family_reunion_bonus": "friend_referral_increased_rewards"
+        }
+      },
+
+      "mid_autumn_festival": {
+        "chinese_name": "中秋团圆节",
+        "duration": "10_days",
+        "timing": "mid_autumn_festival_period",
+        "theme_focus": "reunion_and_bonds",
+        "special_mechanics": {
+          "moon_cake_currency": "special_event_currency_for_exclusive_items",
+          "family_bonds": "guild_member_purchase_bonuses",
+          "moon_phases": "different_discounts_based_on_moon_phase"
+        }
+      },
+
+      "summer_solstice": {
+        "chinese_name": "夏至仙境节",
+        "duration": "12_days",
+        "timing": "summer_solstice_period",
+        "theme_focus": "cooling_and_refreshment",
+        "special_features": {
+          "ice_crystal_currency": "summer_exclusive_currency",
+          "cooling_discounts": "heat_relief_themed_item_sales",
+          "beach_skins": "summer_vacation_themed_cosmetics"
+        }
+      }
+    },
+
+    "anniversary_celebrations": {
+      "game_anniversary": {
+        "duration": "30_days",
+        "frequency": "annually",
+        "milestone_rewards": {
+          "week_1": "foundation_celebration_basic_discounts",
+          "week_2": "growth_celebration_enhanced_offers",
+          "week_3": "prosperity_celebration_premium_bundles",
+          "week_4": "legacy_celebration_exclusive_commemoratives"
+        },
+        "community_goals": {
+          "collective_purchases": "server_wide_purchase_goals_unlock_bonuses",
+          "milestone_celebrations": "progressive_rewards_for_community_achievements",
+          "veteran_appreciation": "special_recognition_for_long_time_players"
+        }
+      }
+    }
+  },
+
+  "special_promotions": {
+    "first_purchase_bonuses": {
+      "new_player_welcome": {
+        "trigger": "first_crystal_purchase_ever",
+        "bonus_multiplier": "300%_value_for_first_purchase",
+        "time_limit": "within_first_7_days",
+        "exclusive_items": "newcomer_exclusive_skin_bundle"
+      },
+      "category_first_purchase": {
+        "skin_shop_debut": "100%_bonus_skin_coins_on_first_skin_purchase",
+        "black_market_debut": "50%_bonus_items_on_first_black_market_purchase",
+        "enhancement_debut": "guaranteed_success_on_first_enhancement_purchase"
+      }
+    },
+
+    "spending_milestones": {
+      "monthly_spender_rewards": {
+        "tier_1": {
+          "spending_threshold": "100_rmb_monthly",
+          "rewards": ["5%_permanent_shop_discount", "priority_customer_service"]
+        },
+        "tier_2": {
+          "spending_threshold": "500_rmb_monthly",
+          "rewards": ["10%_permanent_shop_discount", "early_access_to_new_items", "monthly_exclusive_skin"]
+        },
+        "tier_3": {
+          "spending_threshold": "2000_rmb_monthly",
+          "rewards": ["15%_permanent_shop_discount", "personal_shopper_service", "monthly_custom_bundle"]
+        },
+        "tier_4": {
+          "spending_threshold": "5000_rmb_monthly",
+          "rewards": ["20%_permanent_shop_discount", "exclusive_whale_items", "direct_developer_communication"]
+        }
+      }
+    },
+
+    "social_sharing_rewards": {
+      "skin_showcase_sharing": {
+        "reward": "skin_coins_for_social_media_posts",
+        "requirements": "share_equipped_skin_with_hashtag",
+        "daily_limit": "3_shares_per_day",
+        "bonus_rewards": "extra_coins_for_viral_posts"
+      },
+      "purchase_celebration_sharing": {
+        "reward": "crystals_for_sharing_new_purchases",
+        "requirements": "share_new_skin_or_item_acquisition",
+        "friend_bonus": "extra_rewards_if_friends_also_purchase"
+      }
+    }
+  },
+
+  "dynamic_pricing_events": {
+    "demand_based_pricing": {
+      "high_demand_surcharge": {
+        "trigger": "item_purchase_frequency_above_threshold",
+        "price_adjustment": "10-25%_price_increase",
+        "duration": "until_demand_normalizes",
+        "player_communication": "popularity_surge_notification"
+      },
+      "low_demand_discount": {
+        "trigger": "item_purchase_frequency_below_threshold",
+        "price_adjustment": "15-40%_price_decrease",
+        "duration": "until_demand_increases",
+        "marketing_push": "hidden_gem_promotion"
+      }
+    },
+
+    "time_sensitive_pricing": {
+      "countdown_sales": {
+        "mechanism": "prices_decrease_as_time_limit_approaches",
+        "starting_discount": "10%",
+        "final_discount": "60%",
+        "duration": "24_hours",
+        "psychology": "urgency_and_value_perception"
+      },
+      "auction_style_pricing": {
+        "mechanism": "limited_quantity_items_with_bidding",
+        "starting_price": "base_market_value",
+        "bid_increments": "player_determined",
+        "duration": "48_hours",
+        "exclusivity": "only_highest_bidders_obtain_items"
+      }
+    }
+  },
+
+  "cross_promotion_events": {
+    "platform_collaborations": {
+      "douyin_exclusive": {
+        "trigger": "share_game_achievement_on_douyin",
+        "reward": "exclusive_douyin_themed_skin",
+        "requirements": "hashtag_usage_and_video_creation",
+        "time_limit": "promotional_period_only"
+      },
+      "wechat_integration": {
+        "trigger": "invite_wechat_friends_to_game",
+        "reward": "friend_referral_shop_credits",
+        "scaling_rewards": "more_friends_better_rewards",
+        "mutual_benefits": "both_referrer_and_referee_receive_bonuses"
+      }
+    },
+
+    "influencer_partnerships": {
+      "streamer_exclusive_codes": {
+        "distribution": "popular_streamers_receive_discount_codes",
+        "viewer_benefits": "exclusive_skins_or_significant_discounts",
+        "tracking": "code_usage_analytics_for_roi_measurement",
+        "duration": "campaign_specific_timeframes"
+      },
+      "content_creator_collaborations": {
+        "custom_skins": "skins_designed_in_collaboration_with_creators",
+        "revenue_sharing": "creators_receive_percentage_of_skin_sales",
+        "cross_promotion": "creators_promote_game_receive_exclusive_content"
+      }
+    }
+  },
+
+  "retention_focused_events": {
+    "comeback_campaigns": {
+      "returning_player_bonuses": {
+        "trigger": "player_absence_for_7_plus_days",
+        "welcome_back_bundle": "discounted_bundle_with_progression_items",
+        "catch_up_mechanics": "accelerated_progression_for_limited_time",
+        "personal_offers": "customized_deals_based_on_previous_purchase_history"
+      }
+    },
+
+    "loyalty_programs": {
+      "daily_login_streaks": {
+        "milestone_rewards": "increasing_shop_credits_for_consecutive_logins",
+        "streak_protection": "grace_period_for_maintaining_streaks",
+        "premium_streak_rewards": "exclusive_items_for_long_term_daily_players"
+      },
+      "purchase_frequency_rewards": {
+        "regular_customer_status": "benefits_for_consistent_small_purchases",
+        "bulk_buyer_recognition": "special_status_for_large_single_purchases",
+        "seasonal_loyalty_gifts": "surprise_rewards_for_long_term_customers"
+      }
+    }
+  },
+
+  "analytics_and_optimization": {
+    "event_performance_tracking": {
+      "participation_rates": "percentage_of_players_engaging_with_events",
+      "conversion_metrics": "event_participation_to_purchase_conversion",
+      "revenue_impact": "direct_revenue_attribution_to_specific_events",
+      "player_satisfaction": "post_event_surveys_and_feedback_collection"
+    },
+    "a_b_testing_framework": {
+      "discount_level_testing": "optimal_discount_percentages_for_maximum_conversion",
+      "event_duration_testing": "ideal_event_length_for_sustained_engagement",
+      "timing_optimization": "best_times_and_days_for_event_launches",
+      "messaging_effectiveness": "most_compelling_promotional_language_and_visuals"
+    }
+  }
+}

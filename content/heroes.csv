@@ -1,0 +1,53 @@
+id,name,faction,rarity,role,tags
+# SSR 天命级 (9人) - 绝对压制力的封神至尊
+yuanshi-ssr,元始天尊,阐教,SSR,法师,破法;领袖
+tongtian-ssr,通天教主,截教,SSR,法师,破甲;教主
+taishang-ssr,太上老君,阐教,SSR,辅助,回复;炼丹
+yanzhen-ssr,杨戬,阐教,SSR,刺客,破甲;免控
+nezha-ssr,哪吒,阐教,SSR,刺客,爆发;重生
+longwang-ssr,龙王敖广,妖族,SSR,法师,群攻;水系
+jiuweihu-ssr,九尾狐苏妲己,妖族,SSR,法师,魅惑;精神
+wentaishi-ssr,闻太师,商营,SSR,坦克,反击;忠诚
+huang-feih-ssr,黄飞虎,周营,SSR,坦克,冲锋;义气
+
+# SR 仙阶级 (12人) - 神仙境界的实力派
+jiangziya-sr,姜子牙,阐教,SR,辅助,封印;智谋
+shenggongbao-sr,申公豹,截教,SR,法师,变身;奸诈
+zhaogongming-sr,赵公明,截教,SR,射手,财运;猛攻
+sanxiao-sr,云霄娘娘,截教,SR,法师,阵法;姐妹
+leizhenzi-sr,雷震子,阐教,SR,射手,雷电;飞行
+tuxingsun-sr,土行孙,阐教,SR,刺客,遁地;速攻
+lijing-sr,李靖,周营,SR,坦克,塔防;严父
+bigan-sr,比干,商营,SR,辅助,牺牲;忠臣
+zhijijiang-sr,雉鸡精,妖族,SR,法师,幻术;妖媚
+pipajing-sr,琵琶精,妖族,SR,辅助,音律;魅惑
+huangtianhua-sr,黄天化,周营,SR,射手,神箭;孝子
+yuhua-sr,余化,商营,SR,坦客,防守;猛将
+
+# R 英杰级 (14人) - 人间英雄的代表
+jifa-sr,姬发,周营,R,射手,王者;仁德
+jichang-sr,姬昌,周营,R,辅助,预言;贤君
+sanyi-sr,散宜生,周营,R,辅助,智谋;文臣
+nangong-sr,南宫适,周营,R,坦克,护主;武将
+xianjia-sr,辛甲,周营,R,射手,弓术;猎手
+zhangguifang-sr,张桂芳,商营,R,法师,呼名;术士
+dengjiugong-sr,邓九公,商营,R,坦克,刀法;勇将
+chongheihu-sr,崇黑虎,商营,R,坦克,虎威;猛兽
+guangchengzi-sr,广成子,阐教,R,法师,番天印;翻天
+chijingzi-sr,赤精子,阐教,R,法师,阴阳镜;照妖
+huanglong-sr,黄龙真人,阐教,R,辅助,龙威;真人
+taiyi-sr,太乙真人,阐教,R,法师,九龙神火;救苦
+masu-sr,马遂,截教,R,刺客,飞刀;暗杀
+qingxu-sr,清虚道德真君,截教,R,辅助,德行;清净
+
+# N 凡火级 (10人) - 凡人起步但有潜力
+jinji-sr,金吒,周营,N,射手,降魔;二哥
+muji-sr,木吒,周营,N,辅助,观音;三弟
+handulong-sr,韩毒龙,商营,N,刺客,毒功;阴险
+hanzhixian-sr,韩芝仙,商营,N,法师,仙术;妖道
+wucheng-sr,乌城,商营,N,坦克,城防;守将
+elaiwang-sr,恶来王,商营,N,坦克,巨力;暴君
+feilian-sr,飞廉,商营,N,射手,风神;疾速
+elai-sr,恶来,商营,N,刺客,蛮力;残暴
+jiazi-sr,甲子,截教,N,法师,天君;雷霆
+yiyu-sr,乙酉,截教,N,辅助,天君;治疗

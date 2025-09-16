@@ -1,0 +1,197 @@
+{
+  "system_name": "封神天梯",
+  "description": "无尽仙境试炼，考验道友修为境界的永恒挑战",
+  "reference_system": "咸将塔",
+  "tower_type": "endless",
+  "max_display_floor": 999,
+
+  "floor_progression": {
+    "elite_floors": [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200],
+    "boss_floors": [50, 100, 150, 200, 250, 300, 350, 400, 450, 500],
+    "milestone_floors": [25, 75, 125, 175, 225, 275, 325, 375, 425, 475],
+    "difficulty_increase_per_floor": 1.08,
+    "elite_difficulty_multiplier": 1.5,
+    "boss_difficulty_multiplier": 2.2
+  },
+
+  "milestone_rewards": [
+    {
+      "floor": 25,
+      "rewards": {
+        "fengshen_seals": 100,
+        "spirit_stones": 5000,
+        "enhancement_materials": {"type": "rare", "quantity": 10}
+      },
+      "title": "初入仙境"
+    },
+    {
+      "floor": 50,
+      "rewards": {
+        "fengshen_seals": 200,
+        "spirit_stones": 10000,
+        "character_fragments": {"rarity": "SR", "quantity": 30},
+        "tower_exclusive_artifact": "昆仑印"
+      },
+      "title": "昆仑弟子"
+    },
+    {
+      "floor": 100,
+      "rewards": {
+        "fengshen_seals": 500,
+        "spirit_stones": 25000,
+        "character_fragments": {"rarity": "SSR", "quantity": 20},
+        "tower_exclusive_artifact": "封神榜碎片"
+      },
+      "title": "太乙真仙"
+    },
+    {
+      "floor": 200,
+      "rewards": {
+        "fengshen_seals": 1000,
+        "spirit_stones": 50000,
+        "guaranteed_ssr_ticket": 1,
+        "tower_exclusive_skin": "登仙者外观"
+      },
+      "title": "大罗金仙"
+    },
+    {
+      "floor": 300,
+      "rewards": {
+        "fengshen_seals": 2000,
+        "spirit_stones": 100000,
+        "targeting_charm_supreme": 2,
+        "tower_exclusive_title": "封神战神"
+      },
+      "title": "准圣境界"
+    }
+  ],
+
+  "sweep_system": {
+    "duplicate_trait_ban": true,
+    "unlock_condition": "cleared_floor",
+    "daily_sweep_tickets": 3,
+    "vip_bonus_tickets": {
+      "vip_3": 1,
+      "vip_5": 2,
+      "vip_7": 3
+    },
+    "sweep_efficiency": 100,
+    "sweep_time_seconds": 10
+  },
+
+  "strategic_mechanics": {
+    "forbidden_traits": {
+      "description": "每层不能重复使用相同法宝词条",
+      "examples": ["攻击力+X%", "生命值+X%", "暴击率+X%"],
+      "penalty": "使用重复词条的角色战力-50%"
+    },
+    "element_rotation": {
+      "description": "每10层重点克制不同五行属性",
+      "pattern": ["金", "木", "水", "火", "土"],
+      "bonus_damage": 30,
+      "resistance_reduction": 25
+    },
+    "formation_restrictions": {
+      "certain_floors": [45, 95, 145, 195, 245],
+      "restriction_types": ["single_faction", "no_ssr", "specific_element_only"],
+      "reward_multiplier": 1.5
+    }
+  },
+
+  "difficulty_curve": {
+    "base_enemy_power": 10000,
+    "floor_1_to_50": {
+      "power_scaling": "linear",
+      "coefficient": 1.05
+    },
+    "floor_51_to_100": {
+      "power_scaling": "polynomial",
+      "coefficient": 1.08
+    },
+    "floor_101_plus": {
+      "power_scaling": "exponential",
+      "coefficient": 1.12,
+      "cap_per_floor": 50000
+    }
+  },
+
+  "failure_analysis": {
+    "insufficient_dps": {
+      "threshold": "timeout_90_percent",
+      "recommendation": "提升主C角色攻击力或考虑破甲类法宝"
+    },
+    "lack_control": {
+      "threshold": "team_death_count_over_3",
+      "recommendation": "增加控制系角色如申公豹、三霄娘娘"
+    },
+    "wrong_formation": {
+      "threshold": "damage_taken_over_150_percent",
+      "recommendation": "检查五行相克关系，调整阵容配置"
+    },
+    "insufficient_healing": {
+      "threshold": "total_hp_lost_over_200_percent",
+      "recommendation": "考虑添加治疗型角色或生命类法宝"
+    }
+  },
+
+  "daily_activities": {
+    "tower_climb_task": {
+      "description": "每日登塔挑战",
+      "requirement": "尝试挑战3次，无论成败",
+      "reward": "封神印×50，经验药剂×3"
+    },
+    "sweep_task": {
+      "description": "天梯扫荡任务",
+      "requirement": "使用扫荡券3次",
+      "reward": "额外材料×20%"
+    }
+  },
+
+  "leaderboard": {
+    "server_ranking": {
+      "display_top": 100,
+      "reward_tiers": [
+        {"rank": 1, "weekly_reward": "传说级法宝选择箱×1"},
+        {"rank": "2-3", "weekly_reward": "史诗级法宝选择箱×1"},
+        {"rank": "4-10", "weekly_reward": "稀有级法宝选择箱×1"},
+        {"rank": "11-50", "weekly_reward": "封神印×500"},
+        {"rank": "51-100", "weekly_reward": "封神印×300"}
+      ]
+    },
+    "cross_server_ranking": {
+      "enabled": true,
+      "season_duration_weeks": 4,
+      "season_rewards": "专属称号、限定头像框、独家皮肤"
+    }
+  },
+
+  "special_events": {
+    "tower_rush_weekend": {
+      "frequency": "monthly",
+      "duration_hours": 48,
+      "bonus": "挑战次数无限制，奖励翻倍",
+      "special_reward": "限时法宝『九天玄雷』"
+    },
+    "element_blessing_week": {
+      "frequency": "quarterly",
+      "effect": "指定五行属性角色获得额外50%战力",
+      "rotation": ["金系强化周", "木系强化周", "水系强化周", "火系强化周", "土系强化周"]
+    }
+  },
+
+  "ui_elements": {
+    "entrance_location": "主界面右侧『征战』按钮 → 『封神天梯』",
+    "progress_display": "当前层数 / 历史最高层数",
+    "quick_challenge": "一键使用最优阵容挑战",
+    "formation_save": "保存多套天梯专用阵容",
+    "replay_system": "查看通关录像，学习高手策略"
+  },
+
+  "balance_considerations": {
+    "power_ceiling": "500层后增长趋缓，避免数值膨胀过快",
+    "f2p_progress": "0氪玩家预期可达150-200层",
+    "light_spender_progress": "微氪玩家预期可达250-300层",
+    "whale_progress": "重氪玩家预期可达400层以上",
+    "time_investment": "每日挑战时间控制在15-30分钟"
+  }
+}

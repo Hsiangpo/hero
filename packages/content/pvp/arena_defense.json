@@ -1,0 +1,251 @@
+{
+  "defense_formation_system": {
+    "setup_requirements": {
+      "minimum_characters": 5,
+      "maximum_characters": 5,
+      "formation_slots": {
+        "front_row": 3,
+        "back_row": 2
+      },
+      "equipment_requirement": "must_be_equipped",
+      "level_requirement": "minimum_level_20"
+    },
+
+    "formation_management": {
+      "save_multiple_formations": {
+        "free_slots": 3,
+        "premium_slots": 8,
+        "formation_naming": true,
+        "formation_sharing": true
+      },
+      "auto_optimization": {
+        "enabled_by_default": false,
+        "ai_suggestion_system": true,
+        "power_maximization": true,
+        "element_balance_consideration": true
+      },
+      "formation_lock": {
+        "lock_during_battle": true,
+        "unlock_after_battle": "automatic",
+        "emergency_unlock": "costs_spirit_stones"
+      }
+    }
+  },
+
+  "defense_battle_mechanics": {
+    "ai_control_system": {
+      "ai_difficulty": "adaptive_to_attacker_strength",
+      "skill_usage_intelligence": "high",
+      "formation_switching": false,
+      "tactical_decision_making": true
+    },
+
+    "defender_advantages": {
+      "home_field_bonus": {
+        "defense_boost": 0.05,
+        "health_boost": 0.1,
+        "skill_cooldown_reduction": 0.1
+      },
+      "formation_knowledge": {
+        "attacker_sees_formation": false,
+        "defender_sees_attack_history": true,
+        "previous_battle_analysis": true
+      }
+    },
+
+    "battle_simulation": {
+      "real_time_calculation": false,
+      "deterministic_outcome": true,
+      "replay_generation": "automatic",
+      "result_factors": [
+        "character_power",
+        "formation_synergy",
+        "element_matchups",
+        "bond_activations",
+        "rng_controlled_variance"
+      ]
+    }
+  },
+
+  "defense_record_tracking": {
+    "battle_history": {
+      "records_stored": 50,
+      "detailed_battle_logs": true,
+      "attacker_information": {
+        "username": true,
+        "tier": true,
+        "power_level": true,
+        "formation_used": false
+      }
+    },
+
+    "defense_statistics": {
+      "total_defenses": true,
+      "successful_defenses": true,
+      "defense_win_rate": true,
+      "most_effective_formation": true,
+      "weakest_matchups": true,
+      "peak_defense_times": true
+    },
+
+    "replay_system": {
+      "save_all_defenses": false,
+      "save_successful_defenses": true,
+      "save_close_battles": true,
+      "replay_sharing": true,
+      "replay_analysis_tools": true
+    }
+  },
+
+  "defense_rewards": {
+    "successful_defense_rewards": {
+      "base_rewards": {
+        "fengshen_seals": 10,
+        "spirit_stones": 150,
+        "arena_tokens": 2,
+        "defense_points": 5
+      },
+      "tier_multipliers": {
+        "bronze": 1.0,
+        "silver": 1.2,
+        "gold": 1.4,
+        "platinum": 1.6,
+        "diamond": 1.8,
+        "fengshen": 2.0
+      },
+      "streak_bonuses": {
+        "3_consecutive_defenses": {
+          "bonus_multiplier": 1.2,
+          "additional_rewards": ["defense_master_progress"]
+        },
+        "5_consecutive_defenses": {
+          "bonus_multiplier": 1.5,
+          "additional_rewards": ["exclusive_defender_title_progress"]
+        },
+        "10_consecutive_defenses": {
+          "bonus_multiplier": 2.0,
+          "additional_rewards": ["legendary_defender_recognition"]
+        }
+      }
+    },
+
+    "defense_participation_rewards": {
+      "attempted_defense_consolation": {
+        "fengshen_seals": 3,
+        "spirit_stones": 50,
+        "arena_tokens": 1,
+        "experience_points": 25
+      },
+      "close_defense_bonus": {
+        "condition": "lose_with_enemy_health_below_30_percent",
+        "fengshen_seals": 5,
+        "spirit_stones": 75,
+        "valiant_defender_progress": 1
+      }
+    }
+  },
+
+  "formation_protection_mechanisms": {
+    "defense_formation_stability": {
+      "character_removal_protection": "formation_invalid_if_character_sold",
+      "equipment_change_impact": "immediate_power_recalculation",
+      "level_up_benefits": "automatic_power_increase",
+      "ascension_benefits": "significant_power_boost"
+    },
+
+    "formation_backup_system": {
+      "auto_backup_creation": true,
+      "backup_triggers": [
+        "character_unavailable",
+        "equipment_missing",
+        "formation_power_drop"
+      ],
+      "fallback_formation": "highest_power_auto_generated"
+    }
+  },
+
+  "defense_scheduling": {
+    "availability_settings": {
+      "always_available": true,
+      "optional_defense_windows": false,
+      "maintenance_immunity": true,
+      "timezone_considerations": "server_time_based"
+    },
+
+    "attack_frequency_limits": {
+      "same_attacker_cooldown": "4_hours",
+      "total_attacks_per_day": "no_limit",
+      "protection_after_recent_attack": "30_minutes"
+    }
+  },
+
+  "advanced_defense_features": {
+    "adaptive_ai_learning": {
+      "enabled": false,
+      "learning_from_defeats": false,
+      "formation_adjustment_suggestions": true,
+      "weakness_identification": true
+    },
+
+    "defense_challenges": {
+      "monthly_defense_achievements": {
+        "iron_fortress": "50_successful_defenses",
+        "unbreakable_wall": "100_successful_defenses",
+        "legendary_guardian": "200_successful_defenses"
+      },
+      "special_defense_events": {
+        "fortress_siege_weekend": {
+          "increased_attack_frequency": true,
+          "bonus_defense_rewards": 2.0,
+          "leaderboard_competition": true
+        }
+      }
+    }
+  },
+
+  "social_defense_features": {
+    "sect_defense_coordination": {
+      "formation_sharing_within_sect": true,
+      "sect_defense_strategies": true,
+      "collective_defense_achievements": true,
+      "sect_defense_leaderboards": true
+    },
+
+    "defense_mentorship": {
+      "formation_advice_system": true,
+      "experienced_player_guidance": true,
+      "defense_tips_and_tutorials": true,
+      "community_formation_database": true
+    }
+  },
+
+  "premium_defense_features": {
+    "vip_defense_benefits": {
+      "vip1": ["additional_formation_slot"],
+      "vip3": ["detailed_attack_analytics"],
+      "vip5": ["priority_defense_notifications"],
+      "vip6": ["custom_defense_victory_animations"]
+    },
+
+    "premium_pass_defense_perks": {
+      "enhanced_replay_features": true,
+      "exclusive_defender_cosmetics": true,
+      "advanced_formation_templates": true,
+      "premium_defense_titles": true
+    }
+  },
+
+  "defense_balance_mechanisms": {
+    "power_level_considerations": {
+      "attacker_power_matching": "within_15_percent_variance",
+      "underdog_protection": "bonus_for_defending_against_stronger",
+      "power_spike_detection": "prevent_impossible_formations"
+    },
+
+    "fairness_systems": {
+      "formation_power_calculation": "comprehensive_and_accurate",
+      "hidden_stats_prevention": "all_factors_transparent",
+      "rng_minimization": "skill_over_luck_emphasis"
+    }
+  }
+}

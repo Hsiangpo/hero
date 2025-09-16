@@ -1,0 +1,370 @@
+{
+  "acquisition_system": {
+    "description": "第二维数值线系统的完整获取途径设计",
+    "design_principle": "多样化获取，分层满足，长期价值"
+  },
+
+  "pet_acquisition_sources": {
+    "fishing_system": {
+      "primary_method": "钓场垂钓",
+      "locations": {
+        "青丘山": {
+          "daily_attempts": 10,
+          "cost_per_attempt": 100,
+          "guaranteed_fragments": 2,
+          "pet_pool": ["九尾灵狐", "九天天马"],
+          "special_events": "周末产出翻倍"
+        },
+        "昆仑瑶池": {
+          "daily_attempts": 5,
+          "cost_per_attempt": 500,
+          "guaranteed_fragments": 1,
+          "pet_pool": ["五彩麒麟", "九天凤凰"],
+          "unlock_requirement": "角色等级30级"
+        },
+        "龙王池": {
+          "daily_attempts": 8,
+          "cost_per_attempt": 200,
+          "guaranteed_fragments": 2,
+          "pet_pool": ["东方青龙", "龙子霸下"],
+          "special_mechanism": "连续垂钓稀有概率递增"
+        },
+        "金光洞": {
+          "daily_attempts": 6,
+          "cost_per_attempt": 300,
+          "guaranteed_fragments": 1,
+          "pet_pool": ["西方白虎", "神兽辟邪"],
+          "bonus_condition": "使用金系角色钓鱼概率+20%"
+        },
+        "南天门": {
+          "daily_attempts": 4,
+          "cost_per_attempt": 800,
+          "guaranteed_fragments": 1,
+          "pet_pool": ["南方朱雀", "九天凤凰"],
+          "elite_location": "VIP3以上专享"
+        },
+        "北海深渊": {
+          "daily_attempts": 3,
+          "cost_per_attempt": 1000,
+          "guaranteed_fragments": 1,
+          "pet_pool": ["北方玄武", "上古饕餮"],
+          "challenge_requirement": "需要通过试炼才能垂钓"
+        }
+      },
+      "pity_system": {
+        "rare_pity": "连续20次未获得稀有灵宠，第21次必得",
+        "ssr_pity": "连续80次垂钓必得SSR灵宠",
+        "location_bonus": "单一钓场垂钓次数越多，稀有概率微增"
+      }
+    },
+
+    "combat_rewards": {
+      "daily_challenges": {
+        "pet_trial": {
+          "description": "每日灵宠试炼",
+          "attempts": 3,
+          "rewards": "随机灵宠碎片×3-5",
+          "bonus_day": "周日奖励翻倍"
+        },
+        "element_clash": {
+          "description": "五行争霸战",
+          "daily_rotation": "每日轮换克制属性",
+          "rewards": "对应属性灵宠碎片×2-4",
+          "perfect_clear_bonus": "额外获得强化水晶"
+        }
+      },
+      "weekly_events": {
+        "beast_hunting": {
+          "description": "神兽狩猎周",
+          "frequency": "每月第一周",
+          "special_bosses": ["青龙领主", "白虎霸主", "朱雀女皇", "玄武大帝"],
+          "first_kill_reward": "对应SSR灵宠直接获得",
+          "participation_reward": "大量碎片和强化材料"
+        },
+        "fishing_festival": {
+          "description": "钓场嘉年华",
+          "frequency": "每月第三周",
+          "special_effects": "所有钓场产出翻倍，稀有概率+50%",
+          "exclusive_rewards": "限定外观皮肤灵宠"
+        }
+      },
+      "pvp_integration": {
+        "arena_rewards": {
+          "weekly_ranking": [
+            {"rank": "1-10", "reward": "SSR灵宠选择券×1"},
+            {"rank": "11-50", "reward": "SR灵宠选择券×1"},
+            {"rank": "51-200", "reward": "灵宠碎片×20"},
+            {"rank": "201-500", "reward": "灵宠碎片×10"}
+          ]
+        },
+        "guild_war_contribution": {
+          "participation_reward": "通用碎片×5-10",
+          "victory_bonus": "稀有灵宠碎片×3",
+          "mvp_reward": "SSR灵宠碎片×1"
+        }
+      }
+    },
+
+    "shop_systems": {
+      "sect_shop": {
+        "refresh_frequency": "每日6点刷新",
+        "currency": "宗门贡献点",
+        "available_items": {
+          "pet_fragments": {
+            "R级碎片": {"cost": 50, "daily_limit": 5},
+            "SR级碎片": {"cost": 200, "daily_limit": 2},
+            "SSR级碎片": {"cost": 800, "daily_limit": 1, "member_level_requirement": "核心成员"}
+          },
+          "enhancement_materials": {
+            "强化水晶": {"cost": 100, "daily_limit": 10},
+            "进阶石": {"cost": 500, "daily_limit": 3}
+          }
+        }
+      },
+      "honor_shop": {
+        "currency": "征战荣誉点",
+        "special_items": {
+          "legendary_pet_ticket": {
+            "description": "传说灵宠召唤券",
+            "cost": 5000,
+            "monthly_limit": 1,
+            "guarantee": "必出SSR级灵宠"
+          },
+          "element_specific_fragments": {
+            "description": "指定五行属性碎片包",
+            "cost": 1500,
+            "content": "10个指定属性灵宠碎片"
+          }
+        }
+      },
+      "mysterious_merchant": {
+        "appearance_frequency": "每周随机2-3次",
+        "duration": "24小时限时",
+        "exclusive_offers": {
+          "rare_pet_direct_purchase": "直接购买特定稀有灵宠",
+          "fragment_bundles": "超值碎片礼包",
+          "enhancement_deals": "升星材料限时优惠"
+        },
+        "payment_options": ["钻石", "封域令", "特殊代币"]
+      }
+    },
+
+    "event_acquisition": {
+      "seasonal_events": {
+        "spring_awakening": {
+          "theme": "春回大地，万兽复苏",
+          "duration": "3月整月",
+          "featured_pets": ["木系灵宠产出+100%"],
+          "special_activity": "种植仙草喂养灵宠",
+          "exclusive_reward": "春之精灵限定皮肤"
+        },
+        "summer_divine_beasts": {
+          "theme": "盛夏神兽大聚会",
+          "duration": "6-8月",
+          "mega_event": "四象神兽同时出现",
+          "collaboration_activity": "全服合作解锁稀有灵宠",
+          "milestone_rewards": "参与度越高，奖励越丰厚"
+        },
+        "autumn_harvest": {
+          "theme": "金秋收获季",
+          "duration": "9-10月",
+          "double_rewards": "所有获取途径产出翻倍",
+          "thanksgiving_bonus": "每日登录额外奖励"
+        },
+        "winter_trials": {
+          "theme": "寒冬试炼",
+          "duration": "12-2月",
+          "endurance_challenge": "连续作战获得稀有奖励",
+          "ice_fishing": "特殊冰钓场开放"
+        }
+      },
+      "festival_celebrations": {
+        "chinese_new_year": {
+          "activity": "生肖灵宠限时召唤",
+          "special_mechanism": "每年对应生肖灵宠概率大幅提升",
+          "cultural_integration": "传统节日元素融入灵宠设计"
+        },
+        "mid_autumn": {
+          "activity": "月下赏灵大会",
+          "special_rewards": "月兔、嫦娥等传说灵宠",
+          "community_event": "全服玩家共同完成任务"
+        }
+      }
+    },
+
+    "achievement_system": {
+      "collection_achievements": {
+        "pet_collector": {
+          "tiers": [
+            {"requirement": "收集10只不同灵宠", "reward": "通用碎片×50"},
+            {"requirement": "收集20只不同灵宠", "reward": "SR灵宠选择券×1"},
+            {"requirement": "收集全部灵宠", "reward": "专属称号+限定头像框"}
+          ]
+        },
+        "rarity_master": {
+          "ssr_collector": "拥有5只不同SSR灵宠",
+          "star_master": "任意灵宠达到5星",
+          "bond_expert": "激活20个专属羁绊"
+        }
+      },
+      "activity_achievements": {
+        "fishing_master": {
+          "daily_angler": "连续30天完成钓场任务",
+          "location_expert": "在所有钓场各垂钓100次",
+          "legendary_catch": "钓到10只SSR级灵宠"
+        },
+        "combat_achievements": {
+          "pet_warrior": "使用灵宠获胜1000场",
+          "synergy_master": "激活所有灵宠技能效果",
+          "bond_champion": "专属羁绊获胜500场"
+        }
+      }
+    }
+  },
+
+  "gadget_acquisition_sources": {
+    "story_progression": {
+      "main_quest_rewards": {
+        "封神榜": "主线剧情第10章奖励",
+        "乾坤圈": "首充6元礼包附赠",
+        "镇妖铃": "完成天阶1级试炼"
+      },
+      "character_unlocks": {
+        "mechanism": "获得特定角色自动解锁对应灵玩",
+        "examples": {
+          "哪吒": "解锁乾坤圈和混天珠",
+          "太上老君": "解锁太极图",
+          "姜子牙": "解锁封神榜强化版本"
+        }
+      }
+    },
+
+    "achievement_rewards": {
+      "combat_mastery": {
+        "坠星锤": "完成『力拔山河』成就（单次伤害超过100万）",
+        "七星宝剑": "角色平均星级达到8星",
+        "定海神针": "征战模式获胜100场"
+      },
+      "collection_milestones": {
+        "混天珠": "抽取角色达到100次",
+        "九龙神火罩": "完成『九龙试炼』特殊副本"
+      },
+      "social_achievements": {
+        "太极图": "宗门等级达到5级",
+        "山河社稷图": "VIP5级解锁"
+      }
+    },
+
+    "premium_acquisition": {
+      "vip_privileges": {
+        "VIP3": "解锁南天门钓场",
+        "VIP5": "解锁山河社稷图",
+        "VIP7": "专属灵玩定制服务"
+      },
+      "monthly_passes": {
+        "gadget_mastery_pass": {
+          "cost": "68元/月",
+          "benefits": [
+            "每周解锁1个新灵玩",
+            "灵玩效果+10%",
+            "专属灵玩皮肤"
+          ]
+        }
+      },
+      "limited_offers": {
+        "legendary_gadget_bundle": {
+          "frequency": "每季度限时销售",
+          "content": "3个传说级灵玩+强化材料",
+          "target_audience": "深度付费玩家"
+        }
+      }
+    },
+
+    "competitive_rewards": {
+      "ranking_rewards": {
+        "server_leaderboard": {
+          "top_1": "专属定制灵玩",
+          "top_10": "传说级灵玩选择券",
+          "top_100": "稀有灵玩升级材料"
+        },
+        "cross_server_tournament": {
+          "champion": "全新独占灵玩",
+          "finalist": "限定版现有灵玩",
+          "participation": "强化材料和调谐石"
+        }
+      },
+      "guild_contributions": {
+        "guild_boss_rewards": {
+          "first_kill": "全宗门成员获得特殊灵玩",
+          "damage_ranking": "按伤害贡献分配材料",
+          "participation": "基础调谐石奖励"
+        }
+      }
+    }
+  },
+
+  "economic_balance": {
+    "daily_production_control": {
+      "free_player_daily_income": {
+        "pet_fragments": "4-6个（通过日常活动）",
+        "enhancement_materials": "2-3个强化水晶",
+        "gadget_materials": "1-2个调谐石",
+        "progression_timeline": "1个月获得1只SR灵宠，3个月获得1只SSR灵宠"
+      },
+      "premium_player_acceleration": {
+        "monthly_card_benefits": "每日产出+50%",
+        "vip_bonuses": "高级钓场权限，稀有概率提升",
+        "direct_purchase_options": "跳过等待时间，直接获得"
+      }
+    },
+
+    "long_term_value_retention": {
+      "content_updates": {
+        "new_pet_release_schedule": "每2个月新增2-3只灵宠",
+        "gadget_expansion": "每季度新增1-2个灵玩",
+        "power_creep_control": "新内容提供差异化，非数值碾压"
+      },
+      "meta_rotation": {
+        "seasonal_adjustments": "根据PvP数据微调灵玩效果",
+        "new_synergy_discovery": "定期解锁新的组合搭配",
+        "balance_patches": "确保各种配置都有生存空间"
+      }
+    },
+
+    "monetization_integration": {
+      "convenience_monetization": {
+        "time_skip_options": "付费跳过升星等待时间",
+        "attempt_refills": "购买额外钓场次数",
+        "material_bundles": "强化材料优惠包"
+      },
+      "premium_content": {
+        "exclusive_skins": "灵宠外观皮肤",
+        "early_access": "新灵宠提前体验权",
+        "customization": "个性化灵玩效果定制"
+      },
+      "social_monetization": {
+        "gift_system": "向好友赠送灵宠碎片",
+        "showcase_features": "展示收集成果的社交功能",
+        "competition_entries": "参加限定比赛的门票"
+      }
+    }
+  },
+
+  "quality_assurance": {
+    "acquisition_fairness": {
+      "probability_transparency": "所有概率公开透明",
+      "pity_system_guarantee": "保底机制确保最大投入上限",
+      "no_pay_to_win": "付费主要提供便利性，不破坏游戏平衡"
+    },
+    "progression_satisfaction": {
+      "daily_progress_visibility": "玩家每天都能看到明确进步",
+      "milestone_celebration": "重要节点有仪式感奖励",
+      "collection_pride": "稀有获得时的成就感展示"
+    },
+    "retention_mechanisms": {
+      "daily_engagement": "每日必做活动奖励丰厚",
+      "weekly_goals": "周目标提供中期动力",
+      "long_term_collection": "收集完成需要数月时间，维持长期兴趣"
+    }
+  }
+}

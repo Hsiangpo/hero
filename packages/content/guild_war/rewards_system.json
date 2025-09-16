@@ -1,0 +1,487 @@
+{
+  "system_name": "封域之争奖励荣誉系统",
+  "description": "完整的奖励分配、荣誉等级、赛季积分和长期激励机制",
+  "version": "1.0.0",
+  "last_updated": "2025-09-16",
+
+  "reward_structure": {
+    "championship_rewards": {
+      "rank_1_champion": {
+        "title": "封神霸主",
+        "title_duration": "permanent",
+        "title_color": "#FFD700",
+        "title_effects": ["exclusive_guild_banner", "special_name_display", "priority_customer_service"],
+        "crystal_reward": 100000,
+        "exclusive_items": {
+          "golden_phoenix_banner": {
+            "type": "guild_banner",
+            "description": "金凤凰旗帜，象征至高荣耀",
+            "effects": ["guild_prestige_boost", "member_recruitment_bonus"],
+            "rarity": "legendary_unique"
+          },
+          "nine_heavens_crown": {
+            "type": "trophy",
+            "description": "九重天冠，封神之证",
+            "display_location": "guild_hall_center",
+            "effects": ["weekly_bonus_resources", "exclusive_guild_skills"]
+          },
+          "champion_cloak": {
+            "type": "leader_cosmetic",
+            "description": "冠军披风，宗主专属外观",
+            "visual_effects": ["golden_aura", "floating_particles", "special_animations"]
+          }
+        },
+        "season_points": 1000,
+        "special_privileges": {
+          "naming_rights": "可以为下届比赛的一个天域命名",
+          "exhibition_match": "可以挑战任意宗门进行表演赛",
+          "strategy_consultation": "可以参与游戏平衡性建议讨论"
+        }
+      },
+
+      "rank_2_runner_up": {
+        "title": "天界亚王",
+        "title_duration": "one_year",
+        "title_color": "#C0C0C0",
+        "crystal_reward": 75000,
+        "exclusive_items": {
+          "silver_dragon_banner": {
+            "type": "guild_banner",
+            "description": "银龙旗帜，仅次于冠军的荣耀",
+            "effects": ["guild_prestige_boost_medium"],
+            "rarity": "legendary"
+          },
+          "celestial_blade": {
+            "type": "trophy",
+            "description": "天界神剑，实力的象征",
+            "effects": ["combat_bonus_small"]
+          }
+        },
+        "season_points": 750,
+        "special_privileges": {
+          "priority_matching": "下届比赛优先分组权",
+          "beta_testing": "新功能抢先体验资格"
+        }
+      },
+
+      "rank_3_third_place": {
+        "title": "仙域季军",
+        "title_duration": "six_months",
+        "title_color": "#CD7F32",
+        "crystal_reward": 50000,
+        "exclusive_items": {
+          "bronze_tiger_banner": {
+            "type": "guild_banner",
+            "description": "铜虎旗帜，勇猛的证明",
+            "rarity": "epic"
+          },
+          "immortal_shield": {
+            "type": "trophy",
+            "description": "不朽之盾，防御的象征"
+          }
+        },
+        "season_points": 500
+      },
+
+      "rank_4_semifinalist": {
+        "title": "神州四强",
+        "title_duration": "three_months",
+        "title_color": "#40E0D0",
+        "crystal_reward": 30000,
+        "exclusive_items": {
+          "jade_banner": {
+            "type": "guild_banner",
+            "description": "碧玉旗帜，高贵的品质"
+          },
+          "sacred_pearl": {
+            "type": "trophy",
+            "description": "圣珠，智慧的结晶"
+          }
+        },
+        "season_points": 350
+      }
+    },
+
+    "participation_rewards": {
+      "top_8_quarterfinalist": {
+        "title": "八强豪门",
+        "title_duration": "one_month",
+        "crystal_reward": 20000,
+        "season_points": 200,
+        "special_items": {
+          "legendary_enhancement_stone": {
+            "quantity": 5,
+            "description": "传说级强化石，提升装备品质"
+          },
+          "elite_recruitment_token": {
+            "quantity": 3,
+            "description": "精英招募令，吸引高级人才"
+          }
+        }
+      },
+
+      "top_16_qualified": {
+        "title": "十六强劲旅",
+        "title_duration": "two_weeks",
+        "crystal_reward": 10000,
+        "season_points": 100,
+        "special_items": {
+          "epic_enhancement_stone": {
+            "quantity": 10,
+            "description": "史诗级强化石"
+          },
+          "advanced_training_manual": {
+            "quantity": 5,
+            "description": "高级训练手册，提升成员能力"
+          }
+        }
+      },
+
+      "qualified_participant": {
+        "title": "封域勇士",
+        "title_duration": "one_week",
+        "crystal_reward": 5000,
+        "season_points": 50,
+        "special_items": {
+          "rare_enhancement_stone": {
+            "quantity": 20,
+            "description": "稀有强化石"
+          },
+          "participation_commemorative_badge": {
+            "quantity": 1,
+            "description": "参赛纪念徽章"
+          }
+        }
+      },
+
+      "registered_applicant": {
+        "title": "挑战者",
+        "crystal_reward": 1000,
+        "season_points": 10,
+        "special_items": {
+          "basic_enhancement_stone": {
+            "quantity": 50,
+            "description": "基础强化石"
+          },
+          "guild_experience_boost": {
+            "quantity": 1,
+            "duration": "24_hours",
+            "description": "宗门经验加成道具"
+          }
+        }
+      }
+    }
+  },
+
+  "individual_achievements": {
+    "mvp_categories": {
+      "most_eliminations": {
+        "title": "杀神",
+        "title_color": "#FF0000",
+        "requirement": "单场比赛击败敌人数量最多",
+        "crystal_reward": 5000,
+        "exclusive_items": {
+          "blood_demon_avatar": {
+            "type": "character_skin",
+            "description": "血魔化身，展现杀戮美学",
+            "visual_effects": ["red_aura", "blood_particles", "intimidating_presence"]
+          },
+          "slayer_weapon_skin": {
+            "type": "weapon_enhancement",
+            "description": "屠戮者武器皮肤"
+          }
+        }
+      },
+
+      "best_support": {
+        "title": "战神助手",
+        "title_color": "#00FF00",
+        "requirement": "助攻和治疗数量最多",
+        "crystal_reward": 3000,
+        "exclusive_items": {
+          "divine_support_avatar": {
+            "type": "character_skin",
+            "description": "神圣辅助者形象",
+            "visual_effects": ["healing_aura", "protective_shield", "angelic_wings"]
+          }
+        }
+      },
+
+      "longest_survival": {
+        "title": "不死战神",
+        "title_color": "#0000FF",
+        "requirement": "生存时间最长或死亡次数最少",
+        "crystal_reward": 3000,
+        "exclusive_items": {
+          "immortal_warrior_avatar": {
+            "type": "character_skin",
+            "description": "不朽战士外观",
+            "visual_effects": ["golden_armor", "resilience_aura", "battle_scars"]
+          }
+        }
+      },
+
+      "strategic_mastermind": {
+        "title": "战术大师",
+        "title_color": "#800080",
+        "requirement": "成功指挥团队完成复杂战术",
+        "crystal_reward": 4000,
+        "exclusive_items": {
+          "commander_insignia": {
+            "type": "badge",
+            "description": "指挥官徽章，智慧的象征"
+          }
+        }
+      }
+    },
+
+    "special_achievements": {
+      "perfect_game": {
+        "name": "完美战士",
+        "description": "一场比赛零死亡",
+        "crystal_reward": 2000,
+        "title": "完美无瑕",
+        "rarity": "rare",
+        "badge": "perfection_star"
+      },
+
+      "comeback_victory": {
+        "name": "逆转大师",
+        "description": "落后15分以上成功逆转",
+        "crystal_reward": 3000,
+        "title": "绝地反击",
+        "rarity": "epic",
+        "badge": "phoenix_rising"
+      },
+
+      "dominant_victory": {
+        "name": "碾压王者",
+        "description": "领先50%以上获胜",
+        "crystal_reward": 2000,
+        "title": "压倒性胜利",
+        "rarity": "rare",
+        "badge": "overwhelming_force"
+      },
+
+      "clutch_player": {
+        "name": "关键先生",
+        "description": "在最后时刻完成关键击杀或控点",
+        "crystal_reward": 2500,
+        "title": "时刻英雄",
+        "rarity": "epic",
+        "badge": "clutch_moment"
+      },
+
+      "team_player": {
+        "name": "团队之魂",
+        "description": "最高助攻率且团队配合优秀",
+        "crystal_reward": 2000,
+        "title": "团结之力",
+        "rarity": "rare",
+        "badge": "unity_symbol"
+      }
+    }
+  },
+
+  "seasonal_ranking_system": {
+    "season_duration": "three_months",
+    "ranking_tiers": {
+      "封神至尊": {
+        "points_required": 2000,
+        "tier_color": "#FFD700",
+        "tier_benefits": {
+          "monthly_crystal_bonus": 5000,
+          "exclusive_tournaments": true,
+          "priority_customer_service": true,
+          "beta_features_access": true
+        },
+        "tier_icon": "divine_crown"
+      },
+
+      "仙家宗师": {
+        "points_required": 1500,
+        "tier_color": "#FF6B6B",
+        "tier_benefits": {
+          "monthly_crystal_bonus": 3000,
+          "advanced_statistics": true,
+          "priority_matching": true
+        },
+        "tier_icon": "master_seal"
+      },
+
+      "修仙精英": {
+        "points_required": 1000,
+        "tier_color": "#4ECDC4",
+        "tier_benefits": {
+          "monthly_crystal_bonus": 2000,
+          "enhanced_guild_features": true
+        },
+        "tier_icon": "elite_badge"
+      },
+
+      "仙路新秀": {
+        "points_required": 500,
+        "tier_color": "#45B7D1",
+        "tier_benefits": {
+          "monthly_crystal_bonus": 1000,
+          "training_resources": true
+        },
+        "tier_icon": "rising_star"
+      },
+
+      "凡间修士": {
+        "points_required": 0,
+        "tier_color": "#95A5A6",
+        "tier_benefits": {
+          "monthly_crystal_bonus": 500
+        },
+        "tier_icon": "basic_symbol"
+      }
+    },
+
+    "points_earning": {
+      "tournament_participation": {
+        "base_points": 50,
+        "performance_multiplier": {
+          "champion": 20.0,
+          "runner_up": 15.0,
+          "third_place": 10.0,
+          "top_4": 7.0,
+          "top_8": 4.0,
+          "top_16": 2.0,
+          "qualified": 1.0
+        }
+      },
+      "regular_pvp": {
+        "victory_points": 10,
+        "defeat_points": 3,
+        "participation_points": 1
+      },
+      "community_contribution": {
+        "helpful_feedback": 5,
+        "bug_reporting": 10,
+        "content_creation": 20
+      }
+    },
+
+    "points_decay": {
+      "decay_rate": "5_percent_monthly",
+      "minimum_activity": "participate_in_monthly_events",
+      "protection_period": "first_month_after_earning"
+    }
+  },
+
+  "long_term_rewards": {
+    "hall_of_fame": {
+      "criteria": {
+        "multiple_championships": "3次及以上冠军",
+        "consistent_excellence": "连续6个月顶级排名",
+        "community_contribution": "对游戏社区做出突出贡献",
+        "fair_play_exemplar": "公平竞技典范"
+      },
+      "benefits": {
+        "permanent_recognition": "永久名人堂展示",
+        "exclusive_cosmetics": "专属外观和特效",
+        "naming_rights": "可以命名游戏内容",
+        "advisory_role": "参与游戏发展建议"
+      }
+    },
+
+    "legacy_rewards": {
+      "veteran_benefits": {
+        "description": "参与多届比赛的老将奖励",
+        "tiers": {
+          "5_tournaments": {
+            "title": "封域老兵",
+            "benefits": ["experience_bonus", "priority_support"]
+          },
+          "10_tournaments": {
+            "title": "传奇宗门",
+            "benefits": ["exclusive_banner", "legacy_status"]
+          },
+          "20_tournaments": {
+            "title": "不朽传说",
+            "benefits": ["hall_of_fame_entry", "permanent_recognition"]
+          }
+        }
+      },
+
+      "milestone_achievements": {
+        "total_eliminations": {
+          "100": "百人斩",
+          "500": "千人敌",
+          "1000": "万人屠"
+        },
+        "total_victories": {
+          "50": "常胜将军",
+          "100": "百战百胜",
+          "200": "战神降临"
+        },
+        "survival_time": {
+          "100_hours": "持久战士",
+          "500_hours": "不屈斗士",
+          "1000_hours": "永恒守护"
+        }
+      }
+    }
+  },
+
+  "reward_distribution": {
+    "delivery_timing": {
+      "immediate_rewards": ["titles", "achievement_badges", "basic_crystals"],
+      "weekly_distribution": ["seasonal_bonuses", "tier_benefits"],
+      "monthly_distribution": ["tier_crystals", "special_items"],
+      "seasonal_distribution": ["major_cosmetics", "exclusive_privileges"]
+    },
+
+    "delivery_methods": {
+      "automatic_system": {
+        "triggers": ["achievement_completion", "rank_advancement", "tournament_conclusion"],
+        "validation": "automatic_eligibility_check",
+        "notification": "in_game_popup_and_mail"
+      },
+      "manual_distribution": {
+        "required_for": ["unique_items", "naming_rights", "special_privileges"],
+        "process": "admin_review_and_approval",
+        "timeline": "within_72_hours"
+      }
+    },
+
+    "anti_fraud_measures": {
+      "eligibility_verification": {
+        "automated_checks": ["participation_verification", "performance_validation", "rule_compliance"],
+        "manual_review": "suspicious_achievement_patterns"
+      },
+      "reward_clawback": {
+        "triggers": ["discovered_cheating", "rule_violations", "fraudulent_participation"],
+        "process": "investigation_and_appeal_period",
+        "consequences": ["reward_removal", "future_restrictions"]
+      }
+    }
+  },
+
+  "economy_balance": {
+    "crystal_economy": {
+      "total_weekly_distribution": 500000,
+      "distribution_breakdown": {
+        "tournament_rewards": "60%",
+        "individual_achievements": "20%",
+        "participation_bonuses": "15%",
+        "seasonal_bonuses": "5%"
+      }
+    },
+
+    "inflation_prevention": {
+      "reward_scaling": {
+        "based_on_participation": "rewards_scale_with_active_player_count",
+        "maximum_caps": "prevent_excessive_accumulation",
+        "periodic_review": "quarterly_economy_assessment"
+      },
+      "sink_mechanisms": {
+        "cosmetic_purchases": "encourage_crystal_spending",
+        "guild_improvements": "long_term_investment_options",
+        "charity_donations": "community_benefit_options"
+      }
+    }
+  }
+}

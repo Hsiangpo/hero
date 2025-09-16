@@ -1,0 +1,404 @@
+{
+  "pass_name": "封神令",
+  "description": "封神大战的荣耀见证，记录每位修士的成长历程。通过完成各种挑战获得经验，解锁丰厚的修仙奖励。",
+  "season_theme": "九重天劫",
+  "season_lore": "传说中，想要真正封神必须渡过九重天劫。每一重天劫都是对修士心性、实力、意志的考验。封神令便是记录这修仙征程的圣器。",
+
+  "duration_days": 28,
+  "max_level": 50,
+  "exp_per_level": [
+    1000, 1100, 1200, 1300, 1400, 1500, 1600, 1700, 1800, 1900,
+    2000, 2200, 2400, 2600, 2800, 3000, 3300, 3600, 3900, 4200,
+    4500, 5000, 5500, 6000, 6500, 7000, 7600, 8200, 8800, 9400,
+    10000, 10800, 11600, 12400, 13200, 14000, 15000, 16000, 17000, 18000,
+    19000, 20500, 22000, 23500, 25000, 26500, 28000, 30000, 32000, 35000
+  ],
+
+  "exp_sources": [
+    {
+      "source": "arena_win",
+      "exp": 100,
+      "description": "封神台胜利",
+      "daily_limit": 10
+    },
+    {
+      "source": "arena_participation",
+      "exp": 30,
+      "description": "封神台参与",
+      "daily_limit": 15
+    },
+    {
+      "source": "daily_quest_completion",
+      "exp": 150,
+      "description": "每日修炼任务",
+      "daily_limit": 8
+    },
+    {
+      "source": "pve_stage_clear",
+      "exp": 50,
+      "description": "天界闯关",
+      "daily_limit": 20
+    },
+    {
+      "source": "sect_activity_participation",
+      "exp": 80,
+      "description": "宗门活动",
+      "daily_limit": 5
+    },
+    {
+      "source": "character_ascension",
+      "exp": 200,
+      "description": "角色飞升",
+      "daily_limit": 3
+    },
+    {
+      "source": "bond_unlock",
+      "exp": 300,
+      "description": "解锁羁绊",
+      "daily_limit": 2
+    },
+    {
+      "source": "special_event",
+      "exp": 250,
+      "description": "特殊活动",
+      "daily_limit": 3
+    }
+  ],
+
+  "free_track": [
+    {
+      "level": 1,
+      "rewards": [
+        {"type": "spirit_stones", "amount": 500},
+        {"type": "exp_potions", "amount": 3}
+      ]
+    },
+    {
+      "level": 2,
+      "rewards": [
+        {"type": "arena_tokens", "amount": 10}
+      ]
+    },
+    {
+      "level": 3,
+      "rewards": [
+        {"type": "fengshen_seals", "amount": 50},
+        {"type": "cultivation_materials", "amount": 5}
+      ]
+    },
+    {
+      "level": 5,
+      "rewards": [
+        {"type": "character_exp", "amount": 10000},
+        {"type": "basic_avatar_frame", "id": "bronze_cultivator"}
+      ]
+    },
+    {
+      "level": 8,
+      "rewards": [
+        {"type": "targeting_charm_fragment", "amount": 3}
+      ]
+    },
+    {
+      "level": 10,
+      "rewards": [
+        {"type": "fengshen_seals", "amount": 100},
+        {"type": "title", "id": "seasoned_cultivator"},
+        {"type": "milestone_chest", "tier": "bronze"}
+      ]
+    },
+    {
+      "level": 15,
+      "rewards": [
+        {"type": "rare_materials", "amount": 8},
+        {"type": "skill_upgrade_stones", "amount": 5}
+      ]
+    },
+    {
+      "level": 20,
+      "rewards": [
+        {"type": "targeting_charm_complete", "type_specific": "element_fire"},
+        {"type": "character_skin_fragment", "amount": 5}
+      ]
+    },
+    {
+      "level": 25,
+      "rewards": [
+        {"type": "fengshen_seals", "amount": 200},
+        {"type": "title", "id": "heaven_challenger"},
+        {"type": "milestone_chest", "tier": "silver"}
+      ]
+    },
+    {
+      "level": 30,
+      "rewards": [
+        {"type": "legendary_fragments", "amount": 3},
+        {"type": "advanced_avatar_frame", "id": "silver_immortal"}
+      ]
+    },
+    {
+      "level": 35,
+      "rewards": [
+        {"type": "exclusive_emote", "id": "immortal_gesture"},
+        {"type": "rare_materials", "amount": 15}
+      ]
+    },
+    {
+      "level": 40,
+      "rewards": [
+        {"type": "fengshen_seals", "amount": 300},
+        {"type": "title", "id": "heavenly_champion"},
+        {"type": "milestone_chest", "tier": "gold"}
+      ]
+    },
+    {
+      "level": 45,
+      "rewards": [
+        {"type": "ssr_character_fragments", "character": "random", "amount": 10}
+      ]
+    },
+    {
+      "level": 50,
+      "rewards": [
+        {"type": "fengshen_seals", "amount": 500},
+        {"type": "title", "id": "fengshen_aspirant"},
+        {"type": "legendary_avatar_frame", "id": "golden_deity"},
+        {"type": "milestone_chest", "tier": "diamond"},
+        {"type": "season_completion_badge", "season": "current"}
+      ]
+    }
+  ],
+
+  "premium_track": [
+    {
+      "level": 1,
+      "rewards": [
+        {"type": "spirit_stones", "amount": 1000},
+        {"type": "exp_potions", "amount": 8},
+        {"type": "premium_welcome_pack", "contents": ["targeting_charms", "materials"]}
+      ]
+    },
+    {
+      "level": 2,
+      "rewards": [
+        {"type": "arena_tokens", "amount": 25},
+        {"type": "premium_currency", "amount": 100}
+      ]
+    },
+    {
+      "level": 3,
+      "rewards": [
+        {"type": "fengshen_seals", "amount": 100},
+        {"type": "rare_materials", "amount": 10},
+        {"type": "exclusive_avatar_frame", "id": "premium_bronze"}
+      ]
+    },
+    {
+      "level": 5,
+      "rewards": [
+        {"type": "character_exp", "amount": 25000},
+        {"type": "exclusive_character_skin", "character": "nezha", "skin": "lotus_prince"},
+        {"type": "premium_emote", "id": "divine_fire_dance"}
+      ]
+    },
+    {
+      "level": 8,
+      "rewards": [
+        {"type": "targeting_charm_complete", "type_specific": "camp_immortal"},
+        {"type": "skill_upgrade_stones", "amount": 15}
+      ]
+    },
+    {
+      "level": 10,
+      "rewards": [
+        {"type": "fengshen_seals", "amount": 200},
+        {"type": "exclusive_title", "id": "premium_cultivator"},
+        {"type": "premium_milestone_chest", "tier": "bronze"},
+        {"type": "battle_replay_unlock", "duration": "unlimited"}
+      ]
+    },
+    {
+      "level": 15,
+      "rewards": [
+        {"type": "legendary_fragments", "amount": 5},
+        {"type": "exclusive_character_skin", "character": "erlang_shen", "skin": "celestial_general"},
+        {"type": "premium_background_theme", "id": "kunlun_mountains"}
+      ]
+    },
+    {
+      "level": 20,
+      "rewards": [
+        {"type": "targeting_charm_complete", "type_specific": "bond_legendary"},
+        {"type": "exclusive_kill_effect", "id": "divine_lightning"},
+        {"type": "ssr_character_fragments", "character": "random", "amount": 15}
+      ]
+    },
+    {
+      "level": 25,
+      "rewards": [
+        {"type": "fengshen_seals", "amount": 400},
+        {"type": "exclusive_title", "id": "heaven_conquerer"},
+        {"type": "premium_milestone_chest", "tier": "silver"},
+        {"type": "sect_banner_customization", "unlocked": true}
+      ]
+    },
+    {
+      "level": 30,
+      "rewards": [
+        {"type": "mythical_weapon_fragment", "amount": 2},
+        {"type": "exclusive_character_skin", "character": "jiang_ziya", "skin": "fengshen_master"},
+        {"type": "premium_avatar_frame", "id": "celestial_authority"}
+      ]
+    },
+    {
+      "level": 35,
+      "rewards": [
+        {"type": "exclusive_arena_announcer", "id": "heavenly_herald"},
+        {"type": "legendary_fragments", "amount": 10},
+        {"type": "premium_emote_set", "id": "divine_mastery"}
+      ]
+    },
+    {
+      "level": 40,
+      "rewards": [
+        {"type": "fengshen_seals", "amount": 600},
+        {"type": "exclusive_title", "id": "divine_champion"},
+        {"type": "premium_milestone_chest", "tier": "gold"},
+        {"type": "exclusive_character_skin", "character": "dragon_king", "skin": "four_seas_emperor"}
+      ]
+    },
+    {
+      "level": 45,
+      "rewards": [
+        {"type": "ssr_character_complete", "character": "selection_chest"},
+        {"type": "exclusive_sect_building_skin", "id": "celestial_palace"},
+        {"type": "premium_kill_effect", "id": "fengshen_judgment"}
+      ]
+    },
+    {
+      "level": 50,
+      "rewards": [
+        {"type": "fengshen_seals", "amount": 1000},
+        {"type": "exclusive_title", "id": "fengshen_chosen"},
+        {"type": "ultimate_avatar_frame", "id": "supreme_deity"},
+        {"type": "premium_milestone_chest", "tier": "diamond"},
+        {"type": "exclusive_character_skin", "character": "yuanshi_tianzun", "skin": "primordial_sovereign"},
+        {"type": "season_premium_badge", "season": "current"},
+        {"type": "next_season_preview_access", "enabled": true}
+      ]
+    }
+  ],
+
+  "milestone_levels": [10, 25, 40, 50],
+  "milestone_special_rewards": {
+    "10": {
+      "free": {
+        "type": "milestone_celebration",
+        "rewards": ["fengshen_seals_bonus", "title_upgrade"]
+      },
+      "premium": {
+        "type": "premium_milestone_celebration",
+        "rewards": ["exclusive_skin_selection", "premium_currency_bonus"]
+      }
+    },
+    "25": {
+      "free": {
+        "type": "milestone_celebration",
+        "rewards": ["targeting_charm_selection", "materials_bundle"]
+      },
+      "premium": {
+        "type": "premium_milestone_celebration",
+        "rewards": ["exclusive_character_unlock", "sect_customization"]
+      }
+    },
+    "40": {
+      "free": {
+        "type": "milestone_celebration",
+        "rewards": ["legendary_fragments_bonus", "advanced_title"]
+      },
+      "premium": {
+        "type": "premium_milestone_celebration",
+        "rewards": ["mythical_weapon_unlock", "exclusive_effects_bundle"]
+      }
+    },
+    "50": {
+      "free": {
+        "type": "season_completion_celebration",
+        "rewards": ["season_badge", "completion_title", "next_season_preview"]
+      },
+      "premium": {
+        "type": "premium_season_completion",
+        "rewards": ["ultimate_skin_selection", "supreme_title", "exclusive_privileges"]
+      }
+    }
+  },
+
+  "daily_exp_limits": {
+    "free_player": 2000,
+    "premium_pass": 3000,
+    "vip_bonus": {
+      "vip1": 2200,
+      "vip2": 2400,
+      "vip3": 2600,
+      "vip4": 2800,
+      "vip5": 3000,
+      "vip6": 3500
+    }
+  },
+
+  "catch_up_mechanics": {
+    "week_2_bonus": 1.2,
+    "week_3_bonus": 1.4,
+    "week_4_bonus": 1.6,
+    "late_joiner_boost": {
+      "enabled": true,
+      "max_boost": 2.0,
+      "requirement": "join_after_week_2"
+    }
+  },
+
+  "premium_pass_benefits": {
+    "immediate_unlocks": [
+      "premium_track_access",
+      "unlimited_battle_replays",
+      "exclusive_avatar_frames",
+      "priority_customer_support"
+    ],
+    "ongoing_benefits": [
+      "50_percent_exp_boost",
+      "exclusive_emotes_access",
+      "sect_customization_unlocked",
+      "premium_milestone_chests"
+    ],
+    "end_of_season_rewards": [
+      "exclusive_completion_skin",
+      "next_season_discount",
+      "premium_player_badge"
+    ]
+  },
+
+  "seasonal_themes": {
+    "spring": "万物复苏·封神觉醒",
+    "summer": "烈阳当空·封神试炼",
+    "autumn": "金桂飘香·封神丰收",
+    "winter": "雪映昆仑·封神寒修"
+  },
+
+  "cross_system_integration": {
+    "arena_synergy": {
+      "arena_wins_provide_exp": true,
+      "pass_level_provides_arena_buffs": false,
+      "shared_seasonal_themes": true
+    },
+    "sect_benefits": {
+      "sect_exp_bonus": 0.1,
+      "group_milestone_rewards": true,
+      "sect_leaderboard": true
+    },
+    "character_progression": {
+      "character_skins_unlock_permanently": true,
+      "skill_effects_carry_over": true,
+      "titles_permanent": true
+    }
+  }
+}

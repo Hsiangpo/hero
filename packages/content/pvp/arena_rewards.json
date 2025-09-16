@@ -1,0 +1,403 @@
+{
+  "reward_categories": {
+    "immediate_battle_rewards": {
+      "victory_rewards": {
+        "base_fengshen_seals": 15,
+        "base_spirit_stones": 100,
+        "base_arena_tokens": 3,
+        "tier_multipliers": {
+          "bronze": 1.0,
+          "silver": 1.2,
+          "gold": 1.5,
+          "platinum": 1.8,
+          "diamond": 2.2,
+          "fengshen": 2.5
+        },
+        "performance_bonuses": {
+          "flawless_victory": {
+            "fengshen_seals": 10,
+            "spirit_stones": 200,
+            "arena_tokens": 2
+          },
+          "quick_victory": {
+            "fengshen_seals": 5,
+            "spirit_stones": 100,
+            "arena_tokens": 1
+          },
+          "comeback_victory": {
+            "fengshen_seals": 15,
+            "spirit_stones": 300,
+            "arena_tokens": 3,
+            "special_title_progress": 1
+          }
+        }
+      },
+      "participation_rewards": {
+        "defeat_consolation": {
+          "fengshen_seals": 5,
+          "spirit_stones": 30,
+          "arena_tokens": 1,
+          "experience_points": 50
+        },
+        "close_match_bonus": {
+          "condition": "health_difference_less_than_20_percent",
+          "fengshen_seals": 3,
+          "spirit_stones": 50,
+          "arena_tokens": 1
+        }
+      }
+    },
+
+    "daily_tier_rewards": {
+      "bronze": {
+        "fengshen_seals": 20,
+        "spirit_stones": 200,
+        "arena_tokens": 8,
+        "cultivation_materials": 3
+      },
+      "silver": {
+        "fengshen_seals": 30,
+        "spirit_stones": 350,
+        "arena_tokens": 12,
+        "cultivation_materials": 5,
+        "rare_materials": 1
+      },
+      "gold": {
+        "fengshen_seals": 50,
+        "spirit_stones": 600,
+        "arena_tokens": 18,
+        "cultivation_materials": 8,
+        "rare_materials": 3,
+        "skill_upgrade_stones": 2
+      },
+      "platinum": {
+        "fengshen_seals": 80,
+        "spirit_stones": 1000,
+        "arena_tokens": 25,
+        "cultivation_materials": 12,
+        "rare_materials": 5,
+        "skill_upgrade_stones": 4,
+        "legendary_fragments": 1
+      },
+      "diamond": {
+        "fengshen_seals": 120,
+        "spirit_stones": 1500,
+        "arena_tokens": 35,
+        "cultivation_materials": 18,
+        "rare_materials": 8,
+        "skill_upgrade_stones": 6,
+        "legendary_fragments": 2,
+        "character_skin_fragments": 3
+      },
+      "fengshen": {
+        "fengshen_seals": 200,
+        "spirit_stones": 2500,
+        "arena_tokens": 50,
+        "cultivation_materials": 25,
+        "rare_materials": 12,
+        "skill_upgrade_stones": 10,
+        "legendary_fragments": 4,
+        "character_skin_fragments": 5,
+        "mythical_weapon_fragments": 1
+      }
+    },
+
+    "weekly_tier_rewards": {
+      "bronze": {
+        "fengshen_seals": 150,
+        "spirit_stones": 1500,
+        "arena_tokens": 60,
+        "tier_exclusive_title": "青铜战士",
+        "weekly_chest": "bronze_arena_chest"
+      },
+      "silver": {
+        "fengshen_seals": 250,
+        "spirit_stones": 2800,
+        "arena_tokens": 90,
+        "tier_exclusive_title": "白银剑客",
+        "weekly_chest": "silver_arena_chest",
+        "exclusive_avatar_frame": "silver_cultivator"
+      },
+      "gold": {
+        "fengshen_seals": 400,
+        "spirit_stones": 5000,
+        "arena_tokens": 140,
+        "tier_exclusive_title": "黄金丹师",
+        "weekly_chest": "gold_arena_chest",
+        "exclusive_avatar_frame": "golden_alchemist",
+        "character_skin_selection_ticket": 1
+      },
+      "platinum": {
+        "fengshen_seals": 650,
+        "spirit_stones": 8000,
+        "arena_tokens": 200,
+        "tier_exclusive_title": "铂金真人",
+        "weekly_chest": "platinum_arena_chest",
+        "exclusive_avatar_frame": "platinum_master",
+        "character_skin_selection_ticket": 2,
+        "priority_matchmaking_privilege": true
+      },
+      "diamond": {
+        "fengshen_seals": 1000,
+        "spirit_stones": 12000,
+        "arena_tokens": 280,
+        "tier_exclusive_title": "钻石神君",
+        "weekly_chest": "diamond_arena_chest",
+        "exclusive_avatar_frame": "diamond_deity",
+        "character_skin_selection_ticket": 3,
+        "custom_arena_background_unlock": true,
+        "legendary_character_fragments": 5
+      },
+      "fengshen": {
+        "fengshen_seals": 1500,
+        "spirit_stones": 20000,
+        "arena_tokens": 400,
+        "tier_exclusive_title": "封神榜主",
+        "weekly_chest": "fengshen_supreme_chest",
+        "exclusive_avatar_frame": "fengshen_emperor",
+        "character_skin_selection_ticket": 5,
+        "fengshen_exclusive_privileges": true,
+        "mythical_weapon_selection_ticket": 1,
+        "ssr_character_selection_ticket": 1
+      }
+    },
+
+    "seasonal_end_rewards": {
+      "bronze": {
+        "fengshen_seals": 500,
+        "spirit_stones": 5000,
+        "season_commemorative_title": "第X季青铜修士",
+        "season_badge": "bronze_season_badge",
+        "next_season_placement_bonus": 50
+      },
+      "silver": {
+        "fengshen_seals": 800,
+        "spirit_stones": 9000,
+        "season_commemorative_title": "第X季白银剑客",
+        "season_badge": "silver_season_badge",
+        "exclusive_seasonal_skin": 1,
+        "next_season_placement_bonus": 100
+      },
+      "gold": {
+        "fengshen_seals": 1200,
+        "spirit_stones": 15000,
+        "season_commemorative_title": "第X季黄金丹师",
+        "season_badge": "gold_season_badge",
+        "exclusive_seasonal_skin": 2,
+        "legendary_character_unlock": 1,
+        "next_season_placement_bonus": 200
+      },
+      "platinum": {
+        "fengshen_seals": 2000,
+        "spirit_stones": 25000,
+        "season_commemorative_title": "第X季铂金真人",
+        "season_badge": "platinum_season_badge",
+        "exclusive_seasonal_skin": 3,
+        "legendary_character_unlock": 2,
+        "mythical_weapon_fragment": 5,
+        "next_season_premium_pass_discount": 0.3
+      },
+      "diamond": {
+        "fengshen_seals": 3000,
+        "spirit_stones": 40000,
+        "season_commemorative_title": "第X季钻石神君",
+        "season_badge": "diamond_season_badge",
+        "exclusive_seasonal_skin": 5,
+        "legendary_character_unlock": 3,
+        "mythical_weapon_complete": 1,
+        "exclusive_seasonal_mount": 1,
+        "next_season_premium_pass_discount": 0.5
+      },
+      "fengshen": {
+        "fengshen_seals": 5000,
+        "spirit_stones": 70000,
+        "season_commemorative_title": "第X季封神至尊",
+        "season_badge": "fengshen_supreme_badge",
+        "exclusive_seasonal_skin": 8,
+        "legendary_character_unlock": 5,
+        "mythical_weapon_complete": 2,
+        "exclusive_seasonal_mount": 2,
+        "fengshen_throne_decoration": 1,
+        "hall_of_fame_inscription": true,
+        "next_season_premium_pass_free": true
+      }
+    }
+  },
+
+  "special_achievement_rewards": {
+    "win_streak_rewards": {
+      "5_win_streak": {
+        "fengshen_seals": 50,
+        "title_progress": "连胜新星",
+        "streak_badge": "pentakill_warrior"
+      },
+      "10_win_streak": {
+        "fengshen_seals": 150,
+        "spirit_stones": 1000,
+        "title_unlock": "十连胜者",
+        "exclusive_emote": "victory_celebration"
+      },
+      "20_win_streak": {
+        "fengshen_seals": 400,
+        "spirit_stones": 3000,
+        "title_unlock": "无敌战神",
+        "exclusive_kill_effect": "divine_dominance",
+        "arena_announcer_recognition": true
+      }
+    },
+    "comeback_master_rewards": {
+      "10_comeback_victories": {
+        "fengshen_seals": 200,
+        "title_unlock": "逆转大师",
+        "exclusive_avatar_frame": "phoenix_rising"
+      },
+      "50_comeback_victories": {
+        "fengshen_seals": 800,
+        "title_unlock": "不屈之魂",
+        "exclusive_character_skin": "resilient_hero",
+        "special_victory_animation": "phoenix_rebirth"
+      }
+    },
+    "perfect_game_rewards": {
+      "50_flawless_victories": {
+        "fengshen_seals": 300,
+        "title_unlock": "完美战士",
+        "exclusive_weapon_skin": "flawless_blade"
+      },
+      "200_flawless_victories": {
+        "fengshen_seals": 1000,
+        "title_unlock": "无瑕神君",
+        "exclusive_character_skin": "perfect_immortal",
+        "arena_entrance_effect": "divine_perfection"
+      }
+    }
+  },
+
+  "milestone_rewards": {
+    "total_battles_milestones": {
+      "100_battles": {
+        "fengshen_seals": 100,
+        "title": "竞技场新兵",
+        "arena_tokens": 50
+      },
+      "500_battles": {
+        "fengshen_seals": 300,
+        "title": "竞技场老兵",
+        "exclusive_avatar_frame": "seasoned_fighter"
+      },
+      "1000_battles": {
+        "fengshen_seals": 600,
+        "title": "竞技场大师",
+        "exclusive_character_skin": 1,
+        "priority_support": true
+      },
+      "5000_battles": {
+        "fengshen_seals": 2000,
+        "title": "竞技场传奇",
+        "hall_of_legends_entry": true,
+        "custom_title_creation": 1
+      }
+    }
+  },
+
+  "chest_reward_contents": {
+    "bronze_arena_chest": {
+      "guaranteed_items": [
+        {"type": "fengshen_seals", "amount": 50},
+        {"type": "spirit_stones", "amount": 500},
+        {"type": "cultivation_materials", "amount": 5}
+      ],
+      "random_items": [
+        {"type": "rare_materials", "amount": 2, "probability": 0.7},
+        {"type": "skill_upgrade_stones", "amount": 1, "probability": 0.3},
+        {"type": "character_exp_potion", "amount": 3, "probability": 0.9}
+      ]
+    },
+    "silver_arena_chest": {
+      "guaranteed_items": [
+        {"type": "fengshen_seals", "amount": 100},
+        {"type": "spirit_stones", "amount": 1000},
+        {"type": "rare_materials", "amount": 3}
+      ],
+      "random_items": [
+        {"type": "legendary_fragments", "amount": 1, "probability": 0.4},
+        {"type": "skill_upgrade_stones", "amount": 2, "probability": 0.6},
+        {"type": "targeting_charm_fragment", "amount": 2, "probability": 0.5}
+      ]
+    },
+    "gold_arena_chest": {
+      "guaranteed_items": [
+        {"type": "fengshen_seals", "amount": 200},
+        {"type": "spirit_stones", "amount": 2000},
+        {"type": "legendary_fragments", "amount": 2}
+      ],
+      "random_items": [
+        {"type": "character_skin_fragments", "amount": 3, "probability": 0.6},
+        {"type": "mythical_weapon_fragment", "amount": 1, "probability": 0.2},
+        {"type": "ssr_character_fragments", "amount": 5, "probability": 0.3}
+      ]
+    },
+    "platinum_arena_chest": {
+      "guaranteed_items": [
+        {"type": "fengshen_seals", "amount": 350},
+        {"type": "spirit_stones", "amount": 3500},
+        {"type": "legendary_fragments", "amount": 4},
+        {"type": "character_skin_fragments", "amount": 5}
+      ],
+      "random_items": [
+        {"type": "mythical_weapon_fragment", "amount": 2, "probability": 0.4},
+        {"type": "ssr_character_fragments", "amount": 8, "probability": 0.5},
+        {"type": "exclusive_emote", "amount": 1, "probability": 0.3}
+      ]
+    },
+    "diamond_arena_chest": {
+      "guaranteed_items": [
+        {"type": "fengshen_seals", "amount": 500},
+        {"type": "spirit_stones", "amount": 5000},
+        {"type": "legendary_fragments", "amount": 6},
+        {"type": "mythical_weapon_fragment", "amount": 2}
+      ],
+      "random_items": [
+        {"type": "ssr_character_complete", "amount": 1, "probability": 0.2},
+        {"type": "exclusive_character_skin", "amount": 1, "probability": 0.4},
+        {"type": "premium_currency", "amount": 500, "probability": 0.6}
+      ]
+    },
+    "fengshen_supreme_chest": {
+      "guaranteed_items": [
+        {"type": "fengshen_seals", "amount": 800},
+        {"type": "spirit_stones", "amount": 8000},
+        {"type": "legendary_fragments", "amount": 10},
+        {"type": "mythical_weapon_fragment", "amount": 4},
+        {"type": "ssr_character_fragments", "amount": 15}
+      ],
+      "random_items": [
+        {"type": "ssr_character_complete", "amount": 1, "probability": 0.5},
+        {"type": "exclusive_character_skin", "amount": 2, "probability": 0.7},
+        {"type": "mythical_weapon_complete", "amount": 1, "probability": 0.3},
+        {"type": "exclusive_title_selection", "amount": 1, "probability": 0.8}
+      ]
+    }
+  },
+
+  "reward_timing": {
+    "immediate_rewards": "on_battle_completion",
+    "daily_rewards": "00:00_server_time",
+    "weekly_rewards": "monday_00:00_server_time",
+    "seasonal_rewards": "season_end_plus_24_hours"
+  },
+
+  "reward_delivery_system": {
+    "auto_claim_enabled": true,
+    "manual_claim_option": true,
+    "reward_expiration": {
+      "daily_rewards": "7_days",
+      "weekly_rewards": "14_days",
+      "seasonal_rewards": "30_days"
+    },
+    "overflow_handling": {
+      "currency_limits": "auto_upgrade_storage",
+      "item_limits": "send_to_mail_system"
+    }
+  }
+}

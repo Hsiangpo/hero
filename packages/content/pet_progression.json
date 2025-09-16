@@ -1,0 +1,205 @@
+{
+  "progression_system": {
+    "star_upgrade_timeline": {
+      "description": "灵宠升星进度预期表",
+      "f2p_player": {
+        "R_pets_max_star": {
+          "timeline": "2-3周",
+          "daily_fragments": 3,
+          "total_needed": 38
+        },
+        "SR_pets_3_star": {
+          "timeline": "6-8周",
+          "daily_fragments": 2,
+          "total_needed": 53
+        },
+        "first_SSR_pet": {
+          "timeline": "3-4个月",
+          "primary_source": "活动累积+保底兑换"
+        }
+      },
+      "light_spender": {
+        "monthly_investment": "30-100元",
+        "acceleration": "升星速度提升50%",
+        "SSR_acquisition": "2个月获得首只SSR",
+        "exclusive_benefits": "高级钓场次数+50%"
+      },
+      "whale_player": {
+        "monthly_investment": "500元以上",
+        "advantages": "SSR灵宠可直购，升星材料无限制",
+        "collection_timeline": "1个月内收集大部分SSR",
+        "exclusive_content": "限定SSR灵宠优先获得权"
+      }
+    },
+
+    "fragment_economics": {
+      "daily_production": {
+        "free_sources": {
+          "fishing_guarantee": 2,
+          "daily_challenges": 1,
+          "sect_activities": 1,
+          "total": 4
+        },
+        "premium_sources": {
+          "fishing_premium_bait": 2,
+          "monthly_card_bonus": 2,
+          "vip_daily_gift": 1,
+          "total": 5
+        }
+      },
+      "weekly_events": {
+        "fishing_festival": "周末钓场产出翻倍",
+        "pet_care_week": "灵宠喂食奖励+100%",
+        "fragment_exchange": "通用碎片兑换比例优化"
+      }
+    },
+
+    "bond_progression": {
+      "exclusive_bond_unlock": {
+        "pet_star_requirement": {
+          "basic_bond": "1星解锁",
+          "enhanced_bond": "3星解锁",
+          "ultimate_bond": "5星解锁"
+        },
+        "character_level_sync": {
+          "description": "灵宠与角色等级联动机制",
+          "level_gap_limit": 10,
+          "sync_bonus": "等级差距≤5时，羁绊效果+20%"
+        }
+      },
+      "friendship_system": {
+        "daily_interaction": {
+          "feeding": "好感度+2",
+          "training": "好感度+1",
+          "combat_together": "好感度+1"
+        },
+        "friendship_milestones": {
+          "acquaintance": {"level": 20, "bonus": "属性+5%"},
+          "friendship": {"level": 50, "bonus": "属性+10%，技能效果+10%"},
+          "intimacy": {"level": 80, "bonus": "属性+15%，技能效果+20%"},
+          "soul_bond": {"level": 100, "bonus": "属性+20%，解锁专属技能"}
+        }
+      }
+    },
+
+    "meta_progression": {
+      "collection_achievements": {
+        "pet_collector": "收集10只不同灵宠",
+        "legendary_tamer": "拥有5只SSR灵宠",
+        "bond_master": "激活20个专属羁绊",
+        "fishing_expert": "钓场累计垂钓1000次"
+      },
+      "achievement_rewards": {
+        "titles": ["灵宠大师", "钓场专家", "羁绊之王"],
+        "cosmetics": ["专属头像框", "灵宠展示界面皮肤"],
+        "gameplay_bonuses": ["钓场次数+1", "升星成功率+5%"]
+      }
+    }
+  },
+
+  "coordination_with_main_system": {
+    "character_synergy": {
+      "level_synchronization": {
+        "description": "灵宠与角色等级协调机制",
+        "max_level_gap": 10,
+        "penalty_for_over_leveling": "灵宠超出角色等级10级以上，效果减半",
+        "encouragement_for_balance": "等级差距≤5时，额外属性加成+10%"
+      },
+      "elemental_harmony": {
+        "same_element_resonance": "灵宠与角色同属性时，技能威力+25%",
+        "cross_element_strategy": "不同属性搭配解锁特殊效果",
+        "five_element_completion": "角色+灵宠五行齐全时，解锁『五行灵阵』"
+      }
+    },
+
+    "economic_balance": {
+      "resource_sharing": {
+        "spirit_stones": "与角色升级共用，但消耗量独立计算",
+        "enhancement_materials": "专用灵宠强化材料，避免资源冲突",
+        "exclusive_currency": "钓场代币，专门用于灵宠相关兑换"
+      },
+      "progression_pacing": {
+        "early_game": "1-30级重点角色培养，灵宠作为辅助",
+        "mid_game": "30-60级角色与灵宠并重发展",
+        "late_game": "60级+灵宠成为战力提升重点"
+      }
+    },
+
+    "pvp_integration": {
+      "arena_restrictions": {
+        "pet_level_cap": "PvP中灵宠等级上限=角色等级",
+        "rarity_limitations": "特定模式限制SSR灵宠数量",
+        "seasonal_bans": "赛季中可能禁用特定强势灵宠"
+      },
+      "guild_war_bonuses": {
+        "sect_pet_blessing": "宗门统一装备特定灵宠获得团队加成",
+        "formation_synergy": "多人协作时灵宠羁绊效果叠加",
+        "strategic_depth": "根据对手阵容选择针对性灵宠搭配"
+      }
+    }
+  },
+
+  "long_term_value_design": {
+    "content_expansion": {
+      "new_pet_releases": {
+        "frequency": "每2个月新增2-3只新灵宠",
+        "power_creep_control": "新灵宠提供差异化能力，不直接数值碾压",
+        "thematic_coherence": "新灵宠契合当期活动主题"
+      },
+      "fishing_location_expansion": {
+        "quarterly_new_areas": "每季度开放1个新钓场",
+        "progressive_difficulty": "新钓场更高级，产出更稀有灵宠",
+        "exploration_rewards": "首次发现新钓场获得丰厚奖励"
+      }
+    },
+
+    "social_elements": {
+      "pet_sharing": {
+        "friend_visit": "访问好友查看灵宠收集进度",
+        "pet_exhibition": "定期举办灵宠展示大赛",
+        "breeding_cooperation": "好友间合作培养特殊灵宠"
+      },
+      "community_events": {
+        "global_fishing_tournament": "全服钓场竞赛",
+        "rare_pet_hunt": "限时稀有灵宠出现",
+        "pet_photography": "灵宠截图分享活动"
+      }
+    },
+
+    "monetization_touchpoints": {
+      "premium_fishing_passes": {
+        "monthly_fishing_pass": "30元，钓场次数翻倍，稀有几率+10%",
+        "legendary_fishing_license": "98元，专属传说钓场权限"
+      },
+      "convenience_purchases": {
+        "instant_star_upgrade": "跳过等待时间立即升星",
+        "fragment_bundles": "碎片礼包，快速获得指定灵宠",
+        "premium_bait_subscriptions": "包月仙灵香饵无限使用"
+      },
+      "cosmetic_monetization": {
+        "pet_skins": "灵宠外观皮肤，纯装饰效果",
+        "fishing_environment_themes": "钓场场景主题包",
+        "exclusive_pet_animations": "付费解锁特殊技能动画"
+      }
+    }
+  },
+
+  "technical_implementation_notes": {
+    "data_storage": {
+      "pet_inventory": "玩家灵宠列表，包含ID、星级、经验、好感度",
+      "fishing_records": "钓场历史记录，用于概率保底和统计",
+      "bond_status": "角色-灵宠羁绊状态记录",
+      "fragment_tracking": "各类碎片数量和获取来源追踪"
+    },
+    "performance_considerations": {
+      "pet_battle_effects": "战斗中灵宠技能特效优化，避免性能影响",
+      "fishing_animation": "钓场动画可配置，低端设备自动简化",
+      "collection_display": "大量灵宠展示时使用虚拟滚动优化"
+    },
+    "future_compatibility": {
+      "pet_data_structure": "预留扩展字段，支持未来新功能",
+      "fishing_system_modularity": "钓场系统模块化，便于新增区域",
+      "bond_system_flexibility": "羁绊系统支持复杂组合规则"
+    }
+  }
+}

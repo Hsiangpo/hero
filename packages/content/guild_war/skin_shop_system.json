@@ -1,0 +1,367 @@
+{
+  "system_name": "仙衣阁皮肤商店系统",
+  "description": "专业皮肤销售系统，包含45个封神角色的完整皮肤生态",
+  "version": "1.0.0",
+  "last_updated": "2025-09-16",
+
+  "skin_ecosystem": {
+    "total_heroes": 45,
+    "skin_per_hero_target": {
+      "ssr_heroes": "3-5_skins_each",
+      "sr_heroes": "2-3_skins_each",
+      "r_heroes": "1-2_skins_each",
+      "n_heroes": "1_skin_each"
+    },
+    "total_skin_projection": "150+_skins_at_full_release"
+  },
+
+  "skin_rarity_system": {
+    "普通 (Common)": {
+      "price_range": "188-388_crystals",
+      "features": ["color_variant", "minor_visual_changes"],
+      "target_audience": "light_spenders_and_collectors",
+      "release_frequency": "monthly"
+    },
+    "精良 (Fine)": {
+      "price_range": "488-788_crystals",
+      "features": ["outfit_change", "basic_particle_effects"],
+      "target_audience": "regular_spenders",
+      "release_frequency": "bi_weekly"
+    },
+    "史诗 (Epic)": {
+      "price_range": "888-1388_crystals",
+      "features": ["complete_visual_overhaul", "enhanced_animations", "new_voice_lines"],
+      "target_audience": "dedicated_spenders",
+      "release_frequency": "weekly"
+    },
+    "传说 (Legendary)": {
+      "price_range": "1588-2388_crystals",
+      "features": ["full_transformation", "unique_skill_effects", "exclusive_audio", "special_ui_elements"],
+      "target_audience": "high_spenders",
+      "release_frequency": "bi_weekly"
+    },
+    "神话 (Mythical)": {
+      "price_range": "2888-4888_crystals",
+      "features": ["complete_reimagining", "dynamic_visual_effects", "interactive_elements", "prestige_value"],
+      "target_audience": "whales_and_collectors",
+      "release_frequency": "monthly_limited_editions",
+      "limited_availability": true
+    }
+  },
+
+  "featured_hero_skins": {
+    "nezha_collection": {
+      "hero_name": "哪吒",
+      "base_theme": "rebellious_divine_child",
+      "skin_variants": {
+        "classic_nezha": {
+          "name": "经典哪吒",
+          "rarity": "普通",
+          "price": 288,
+          "description": "还原封神演义经典形象",
+          "features": ["traditional_red_outfit", "original_weapon_set"]
+        },
+        "demon_king_nezha": {
+          "name": "魔王哪吒",
+          "rarity": "传说",
+          "price": 1988,
+          "description": "黑化版哪吒，红莲业火缠身",
+          "features": ["dark_armor", "flame_particles", "red_eye_glow", "demonic_voice_filter"],
+          "special_effects": ["skill_flames_turn_black", "victory_pose_with_fire_wings"]
+        },
+        "celestial_prince": {
+          "name": "天庭太子",
+          "rarity": "史诗",
+          "price": 1188,
+          "description": "天庭正统继承人装扮",
+          "features": ["golden_royal_armor", "jade_accessories", "floating_lotus_petals"]
+        },
+        "modern_street": {
+          "name": "街头哪吒",
+          "rarity": "精良",
+          "price": 688,
+          "description": "现代街头风格改造",
+          "features": ["casual_streetwear", "sneakers", "baseball_cap", "modern_weapons"]
+        }
+      }
+    },
+
+    "yangjian_collection": {
+      "hero_name": "杨戬",
+      "base_theme": "divine_hunter_warrior",
+      "skin_variants": {
+        "heavenly_eye_master": {
+          "name": "天眼真君",
+          "rarity": "神话",
+          "price": 3888,
+          "description": "第三只眼完全开启，洞察三界真相",
+          "features": ["glowing_third_eye", "divine_armor", "reality_distortion_effects"],
+          "limited_edition": true,
+          "availability": "30_days_only"
+        },
+        "dog_companion": {
+          "name": "啸天伙伴",
+          "rarity": "传说",
+          "price": 2188,
+          "description": "与啸天犬并肩作战",
+          "features": ["xiaotian_dog_companion", "dual_combat_animations", "loyalty_bond_effects"]
+        },
+        "judicial_god": {
+          "name": "司法天神",
+          "rarity": "史诗",
+          "price": 1288,
+          "description": "掌管天庭律法的威严形象",
+          "features": ["ceremonial_robes", "scales_of_justice", "authority_aura"]
+        }
+      }
+    },
+
+    "seasonal_collections": {
+      "spring_festival_2025": {
+        "theme": "新春封神",
+        "duration": "february_1_to_march_15",
+        "featured_heroes": ["nezha", "yangjian", "leizhenzi", "jinzha", "muzha"],
+        "special_pricing": "20%_discount_for_complete_collection",
+        "exclusive_bonus": "festival_frame_and_title"
+      },
+      "summer_solstice": {
+        "theme": "夏至仙境",
+        "duration": "june_15_to_july_31",
+        "featured_heroes": ["changsangu", "dingguang", "puxian", "manjusri", "guanyin"],
+        "beach_theme": "immortal_vacation_outfits",
+        "special_mechanic": "cooling_visual_effects"
+      }
+    }
+  },
+
+  "shop_interface_design": {
+    "main_sections": {
+      "featured_showcase": {
+        "position": "top_banner",
+        "content": "current_limited_time_offers",
+        "rotation": "daily_featured_skin",
+        "visual_treatment": "high_impact_animations"
+      },
+      "by_rarity": {
+        "organization": "tabs_for_each_rarity_level",
+        "preview_system": "3d_model_rotation",
+        "comparison_tool": "side_by_side_skin_comparison"
+      },
+      "by_hero": {
+        "hero_grid": "45_hero_portraits",
+        "filter_options": ["faction", "rarity", "role"],
+        "collection_progress": "owned_vs_total_skins_per_hero"
+      },
+      "my_collection": {
+        "owned_skins": "all_purchased_skins_gallery",
+        "usage_stats": "most_used_skins_tracking",
+        "favorites": "quick_access_to_preferred_skins"
+      }
+    },
+
+    "preview_system": {
+      "3d_model_viewer": {
+        "rotation": "360_degree_model_rotation",
+        "zoom": "detailed_close_up_capability",
+        "animation_preview": "idle_and_skill_animations"
+      },
+      "in_battle_preview": {
+        "combat_simulation": "see_skin_in_actual_battle",
+        "skill_effects": "preview_enhanced_abilities",
+        "team_composition": "how_skin_looks_with_team"
+      },
+      "social_sharing": {
+        "screenshot_tool": "capture_and_share_skin_images",
+        "comparison_sharing": "before_after_skin_comparisons",
+        "collection_showcase": "share_entire_hero_collection"
+      }
+    }
+  },
+
+  "monetization_strategies": {
+    "pricing_psychology": {
+      "charm_pricing": {
+        "examples": ["1988_instead_of_2000", "688_instead_of_700"],
+        "psychological_impact": "perceived_value_improvement"
+      },
+      "bundle_anchoring": {
+        "expensive_anchor": "mythical_skins_make_legendary_seem_reasonable",
+        "value_perception": "epic_skins_appear_as_good_deals"
+      },
+      "limited_time_pressure": {
+        "countdown_timers": "creates_urgency_for_purchase",
+        "flash_sales": "unexpected_discount_opportunities",
+        "seasonal_exclusivity": "must_buy_now_or_wait_year"
+      }
+    },
+
+    "spending_tier_targeting": {
+      "whale_segment": {
+        "target_monthly_spend": "5000+_rmb",
+        "preferred_products": "mythical_skins_and_complete_collections",
+        "special_treatment": "early_access_and_exclusive_previews"
+      },
+      "dolphin_segment": {
+        "target_monthly_spend": "500-2000_rmb",
+        "preferred_products": "legendary_and_epic_skins",
+        "value_proposition": "best_bang_for_buck_premium_content"
+      },
+      "minnow_segment": {
+        "target_monthly_spend": "50-200_rmb",
+        "preferred_products": "fine_and_epic_skins_on_sale",
+        "accessibility": "monthly_affordable_luxury"
+      },
+      "f2p_conversion": {
+        "target_spend": "first_purchase_under_50_rmb",
+        "entry_products": "common_skins_and_small_bundles",
+        "conversion_strategy": "taste_of_premium_experience"
+      }
+    },
+
+    "cross_selling_mechanics": {
+      "skin_synergy": {
+        "faction_collections": "discount_for_complete_faction_skin_sets",
+        "element_themes": "wuxing_elemental_skin_bundles",
+        "role_based": "tank_assassin_support_skin_packages"
+      },
+      "hero_investment_leverage": {
+        "maxed_hero_offers": "special_skin_deals_for_fully_upgraded_heroes",
+        "usage_based_recommendations": "suggest_skins_for_most_used_heroes",
+        "achievement_unlocks": "exclusive_skins_for_milestone_achievements"
+      }
+    }
+  },
+
+  "skin_coin_economy": {
+    "earning_mechanisms": {
+      "daily_activities": {
+        "login_bonus": "5_coins_daily",
+        "battle_participation": "2_coins_per_battle_up_to_10_daily",
+        "achievement_completion": "bonus_coins_for_daily_goals"
+      },
+      "weekly_challenges": {
+        "skin_showcase": "earn_coins_by_using_different_skins",
+        "collection_milestones": "bonus_for_acquiring_new_skins",
+        "community_events": "participate_in_skin_contests"
+      },
+      "duplicate_compensation": {
+        "gacha_duplicates": "receive_coins_for_duplicate_skin_drops",
+        "purchase_protection": "coin_refund_for_accidental_duplicate_purchases"
+      }
+    },
+
+    "spending_options": {
+      "skin_fragments": {
+        "fragment_system": "collect_10_fragments_equals_1_random_skin",
+        "targeted_fragments": "choose_specific_hero_fragment_type",
+        "fragment_exchange": "100_coins_equals_1_fragment"
+      },
+      "exclusive_coin_shop": {
+        "coin_only_skins": "special_skins_unavailable_for_crystals",
+        "seasonal_rotations": "different_exclusive_items_monthly",
+        "prestige_items": "high_coin_cost_premium_exclusives"
+      },
+      "utility_purchases": {
+        "skin_preview_time": "extend_trial_period_for_skins",
+        "collection_boosters": "increase_skin_fragment_drop_rates",
+        "customization_tools": "unlock_advanced_skin_modification_options"
+      }
+    },
+
+    "coin_to_crystal_economy": {
+      "exchange_rates": {
+        "coins_to_crystals": "200_coins_equals_100_crystals",
+        "crystals_to_coins": "100_crystals_equals_150_coins",
+        "vip_bonuses": "better_exchange_rates_for_vip_players"
+      },
+      "market_stability": {
+        "inflation_protection": "coin_value_maintained_through_limited_supply",
+        "sink_mechanisms": "attractive_coin_only_purchases_remove_coins_from_economy"
+      }
+    }
+  },
+
+  "quality_assurance": {
+    "skin_standards": {
+      "visual_quality": {
+        "texture_resolution": "minimum_1024x1024_for_main_textures",
+        "polygon_count": "optimized_for_mobile_performance",
+        "animation_smoothness": "60fps_on_mid_range_devices"
+      },
+      "thematic_consistency": {
+        "lore_alignment": "all_skins_respect_character_background",
+        "art_style_coherence": "consistent_with_game_overall_aesthetic",
+        "cultural_sensitivity": "respectful_treatment_of_mythological_figures"
+      },
+      "technical_requirements": {
+        "loading_times": "skin_changes_complete_within_2_seconds",
+        "memory_usage": "additional_skin_assets_under_50mb_per_skin",
+        "compatibility": "works_across_all_supported_devices"
+      }
+    },
+
+    "user_experience_standards": {
+      "purchase_flow": {
+        "steps_to_purchase": "maximum_3_taps_from_skin_view_to_confirmation",
+        "payment_security": "secure_transaction_processing",
+        "confirmation_feedback": "clear_visual_confirmation_of_successful_purchase"
+      },
+      "preview_accuracy": {
+        "what_you_see_is_what_you_get": "preview_exactly_matches_final_product",
+        "animation_showcase": "all_special_effects_visible_in_preview",
+        "context_preview": "see_skin_in_actual_game_environments"
+      }
+    }
+  },
+
+  "analytics_and_optimization": {
+    "key_performance_indicators": {
+      "conversion_metrics": {
+        "skin_shop_visit_to_purchase": "percentage_of_visitors_who_buy",
+        "preview_to_purchase": "conversion_rate_after_skin_preview",
+        "return_customer_rate": "repeat_skin_purchase_behavior"
+      },
+      "revenue_metrics": {
+        "average_skin_purchase_value": "typical_spending_per_transaction",
+        "customer_lifetime_value": "total_skin_revenue_per_player",
+        "seasonal_revenue_peaks": "identify_highest_earning_periods"
+      },
+      "engagement_metrics": {
+        "skin_usage_frequency": "how_often_purchased_skins_are_equipped",
+        "collection_completion_rate": "players_who_complete_hero_skin_sets",
+        "social_sharing_activity": "skin_showcasing_in_community"
+      }
+    },
+
+    "a_b_testing_framework": {
+      "pricing_experiments": {
+        "price_point_testing": "optimal_pricing_for_each_rarity_tier",
+        "bundle_vs_individual": "effectiveness_of_package_deals",
+        "discount_timing": "best_times_for_promotional_pricing"
+      },
+      "ui_ux_testing": {
+        "layout_variations": "different_shop_organization_methods",
+        "preview_system_options": "static_vs_animated_vs_interactive_previews",
+        "purchase_flow_optimization": "streamline_buying_process"
+      }
+    }
+  },
+
+  "future_expansion_roadmap": {
+    "year_1_goals": {
+      "skin_count_target": "100_skins_across_45_heroes",
+      "feature_additions": ["skin_mixing_system", "user_generated_color_variants"],
+      "platform_expansion": "skin_compatibility_across_all_mini_game_platforms"
+    },
+    "year_2_vision": {
+      "advanced_customization": "player_created_skin_modifications",
+      "nft_integration": "blockchain_based_limited_edition_skins",
+      "cross_game_compatibility": "skin_usage_in_multiple_game_modes"
+    },
+    "long_term_sustainability": {
+      "evergreen_content": "classic_skins_that_remain_popular_indefinitely",
+      "community_involvement": "player_voting_on_new_skin_designs",
+      "cultural_celebrations": "annual_themed_skin_releases_for_major_holidays"
+    }
+  }
+}

@@ -1,0 +1,197 @@
+[
+  {
+    "stage_id": "ch01_01",
+    "chapter_id": "ch01",
+    "name": "西岐城门",
+    "description": "姬发军队攻打朝歌外围据点，初试锋芒",
+    "unlock_condition": {"prev_stage": null},
+    "enemies": [
+      {"id": "shang_soldier", "level": 5, "count": 3, "element": "earth"},
+      {"id": "shang_captain", "level": 6, "count": 1, "element": "metal"}
+    ],
+    "rewards": {
+      "base": {"gold": 1200, "exp": 300, "equipment_chance": 0.1},
+      "first_clear": {"gem": 50, "hero_exp_potion": 1},
+      "three_star": {"recruitment_token": 1}
+    },
+    "star_conditions": [
+      {"type": "clear", "desc": "通关"},
+      {"type": "no_death", "desc": "无人阵亡"},
+      {"type": "time_limit", "value": 120, "desc": "120秒内通关"}
+    ],
+    "recommended_power": 5000,
+    "background": "xiqi_gate"
+  },
+  {
+    "stage_id": "ch01_05",
+    "chapter_id": "ch01",
+    "name": "商军先锋",
+    "description": "遭遇商军先遣部队，展现周军实力",
+    "unlock_condition": {"prev_stage": "ch01_04"},
+    "enemies": [
+      {"id": "shang_vanguard", "level": 8, "count": 2, "element": "metal"},
+      {"id": "shang_archer", "level": 7, "count": 3, "element": "wood"},
+      {"id": "shang_elite", "level": 10, "count": 1, "element": "fire"}
+    ],
+    "rewards": {
+      "base": {"gold": 1800, "exp": 450, "equipment_chance": 0.15},
+      "first_clear": {"gem": 75, "hero_exp_potion": 2},
+      "three_star": {"recruitment_token": 2, "upgrade_stone": 1}
+    },
+    "star_conditions": [
+      {"type": "clear", "desc": "通关"},
+      {"type": "no_death", "desc": "无人阵亡"},
+      {"type": "element_advantage", "desc": "使用克制属性取得3次胜利"}
+    ],
+    "recommended_power": 12000,
+    "background": "battlefield_plains"
+  },
+  {
+    "stage_id": "ch01_18",
+    "chapter_id": "ch01",
+    "name": "首战告捷",
+    "description": "击败商军主将，西岐首战大胜",
+    "unlock_condition": {"prev_stage": "ch01_17"},
+    "enemies": [
+      {"id": "shang_general", "level": 15, "count": 1, "element": "metal", "boss": true},
+      {"id": "shang_bodyguard", "level": 12, "count": 2, "element": "earth"},
+      {"id": "shang_mage", "level": 13, "count": 2, "element": "water"}
+    ],
+    "rewards": {
+      "base": {"gold": 3500, "exp": 800, "equipment_chance": 0.3},
+      "first_clear": {"gem": 150, "hero_shard": "zhou_soldier_r", "equipment": "bronze_armor"},
+      "three_star": {"recruitment_token": 5, "upgrade_stone": 3, "gem": 100}
+    },
+    "star_conditions": [
+      {"type": "clear", "desc": "通关"},
+      {"type": "boss_skill_dodge", "desc": "成功躲避Boss技能3次"},
+      {"type": "bond_activation", "desc": "激活羁绊技能1次"}
+    ],
+    "recommended_power": 25000,
+    "background": "victory_field",
+    "boss_mechanics": {
+      "special_attack": "金戈铁马",
+      "attack_pattern": "每30秒释放范围攻击",
+      "weakness": "木属性角色伤害+50%"
+    }
+  },
+  {
+    "stage_id": "ch04_01",
+    "chapter_id": "ch04",
+    "name": "绝龙岭",
+    "description": "闻太师修炼之地，雷法神威初现",
+    "unlock_condition": {"prev_stage": "ch03_20"},
+    "enemies": [
+      {"id": "thunder_spirit", "level": 25, "count": 3, "element": "fire"},
+      {"id": "lightning_beast", "level": 28, "count": 2, "element": "fire"}
+    ],
+    "rewards": {
+      "base": {"gold": 8000, "exp": 1800, "equipment_chance": 0.2},
+      "first_clear": {"gem": 200, "thunder_essence": 3},
+      "three_star": {"recruitment_token": 3, "rare_material": 1}
+    },
+    "star_conditions": [
+      {"type": "clear", "desc": "通关"},
+      {"type": "no_death", "desc": "无人阵亡"},
+      {"type": "element_counter", "desc": "使用水属性角色击败雷灵3次"}
+    ],
+    "recommended_power": 120000,
+    "background": "juelong_ridge",
+    "environment_effect": {
+      "name": "雷电场域",
+      "effect": "火属性角色攻击力+20%，水属性角色受到伤害-30%"
+    }
+  },
+  {
+    "stage_id": "ch04_18",
+    "chapter_id": "ch04",
+    "name": "太师下山",
+    "description": "闻仲太师正式下山，雷法震慑周军",
+    "unlock_condition": {"prev_stage": "ch04_17"},
+    "enemies": [
+      {"id": "wenzhong", "level": 40, "count": 1, "element": "fire", "boss": true},
+      {"id": "thunder_general", "level": 35, "count": 2, "element": "fire"},
+      {"id": "lightning_cavalry", "level": 32, "count": 4, "element": "metal"}
+    ],
+    "rewards": {
+      "base": {"gold": 18000, "exp": 4000, "equipment_chance": 0.4},
+      "first_clear": {"gem": 400, "hero_shard": "wenzhong_ssr", "equipment": "thunder_staff"},
+      "three_star": {"recruitment_token": 8, "upgrade_stone": 5, "rare_material": 3}
+    },
+    "star_conditions": [
+      {"type": "clear", "desc": "通关"},
+      {"type": "survive_ultimate", "desc": "在闻仲雷法攻击下存活"},
+      {"type": "time_limit", "value": 300, "desc": "300秒内击败闻仲"}
+    ],
+    "recommended_power": 300000,
+    "background": "thunder_mountain",
+    "boss_mechanics": {
+      "special_attack": "九天雷霆",
+      "attack_pattern": "血量低于50%时释放全屏雷击",
+      "weakness": "土属性角色免疫雷击伤害",
+      "enrage_timer": 240
+    }
+  },
+  {
+    "stage_id": "ch07_20",
+    "chapter_id": "ch07",
+    "name": "万仙大阵",
+    "description": "通天教主摆下万仙阵，截教与阐教决战",
+    "unlock_condition": {"prev_stage": "ch07_19"},
+    "enemies": [
+      {"id": "tongtian_jiaozhu", "level": 70, "count": 1, "element": "water", "boss": true},
+      {"id": "jiejiao_immortal", "level": 65, "count": 4, "element": "mixed"},
+      {"id": "array_spirit", "level": 60, "count": 6, "element": "mixed"}
+    ],
+    "rewards": {
+      "base": {"gold": 50000, "exp": 12000, "equipment_chance": 0.5},
+      "first_clear": {"gem": 800, "hero_shard": "tongtian_jiaozhu_ssr", "equipment": "qingping_sword"},
+      "three_star": {"recruitment_token": 15, "legendary_material": 2, "gem": 500}
+    },
+    "star_conditions": [
+      {"type": "clear", "desc": "通关"},
+      {"type": "array_break", "desc": "破解万仙阵法3层"},
+      {"type": "bond_combo", "desc": "连续激活羁绊技能3次"}
+    ],
+    "recommended_power": 1200000,
+    "background": "wanxian_array",
+    "boss_mechanics": {
+      "special_attack": "万仙朝宗",
+      "attack_pattern": "召唤万仙虚影协同攻击",
+      "weakness": "五行齐全时可破阵",
+      "phase_change": "每25%血量变换阵型",
+      "array_effects": ["金仙护体", "木行束缚", "水波冲击", "火海焚天", "土墙阻挡"]
+    }
+  },
+  {
+    "stage_id": "ch12_30",
+    "chapter_id": "ch12",
+    "name": "封神台",
+    "description": "姜子牙登封神台，宣读封神榜，为战死英雄封神",
+    "unlock_condition": {"prev_stage": "ch12_29"},
+    "enemies": [
+      {"id": "chaos_remnant", "level": 100, "count": 3, "element": "mixed"},
+      {"id": "destiny_guardian", "level": 110, "count": 2, "element": "mixed"},
+      {"id": "final_trial", "level": 120, "count": 1, "element": "mixed", "boss": true}
+    ],
+    "rewards": {
+      "base": {"gold": 100000, "exp": 25000, "equipment_chance": 0.8},
+      "first_clear": {"gem": 1500, "hero_shard": "fengshen_bang", "equipment": "conferred_god_seal"},
+      "three_star": {"recruitment_token": 30, "mythic_material": 5, "title": "封神使者"}
+    },
+    "star_conditions": [
+      {"type": "clear", "desc": "通关"},
+      {"type": "perfect_victory", "desc": "以满血状态击败最终Boss"},
+      {"type": "all_bonds_active", "desc": "同时激活5个不同羁绊技能"}
+    ],
+    "recommended_power": 7000000,
+    "background": "fengshen_altar",
+    "boss_mechanics": {
+      "special_attack": "封神审判",
+      "attack_pattern": "根据玩家阵容调整攻击模式",
+      "weakness": "传说级羁绊技能可造成真实伤害",
+      "evolution": "战斗中会解锁新技能",
+      "final_phase": "血量10%以下进入狂暴模式"
+    }
+  }
+]

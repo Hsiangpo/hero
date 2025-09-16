@@ -1,0 +1,303 @@
+{
+  "system_name": "仙域三周循环活动系统",
+  "description": "招募盛典、宝箱寻宝、黑市狂欢三大主题活动的21天循环体系，确保玩家长期参与度",
+  "version": "1.0.0",
+  "last_updated": "2025-09-16",
+
+  "cycle_overview": {
+    "total_cycle_duration": "21_days",
+    "activity_rotation": [
+      {"week_1": "recruitment_festival", "days": "1-7"},
+      {"week_2": "treasure_hunt_bonanza", "days": "8-14"},
+      {"week_3": "black_market_carnival", "days": "15-21"}
+    ],
+    "transition_periods": {
+      "preparation_day": "1_day_between_activities_for_setup",
+      "overlap_period": "last_day_of_activity_overlaps_with_prep_day",
+      "announcement_timing": "3_days_advance_notice_for_next_activity"
+    },
+    "cycle_progression": {
+      "seasonal_variations": "activities_adapt_to_seasonal_themes",
+      "difficulty_scaling": "each_cycle_slightly_more_challenging",
+      "reward_evolution": "better_rewards_for_veteran_participants"
+    }
+  },
+
+  "week_1_recruitment_festival": {
+    "activity_name": "封神召集令",
+    "duration": "7_days",
+    "core_theme": "hero_acquisition_and_summoning",
+
+    "main_mechanics": {
+      "enhanced_summon_rates": {
+        "ssr_rate_boost": "base_3%_increased_to_6%",
+        "sr_rate_boost": "base_15%_increased_to_25%",
+        "guaranteed_mechanics": "pity_counter_reduced_from_100_to_70_pulls"
+      },
+      "recruitment_missions": {
+        "daily_summon_quest": "perform_daily_summons_for_bonus_rewards",
+        "weekly_recruitment_goal": "complete_50_summons_for_exclusive_hero",
+        "faction_focus_days": {
+          "day_1_2": "chanjiao_rate_up",
+          "day_3_4": "jiejiao_rate_up",
+          "day_5_6": "heavenly_court_rate_up",
+          "day_7": "all_factions_balanced_rate_up"
+        }
+      },
+      "fragment_bonuses": {
+        "battle_fragment_drop": "double_hero_fragments_from_all_sources",
+        "daily_fragment_shop": "special_shop_with_discounted_fragments",
+        "fragment_fusion_event": "combine_lower_tier_fragments_into_higher_tier"
+      }
+    },
+
+    "special_features": {
+      "newbie_recruitment_path": {
+        "target_audience": "players_under_level_30",
+        "guaranteed_rewards": "one_guaranteed_ssr_hero_within_first_20_pulls",
+        "tutorial_enhancement": "guided_summoning_experience_with_explanations",
+        "resource_support": "bonus_crystals_and_summon_tickets_for_new_players"
+      },
+      "veteran_collector_challenges": {
+        "target_audience": "players_with_30_plus_heroes",
+        "advanced_missions": "collect_specific_hero_combinations_for_bonuses",
+        "prestige_rewards": "exclusive_skins_and_titles_for_completion",
+        "collection_showcase": "leaderboards_for_hero_collection_completeness"
+      },
+      "guild_recruitment_cooperation": {
+        "guild_summon_goals": "collective_guild_summon_targets_for_guild_bonuses",
+        "sharing_mechanics": "guild_members_can_share_summon_luck_bonuses",
+        "mentorship_program": "veteran_guild_members_guide_new_members_in_summoning"
+      }
+    },
+
+    "reward_structure": {
+      "participation_rewards": {
+        "daily_login": "bonus_summon_tickets_each_day",
+        "summon_milestones": "crystals_and_fragments_for_cumulative_summons",
+        "activity_completion": "exclusive_recruitment_themed_avatar_frames"
+      },
+      "performance_rewards": {
+        "lucky_summoner": "bonus_rewards_for_getting_multiple_ssrs",
+        "dedicated_recruiter": "special_recognition_for_high_summon_volume",
+        "collection_completionist": "exclusive_rewards_for_faction_completion"
+      },
+      "exclusive_items": {
+        "recruitment_officer_title": "special_title_for_event_participation",
+        "golden_summon_ticket": "guaranteed_ssr_ticket_for_top_performers",
+        "hero_selector_box": "choose_specific_ssr_hero_reward_for_completion"
+      }
+    }
+  },
+
+  "week_2_treasure_hunt_bonanza": {
+    "activity_name": "仙域寻宝大会",
+    "duration": "7_days",
+    "core_theme": "equipment_acquisition_and_enhancement",
+
+    "main_mechanics": {
+      "treasure_map_system": {
+        "daily_treasure_maps": "receive_3_treasure_maps_daily_for_special_dungeons",
+        "map_rarity_levels": ["common", "rare", "epic", "legendary", "mythical"],
+        "treasure_locations": "different_maps_lead_to_different_reward_types",
+        "group_expeditions": "team_up_with_guild_members_for_better_rewards"
+      },
+      "enhanced_equipment_drops": {
+        "drop_rate_multiplier": "2x_equipment_drop_rates_from_all_sources",
+        "quality_improvement": "higher_chance_of_epic_and_legendary_equipment",
+        "set_item_bonuses": "increased_chance_of_finding_complete_equipment_sets"
+      },
+      "mystery_chest_events": {
+        "daily_mystery_chests": "special_chests_appear_randomly_during_battles",
+        "chest_upgrade_system": "combine_lower_tier_chests_into_higher_tier_ones",
+        "key_collection": "collect_keys_from_various_activities_to_open_premium_chests"
+      }
+    },
+
+    "special_features": {
+      "archaeological_expeditions": {
+        "ancient_ruins_exploration": "special_dungeon_areas_with_rare_artifacts",
+        "relic_discovery": "find_ancient_relics_that_provide_permanent_bonuses",
+        "expedition_teams": "form_teams_with_specific_hero_requirements_for_bonuses",
+        "discovery_journal": "track_all_discovered_treasures_for_completion_rewards"
+      },
+      "enchantment_workshop": {
+        "enhanced_success_rates": "equipment_enhancement_success_rates_increased",
+        "free_enhancement_attempts": "daily_free_enhancement_attempts_without_material_cost",
+        "master_craftsman_npc": "special_npc_provides_guaranteed_enhancement_services",
+        "workshop_upgrades": "improve_workshop_facilities_for_better_enhancement_results"
+      },
+      "treasure_exchange_market": {
+        "player_to_player_trading": "limited_trading_system_for_duplicate_equipment",
+        "treasure_auction_house": "bid_on_rare_items_from_other_players",
+        "donation_system": "donate_excess_equipment_to_guild_for_guild_bonuses"
+      }
+    },
+
+    "reward_structure": {
+      "exploration_rewards": {
+        "distance_milestones": "rewards_for_exploring_certain_number_of_locations",
+        "discovery_bonuses": "special_rewards_for_finding_rare_or_unique_items",
+        "expedition_completion": "bonus_rewards_for_completing_full_expedition_routes"
+      },
+      "enhancement_achievements": {
+        "enhancement_master": "rewards_for_successfully_enhancing_equipment_multiple_times",
+        "lucky_enhancer": "bonus_rewards_for_consecutive_successful_enhancements",
+        "equipment_collector": "rewards_for_collecting_complete_equipment_sets"
+      },
+      "exclusive_items": {
+        "treasure_hunter_title": "special_title_for_active_treasure_hunting",
+        "master_key": "opens_any_locked_chest_without_specific_key_requirements",
+        "archaeologist_outfit": "cosmetic_outfit_for_top_treasure_hunters",
+        "legendary_equipment_selector": "choose_specific_legendary_equipment_piece"
+      }
+    }
+  },
+
+  "week_3_black_market_carnival": {
+    "activity_name": "黑市狂欢节",
+    "duration": "7_days",
+    "core_theme": "shopping_discounts_and_exclusive_deals",
+
+    "main_mechanics": {
+      "mega_discount_festival": {
+        "progressive_discounts": "discounts_increase_each_day_from_20%_to_60%",
+        "flash_sale_frequency": "flash_sales_every_2_hours_instead_of_daily",
+        "bulk_purchase_bonuses": "buy_multiple_items_get_exponential_discounts",
+        "loyalty_customer_rewards": "additional_discounts_for_frequent_shoppers"
+      },
+      "exclusive_carnival_merchants": {
+        "carnival_ringmaster": "special_merchant_with_unique_items_not_available_elsewhere",
+        "fortune_teller": "predict_future_deals_and_pre_order_with_discounts",
+        "game_master": "mini_games_within_shop_for_additional_discounts_and_prizes",
+        "traveling_collector": "rare_items_from_previous_events_available_again"
+      },
+      "carnival_currency_system": {
+        "carnival_tokens": "special_currency_earned_through_carnival_activities",
+        "token_earning_methods": ["daily_purchases", "mini_game_victories", "social_sharing"],
+        "exclusive_token_shop": "items_only_available_with_carnival_tokens",
+        "token_multiplier_events": "certain_activities_give_double_or_triple_tokens"
+      }
+    },
+
+    "special_features": {
+      "carnival_games_and_activities": {
+        "wheel_of_fortune": "spin_daily_for_discounts_crystals_or_exclusive_items",
+        "treasure_dig": "dig_for_buried_treasures_with_guaranteed_rewards",
+        "ring_toss_game": "skill_based_mini_game_for_premium_rewards",
+        "lucky_draw_booth": "multiple_daily_draws_with_increasing_prize_pools"
+      },
+      "social_carnival_events": {
+        "group_purchase_discounts": "guild_members_coordinate_purchases_for_better_deals",
+        "carnival_parade": "showcase_purchased_items_in_guild_for_social_recognition",
+        "referral_bonuses": "bring_friends_to_carnival_for_mutual_benefits",
+        "community_challenges": "server_wide_purchase_goals_unlock_special_rewards"
+      },
+      "vip_carnival_experience": {
+        "vip_early_access": "vip_players_get_6_hour_early_access_to_deals",
+        "personal_shopper_service": "ai_recommendations_based_on_purchase_history",
+        "vip_lounge": "exclusive_deals_and_items_only_available_to_vip_members",
+        "concierge_support": "priority_customer_service_during_carnival_period"
+      }
+    },
+
+    "reward_structure": {
+      "spending_milestone_rewards": {
+        "carnival_spender_tiers": "bronze_silver_gold_platinum_spending_levels",
+        "cumulative_purchase_bonuses": "rewards_increase_with_total_carnival_spending",
+        "daily_spending_goals": "achieve_daily_purchase_targets_for_bonus_rewards"
+      },
+      "participation_achievements": {
+        "carnival_enthusiast": "rewards_for_participating_in_multiple_carnival_activities",
+        "game_master": "special_recognition_for_excelling_at_carnival_mini_games",
+        "social_butterfly": "bonuses_for_active_social_participation_during_carnival"
+      },
+      "exclusive_items": {
+        "carnival_king_queen_title": "ultimate_title_for_top_carnival_participants",
+        "ringmaster_outfit": "exclusive_cosmetic_outfit_for_carnival_champions",
+        "golden_ticket": "permanent_vip_shopping_benefits_for_ultimate_winners",
+        "carnival_commemorative_items": "limited_edition_items_marking_participation"
+      }
+    }
+  },
+
+  "cross_week_mechanics": {
+    "cycle_progression_system": {
+      "cycle_level": "players_gain_cycle_experience_for_participating_in_activities",
+      "cycle_rewards": "better_base_rewards_and_bonuses_for_higher_cycle_levels",
+      "legacy_bonuses": "players_who_complete_multiple_full_cycles_get_permanent_benefits",
+      "cycle_achievements": "special_achievements_for_consistent_participation_across_cycles"
+    },
+    "carry_over_mechanics": {
+      "activity_momentum": "strong_performance_in_one_week_provides_bonuses_for_next_week",
+      "resource_banking": "save_certain_resources_from_one_activity_for_use_in_another",
+      "friendship_bonds": "relationships_built_during_group_activities_provide_ongoing_benefits"
+    },
+    "preparation_phases": {
+      "activity_preview": "preview_next_week_activity_and_prepare_resources_accordingly",
+      "strategy_planning": "guild_coordination_and_individual_planning_time",
+      "resource_conversion": "convert_excess_resources_from_current_activity_for_next_activity"
+    }
+  },
+
+  "seasonal_adaptations": {
+    "spring_cycle_theme": {
+      "recruitment_festival": "new_growth_and_fresh_beginnings_theme",
+      "treasure_hunt": "spring_awakening_and_natural_discovery_theme",
+      "black_market": "spring_festival_and_celebration_shopping_theme"
+    },
+    "summer_cycle_theme": {
+      "recruitment_festival": "summer_camp_and_adventure_recruitment_theme",
+      "treasure_hunt": "beach_and_ocean_exploration_theme",
+      "black_market": "summer_vacation_and_leisure_shopping_theme"
+    },
+    "autumn_cycle_theme": {
+      "recruitment_festival": "harvest_season_and_gathering_theme",
+      "treasure_hunt": "autumn_leaves_and_hidden_treasures_theme",
+      "black_market": "harvest_festival_and_abundance_shopping_theme"
+    },
+    "winter_cycle_theme": {
+      "recruitment_festival": "winter_solidarity_and_warmth_theme",
+      "treasure_hunt": "ice_caverns_and_winter_wonderland_theme",
+      "black_market": "winter_celebration_and_holiday_shopping_theme"
+    }
+  },
+
+  "analytics_and_optimization": {
+    "cycle_performance_metrics": {
+      "participation_rates": "percentage_of_active_players_engaging_with_each_activity",
+      "retention_across_cycles": "player_retention_rates_throughout_21_day_cycles",
+      "revenue_generation": "monetization_effectiveness_of_each_activity_type",
+      "player_satisfaction": "feedback_and_satisfaction_scores_for_each_activity"
+    },
+    "balance_adjustments": {
+      "difficulty_tuning": "adjust_challenge_levels_based_on_player_performance_data",
+      "reward_optimization": "balance_reward_distribution_to_maintain_engagement",
+      "timing_adjustments": "optimize_activity_duration_and_transition_periods",
+      "feature_iteration": "continuously_improve_mechanics_based_on_player_feedback"
+    },
+    "predictive_planning": {
+      "player_behavior_modeling": "predict_player_engagement_patterns_for_future_cycles",
+      "resource_demand_forecasting": "anticipate_resource_needs_and_prepare_accordingly",
+      "event_impact_analysis": "measure_long_term_effects_of_cycle_activities_on_player_behavior"
+    }
+  },
+
+  "technical_implementation": {
+    "server_architecture": {
+      "activity_state_management": "robust_system_for_tracking_cycle_progress_and_player_participation",
+      "reward_distribution": "automated_systems_for_timely_and_accurate_reward_delivery",
+      "load_balancing": "handle_increased_server_load_during_popular_activity_periods"
+    },
+    "client_optimization": {
+      "ui_transitions": "smooth_transitions_between_different_activity_interfaces",
+      "asset_management": "efficient_loading_and_caching_of_activity_specific_assets",
+      "notification_system": "timely_and_relevant_notifications_for_activity_updates_and_opportunities"
+    },
+    "data_integrity": {
+      "progress_tracking": "reliable_tracking_of_player_progress_across_all_activities",
+      "anti_cheat_measures": "prevent_exploitation_of_activity_mechanics_and_rewards",
+      "backup_systems": "protect_player_progress_and_rewards_from_data_loss"
+    }
+  }
+}

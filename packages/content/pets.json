@@ -1,0 +1,675 @@
+{
+  "system_name": "封神灵宠系统",
+  "description": "封神神兽为伴，助力修仙之路的伙伴培养系统",
+  "reference_system": "咸鱼之王鱼灵系统",
+  "pet_slot_type": "equipment_style",
+  "max_equipped_pets": 3,
+
+  "rarity_system": {
+    "SSR": {
+      "name": "神兽至尊",
+      "star_cap": 5,
+      "base_stat_multiplier": 2.0,
+      "special_skills": 2,
+      "upgrade_cost_multiplier": 3.0
+    },
+    "SR": {
+      "name": "仙家灵兽",
+      "star_cap": 5,
+      "base_stat_multiplier": 1.5,
+      "special_skills": 1,
+      "upgrade_cost_multiplier": 2.0
+    },
+    "R": {
+      "name": "山野精怪",
+      "star_cap": 4,
+      "base_stat_multiplier": 1.2,
+      "special_skills": 1,
+      "upgrade_cost_multiplier": 1.5
+    },
+    "N": {
+      "name": "普通灵兽",
+      "star_cap": 3,
+      "base_stat_multiplier": 1.0,
+      "special_skills": 0,
+      "upgrade_cost_multiplier": 1.0
+    }
+  },
+
+  "pet_database": [
+    {
+      "id": "qinglong",
+      "name": "东方青龙",
+      "rarity": "SSR",
+      "element": "wood",
+      "mythology_origin": "四象神兽之东方守护神",
+      "base_stats": {
+        "atk": 150,
+        "hp": 1200,
+        "def": 100,
+        "speed": 80,
+        "crit_rate": 12
+      },
+      "star_bonuses": [
+        {"star": 1, "bonus": {"atk": 15, "hp": 120, "def": 10}},
+        {"star": 2, "bonus": {"atk": 30, "hp": 240, "def": 20, "crit_rate": 3}},
+        {"star": 3, "bonus": {"atk": 50, "hp": 400, "def": 35, "speed": 8}},
+        {"star": 4, "bonus": {"atk": 75, "hp": 600, "def": 50, "crit_rate": 5}},
+        {"star": 5, "bonus": {"atk": 100, "hp": 800, "def": 70, "speed": 12, "crit_rate": 7}}
+      ],
+      "skills": [
+        {
+          "name": "青龙吐息",
+          "description": "携带者技能暴击伤害+25%",
+          "unlock_star": 1
+        },
+        {
+          "name": "东方护佑",
+          "description": "战斗开始时，全队木系角色获得护盾",
+          "unlock_star": 3
+        }
+      ],
+      "exclusive_bonds": [
+        {
+          "character": "yangjian",
+          "bond_name": "神兽同心",
+          "effect": "杨戬装备青龙时，羁绊技能伤害+40%"
+        },
+        {
+          "character": "leizhenzi",
+          "bond_name": "风雷双翼",
+          "effect": "雷震子与青龙配合时，移动速度+30%"
+        }
+      ],
+      "acquisition_sources": ["钓场·龙王池", "封神榜召唤", "宗门商店·高级", "月度活动奖励"]
+    },
+    {
+      "id": "baihu",
+      "name": "西方白虎",
+      "rarity": "SSR",
+      "element": "metal",
+      "mythology_origin": "四象神兽之西方肃杀之神",
+      "base_stats": {
+        "atk": 180,
+        "hp": 800,
+        "def": 120,
+        "speed": 90,
+        "crit_rate": 18
+      },
+      "star_bonuses": [
+        {"star": 1, "bonus": {"atk": 18, "hp": 80, "def": 12}},
+        {"star": 2, "bonus": {"atk": 36, "hp": 160, "def": 24, "crit_rate": 4}},
+        {"star": 3, "bonus": {"atk": 60, "hp": 280, "def": 40, "speed": 10}},
+        {"star": 4, "bonus": {"atk": 90, "hp": 400, "def": 60, "crit_rate": 6}},
+        {"star": 5, "bonus": {"atk": 120, "hp": 520, "def": 80, "speed": 15, "crit_rate": 10}}
+      ],
+      "skills": [
+        {
+          "name": "虎啸西风",
+          "description": "携带者普攻有15%几率触发连击",
+          "unlock_star": 1
+        },
+        {
+          "name": "肃杀之威",
+          "description": "敌方血量低于30%时，携带者伤害+50%",
+          "unlock_star": 3
+        }
+      ],
+      "exclusive_bonds": [
+        {
+          "character": "huangfeihu",
+          "bond_name": "虎将神威",
+          "effect": "黄飞虎装备白虎时，终结技冷却-30%"
+        },
+        {
+          "character": "nezha",
+          "bond_name": "火虎双煞",
+          "effect": "哪吒与白虎配合时，暴击伤害+60%"
+        }
+      ],
+      "acquisition_sources": ["钓场·金光洞", "限时活动·兽王争霸", "VIP特权箱", "周常Boss掉落"]
+    },
+    {
+      "id": "zhuque",
+      "name": "南方朱雀",
+      "rarity": "SSR",
+      "element": "fire",
+      "mythology_origin": "四象神兽之南方火焰女神",
+      "base_stats": {
+        "atk": 160,
+        "hp": 900,
+        "def": 80,
+        "speed": 110,
+        "crit_rate": 15
+      },
+      "star_bonuses": [
+        {"star": 1, "bonus": {"atk": 16, "hp": 90, "def": 8}},
+        {"star": 2, "bonus": {"atk": 32, "hp": 180, "def": 16, "speed": 12}},
+        {"star": 3, "bonus": {"atk": 55, "hp": 300, "def": 28, "crit_rate": 4}},
+        {"star": 4, "bonus": {"atk": 80, "hp": 450, "def": 40, "speed": 18}},
+        {"star": 5, "bonus": {"atk": 110, "hp": 630, "def": 55, "speed": 25, "crit_rate": 8}}
+      ],
+      "skills": [
+        {
+          "name": "凤凰涅槃",
+          "description": "携带者濒死时有20%几率满血复活",
+          "unlock_star": 1
+        },
+        {
+          "name": "烈焰焚天",
+          "description": "携带者技能附带灼烧效果，每秒造成10%攻击力伤害",
+          "unlock_star": 3
+        }
+      ],
+      "exclusive_bonds": [
+        {
+          "character": "nezha",
+          "bond_name": "火神传承",
+          "effect": "哪吒装备朱雀时，火系技能威力+50%"
+        },
+        {
+          "character": "honghaier",
+          "bond_name": "真火之子",
+          "effect": "红孩儿与朱雀配合时，灼烧伤害翻倍"
+        }
+      ],
+      "acquisition_sources": ["钓场·南天门", "封神榜召唤·UP池", "征战商店", "节日限定活动"]
+    },
+    {
+      "id": "xuanwu",
+      "name": "北方玄武",
+      "rarity": "SSR",
+      "element": "water",
+      "mythology_origin": "四象神兽之北方玄冥大帝",
+      "base_stats": {
+        "atk": 120,
+        "hp": 1500,
+        "def": 150,
+        "speed": 60,
+        "crit_rate": 8
+      },
+      "star_bonuses": [
+        {"star": 1, "bonus": {"atk": 12, "hp": 150, "def": 15}},
+        {"star": 2, "bonus": {"atk": 24, "hp": 300, "def": 30, "crit_rate": 2}},
+        {"star": 3, "bonus": {"atk": 40, "hp": 500, "def": 50, "speed": 6}},
+        {"star": 4, "bonus": {"atk": 60, "hp": 750, "def": 75, "crit_rate": 3}},
+        {"star": 5, "bonus": {"atk": 85, "hp": 1000, "def": 100, "speed": 10, "crit_rate": 5}}
+      ],
+      "skills": [
+        {
+          "name": "玄武护甲",
+          "description": "携带者受到伤害时，减少最终伤害20%",
+          "unlock_star": 1
+        },
+        {
+          "name": "北海怒涛",
+          "description": "携带者使用技能时，有30%几率为队友回复生命值",
+          "unlock_star": 3
+        }
+      ],
+      "exclusive_bonds": [
+        {
+          "character": "longwang",
+          "bond_name": "水域霸主",
+          "effect": "龙王装备玄武时，水系技能范围+100%"
+        },
+        {
+          "character": "sanxiao",
+          "bond_name": "水月镜花",
+          "effect": "三霄与玄武配合时，控制技能效果+50%"
+        }
+      ],
+      "acquisition_sources": ["钓场·北海深渊", "宗门Boss首杀", "跨服征战奖励", "传说级礼包"]
+    },
+    {
+      "id": "qilin",
+      "name": "五彩麒麟",
+      "rarity": "SSR",
+      "element": "earth",
+      "mythology_origin": "上古瑞兽，仁德之化身",
+      "base_stats": {
+        "atk": 140,
+        "hp": 1100,
+        "def": 110,
+        "speed": 85,
+        "crit_rate": 12
+      },
+      "star_bonuses": [
+        {"star": 1, "bonus": {"atk": 14, "hp": 110, "def": 11}},
+        {"star": 2, "bonus": {"atk": 28, "hp": 220, "def": 22, "speed": 8}},
+        {"star": 3, "bonus": {"atk": 46, "hp": 366, "def": 37, "crit_rate": 3}},
+        {"star": 4, "bonus": {"atk": 70, "hp": 550, "def": 55, "speed": 13}},
+        {"star": 5, "bonus": {"atk": 98, "hp": 770, "def": 77, "speed": 18, "crit_rate": 6}}
+      ],
+      "skills": [
+        {
+          "name": "麒麟祥瑞",
+          "description": "战斗开始时，全队获得经验加成buff",
+          "unlock_star": 1
+        },
+        {
+          "name": "仁德护体",
+          "description": "携带者每次释放技能，队友获得小幅治疗",
+          "unlock_star": 3
+        }
+      ],
+      "exclusive_bonds": [
+        {
+          "character": "jiangziya",
+          "bond_name": "圣人坐骑",
+          "effect": "姜子牙装备麒麟时，羁绊技能冷却-50%"
+        },
+        {
+          "character": "yuanshi",
+          "bond_name": "教主神兽",
+          "effect": "元始天尊与麒麟配合时，全队属性+20%"
+        }
+      ],
+      "acquisition_sources": ["钓场·昆仑瑶池", "封神榜召唤·超稀有", "年度庆典", "充值回馈活动"]
+    },
+    {
+      "id": "fenghuang",
+      "name": "九天凤凰",
+      "rarity": "SSR",
+      "element": "fire",
+      "mythology_origin": "百鸟之王，不死之鸟",
+      "base_stats": {
+        "atk": 170,
+        "hp": 950,
+        "def": 90,
+        "speed": 120,
+        "crit_rate": 20
+      },
+      "star_bonuses": [
+        {"star": 1, "bonus": {"atk": 17, "hp": 95, "def": 9}},
+        {"star": 2, "bonus": {"atk": 34, "hp": 190, "def": 18, "speed": 12}},
+        {"star": 3, "bonus": {"atk": 57, "hp": 323, "def": 31, "crit_rate": 5}},
+        {"star": 4, "bonus": {"atk": 85, "hp": 475, "def": 45, "speed": 18}},
+        {"star": 5, "bonus": {"atk": 119, "hp": 665, "def": 63, "speed": 25, "crit_rate": 10}}
+      ],
+      "skills": [
+        {
+          "name": "凤鸣九天",
+          "description": "携带者释放技能时，全队攻击力短暂提升",
+          "unlock_star": 1
+        },
+        {
+          "name": "浴火重生",
+          "description": "携带者死亡时，立即复活并清除所有负面状态",
+          "unlock_star": 3
+        }
+      ],
+      "exclusive_bonds": [
+        {
+          "character": "cihang",
+          "bond_name": "慈航普渡",
+          "effect": "慈航装备凤凰时，治疗技能附加净化效果"
+        },
+        {
+          "character": "xihe",
+          "bond_name": "日月同辉",
+          "effect": "羲和与凤凰配合时，全队暴击率+15%"
+        }
+      ],
+      "acquisition_sources": ["钓场·凤凰巢", "限时活动·百鸟朝凤", "至尊VIP特权", "封神大赛冠军"]
+    },
+    {
+      "id": "taotie",
+      "name": "上古饕餮",
+      "rarity": "SR",
+      "element": "earth",
+      "mythology_origin": "四大凶兽之一，吞噬万物",
+      "base_stats": {
+        "atk": 110,
+        "hp": 800,
+        "def": 90,
+        "speed": 70,
+        "crit_rate": 10
+      },
+      "star_bonuses": [
+        {"star": 1, "bonus": {"atk": 11, "hp": 80, "def": 9}},
+        {"star": 2, "bonus": {"atk": 22, "hp": 160, "def": 18, "crit_rate": 2}},
+        {"star": 3, "bonus": {"atk": 37, "hp": 272, "def": 31, "speed": 7}},
+        {"star": 4, "bonus": {"atk": 55, "hp": 400, "def": 45, "crit_rate": 4}},
+        {"star": 5, "bonus": {"atk": 77, "hp": 560, "def": 63, "speed": 11, "crit_rate": 6}}
+      ],
+      "skills": [
+        {
+          "name": "贪婪吞噬",
+          "description": "携带者击杀敌人时，恢复自身30%生命值",
+          "unlock_star": 1
+        }
+      ],
+      "exclusive_bonds": [
+        {
+          "character": "chongheihu",
+          "bond_name": "凶兽之威",
+          "effect": "崇黑虎装备饕餮时，攻击附带恐惧效果"
+        }
+      ],
+      "acquisition_sources": ["钓场·炼狱深渊", "日常活动", "宗门商店·中级", "挑战副本"]
+    },
+    {
+      "id": "bixie",
+      "name": "神兽辟邪",
+      "rarity": "SR",
+      "element": "metal",
+      "mythology_origin": "驱魔神兽，镇压邪祟",
+      "base_stats": {
+        "atk": 130,
+        "hp": 700,
+        "def": 100,
+        "speed": 85,
+        "crit_rate": 12
+      },
+      "star_bonuses": [
+        {"star": 1, "bonus": {"atk": 13, "hp": 70, "def": 10}},
+        {"star": 2, "bonus": {"atk": 26, "hp": 140, "def": 20, "speed": 8}},
+        {"star": 3, "bonus": {"atk": 43, "hp": 238, "def": 34, "crit_rate": 3}},
+        {"star": 4, "bonus": {"atk": 65, "hp": 350, "def": 50, "speed": 13}},
+        {"star": 5, "bonus": {"atk": 91, "hp": 490, "def": 70, "speed": 18, "crit_rate": 5}}
+      ],
+      "skills": [
+        {
+          "name": "辟邪神光",
+          "description": "携带者对妖魔阵营角色伤害+30%",
+          "unlock_star": 1
+        }
+      ],
+      "exclusive_bonds": [
+        {
+          "character": "lijing",
+          "bond_name": "天王神兽",
+          "effect": "李靖装备辟邪时，技能命中率+20%"
+        }
+      ],
+      "acquisition_sources": ["钓场·天王殿", "征战奖励", "月卡福利", "新手引导"]
+    },
+    {
+      "id": "longzi_baxia",
+      "name": "龙子霸下",
+      "rarity": "SR",
+      "element": "water",
+      "mythology_origin": "龙生九子之一，力大无穷",
+      "base_stats": {
+        "atk": 100,
+        "hp": 900,
+        "def": 120,
+        "speed": 60,
+        "crit_rate": 8
+      },
+      "star_bonuses": [
+        {"star": 1, "bonus": {"atk": 10, "hp": 90, "def": 12}},
+        {"star": 2, "bonus": {"atk": 20, "hp": 180, "def": 24, "crit_rate": 2}},
+        {"star": 3, "bonus": {"atk": 33, "hp": 306, "def": 41, "speed": 6}},
+        {"star": 4, "bonus": {"atk": 50, "hp": 450, "def": 60, "crit_rate": 3}},
+        {"star": 5, "bonus": {"atk": 70, "hp": 630, "def": 84, "speed": 9, "crit_rate": 4}}
+      ],
+      "skills": [
+        {
+          "name": "负重千钧",
+          "description": "携带者受到控制效果持续时间-50%",
+          "unlock_star": 1
+        }
+      ],
+      "exclusive_bonds": [
+        {
+          "character": "longwang",
+          "bond_name": "父子连心",
+          "effect": "龙王装备霸下时，水系技能冷却-25%"
+        }
+      ],
+      "acquisition_sources": ["钓场·东海龙宫", "活动签到", "成就奖励", "好友推荐"]
+    },
+    {
+      "id": "tianma",
+      "name": "九天天马",
+      "rarity": "R",
+      "element": "wood",
+      "mythology_origin": "神驹良骏，日行千里",
+      "base_stats": {
+        "atk": 90,
+        "hp": 600,
+        "def": 70,
+        "speed": 100,
+        "crit_rate": 10
+      },
+      "star_bonuses": [
+        {"star": 1, "bonus": {"atk": 9, "hp": 60, "def": 7}},
+        {"star": 2, "bonus": {"atk": 18, "hp": 120, "def": 14, "speed": 10}},
+        {"star": 3, "bonus": {"atk": 30, "hp": 204, "def": 24, "crit_rate": 3}},
+        {"star": 4, "bonus": {"atk": 45, "hp": 300, "def": 35, "speed": 15}}
+      ],
+      "skills": [
+        {
+          "name": "风驰电掣",
+          "description": "携带者移动速度+25%",
+          "unlock_star": 1
+        }
+      ],
+      "exclusive_bonds": [
+        {
+          "character": "tuixingsun",
+          "bond_name": "土遁神行",
+          "effect": "土行孙装备天马时，先手几率+30%"
+        }
+      ],
+      "acquisition_sources": ["钓场·云中牧场", "新手福利", "日常任务", "基础召唤"]
+    },
+    {
+      "id": "linghu",
+      "name": "九尾灵狐",
+      "rarity": "R",
+      "element": "fire",
+      "mythology_origin": "山野精怪，狡诈多变",
+      "base_stats": {
+        "atk": 110,
+        "hp": 500,
+        "def": 60,
+        "speed": 90,
+        "crit_rate": 15
+      },
+      "star_bonuses": [
+        {"star": 1, "bonus": {"atk": 11, "hp": 50, "def": 6}},
+        {"star": 2, "bonus": {"atk": 22, "hp": 100, "def": 12, "crit_rate": 3}},
+        {"star": 3, "bonus": {"atk": 37, "hp": 170, "def": 20, "speed": 9}},
+        {"star": 4, "bonus": {"atk": 55, "hp": 250, "def": 30, "crit_rate": 5}}
+      ],
+      "skills": [
+        {
+          "name": "魅惑之术",
+          "description": "携带者暴击时，有20%几率使敌人混乱1秒",
+          "unlock_star": 1
+        }
+      ],
+      "exclusive_bonds": [
+        {
+          "character": "daji",
+          "bond_name": "狐族传承",
+          "effect": "妲己装备灵狐时，魅惑技能效果+50%"
+        }
+      ],
+      "acquisition_sources": ["钓场·青丘山", "初始福利", "每日签到", "新手引导"]
+    }
+  ],
+
+  "fishing_system": {
+    "fishing_locations": {
+      "qingqiu_mountain": {
+        "name": "青丘山",
+        "unlock_level": 1,
+        "pet_pool": ["linghu", "tianma"],
+        "rare_chance": 15,
+        "epic_chance": 3,
+        "legendary_chance": 0.5,
+        "daily_attempts": 10,
+        "cost_per_attempt": 100
+      },
+      "kunlun_yaochi": {
+        "name": "昆仑瑶池",
+        "unlock_level": 30,
+        "pet_pool": ["qilin", "fenghuang"],
+        "rare_chance": 25,
+        "epic_chance": 8,
+        "legendary_chance": 2,
+        "daily_attempts": 5,
+        "cost_per_attempt": 500
+      },
+      "dragon_king_pool": {
+        "name": "龙王池",
+        "unlock_level": 15,
+        "pet_pool": ["qinglong", "longzi_baxia"],
+        "rare_chance": 20,
+        "epic_chance": 5,
+        "legendary_chance": 1,
+        "daily_attempts": 8,
+        "cost_per_attempt": 200
+      },
+      "golden_cave": {
+        "name": "金光洞",
+        "unlock_level": 25,
+        "pet_pool": ["baihu", "bixie"],
+        "rare_chance": 22,
+        "epic_chance": 6,
+        "legendary_chance": 1.5,
+        "daily_attempts": 6,
+        "cost_per_attempt": 300
+      },
+      "southern_gate": {
+        "name": "南天门",
+        "unlock_level": 35,
+        "pet_pool": ["zhuque", "fenghuang"],
+        "rare_chance": 18,
+        "epic_chance": 7,
+        "legendary_chance": 2.5,
+        "daily_attempts": 4,
+        "cost_per_attempt": 800
+      },
+      "north_sea_abyss": {
+        "name": "北海深渊",
+        "unlock_level": 40,
+        "pet_pool": ["xuanwu", "taotie"],
+        "rare_chance": 28,
+        "epic_chance": 10,
+        "legendary_chance": 3,
+        "daily_attempts": 3,
+        "cost_per_attempt": 1000
+      }
+    },
+    "bait_system": {
+      "basic_bait": {
+        "name": "普通灵饵",
+        "cost": 0,
+        "effect": "基础成功率",
+        "source": "免费获得"
+      },
+      "premium_bait": {
+        "name": "仙灵香饵",
+        "cost": 50,
+        "effect": "稀有几率+10%",
+        "source": "商店购买"
+      },
+      "legendary_bait": {
+        "name": "九天琼浆",
+        "cost": 200,
+        "effect": "传说几率+5%，史诗几率+15%",
+        "source": "VIP特权/活动奖励"
+      }
+    }
+  },
+
+  "upgrade_system": {
+    "star_upgrade_costs": {
+      "SSR": {
+        "1_to_2": {"fragments": 10, "spirit_stones": 5000, "enhancement_crystals": 3},
+        "2_to_3": {"fragments": 20, "spirit_stones": 15000, "enhancement_crystals": 8},
+        "3_to_4": {"fragments": 40, "spirit_stones": 40000, "enhancement_crystals": 15},
+        "4_to_5": {"fragments": 80, "spirit_stones": 100000, "enhancement_crystals": 30}
+      },
+      "SR": {
+        "1_to_2": {"fragments": 8, "spirit_stones": 3000, "enhancement_crystals": 2},
+        "2_to_3": {"fragments": 15, "spirit_stones": 10000, "enhancement_crystals": 5},
+        "3_to_4": {"fragments": 30, "spirit_stones": 25000, "enhancement_crystals": 10},
+        "4_to_5": {"fragments": 60, "spirit_stones": 60000, "enhancement_crystals": 20}
+      },
+      "R": {
+        "1_to_2": {"fragments": 5, "spirit_stones": 1500, "enhancement_crystals": 1},
+        "2_to_3": {"fragments": 10, "spirit_stones": 5000, "enhancement_crystals": 3},
+        "3_to_4": {"fragments": 20, "spirit_stones": 15000, "enhancement_crystals": 6}
+      },
+      "N": {
+        "1_to_2": {"fragments": 3, "spirit_stones": 800, "enhancement_crystals": 1},
+        "2_to_3": {"fragments": 6, "spirit_stones": 2500, "enhancement_crystals": 2}
+      }
+    },
+    "fragment_sources": {
+      "fishing_rewards": "钓场每日必得对应灵宠碎片",
+      "daily_challenges": "完成日常挑战获得随机碎片",
+      "sect_shop": "宗门商店使用贡献度兑换",
+      "event_rewards": "活动期间高倍产出",
+      "decomposition": "分解多余灵宠获得通用碎片"
+    }
+  },
+
+  "equipment_mechanics": {
+    "slot_restrictions": {
+      "main_pet": "主力灵宠，提供最大属性加成",
+      "support_pet_1": "辅助灵宠1，属性加成80%",
+      "support_pet_2": "辅助灵宠2，属性加成60%"
+    },
+    "same_pet_restriction": "不能装备多个相同灵宠",
+    "element_synergy": {
+      "same_element_bonus": "同属性灵宠数量≥2时，全队该属性角色攻击力+15%",
+      "full_element_bonus": "五行灵宠齐全时，全队属性+10%，技能威力+20%"
+    },
+    "rarity_synergy": {
+      "all_ssr": "3只SSR灵宠时，全队暴击率+10%",
+      "mixed_harmony": "不同稀有度灵宠搭配时，获得额外经验+20%"
+    }
+  },
+
+  "daily_activities": {
+    "pet_care": {
+      "description": "每日灵宠照料",
+      "requirement": "给3只装备灵宠喂食",
+      "reward": "灵宠经验+10%，好感度+1",
+      "cost": "灵宠饲料×3"
+    },
+    "fishing_daily": {
+      "description": "钓场日常",
+      "requirement": "在任意钓场垂钓5次",
+      "reward": "随机灵宠碎片×3，钓场代币×50"
+    },
+    "pet_training": {
+      "description": "灵宠训练",
+      "requirement": "使用装备灵宠战斗10次",
+      "reward": "强化水晶×2，灵宠经验药剂×1"
+    }
+  },
+
+  "ui_integration": {
+    "entry_points": {
+      "main_interface": "主界面『灵宠』按钮",
+      "character_detail": "角色详情页『灵宠装备』区域",
+      "fishing_entrance": "主界面『钓场』按钮"
+    },
+    "display_elements": {
+      "pet_preview": "角色详情页显示已装备灵宠形象",
+      "attribute_bonus": "实时显示灵宠提供的属性加成",
+      "collection_progress": "灵宠图鉴收集进度展示",
+      "fishing_log": "钓场记录和稀有灵宠展示"
+    }
+  },
+
+  "balance_considerations": {
+    "power_scaling": "灵宠提供15-25%角色战力提升",
+    "f2p_accessibility": "0氪玩家可通过时间积累获得所有R/SR灵宠",
+    "premium_value": "SSR灵宠主要通过活动和VIP特权获得",
+    "progression_timeline": {
+      "first_week": "获得2-3只R级灵宠",
+      "first_month": "收集齐全R级，获得1-2只SR级",
+      "three_months": "获得第一只SSR级灵宠",
+      "six_months": "SR级灵宠5星，SSR灵宠3星"
+    }
+  }
+}

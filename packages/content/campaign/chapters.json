@@ -1,0 +1,170 @@
+[
+  {
+    "chapter_id": "ch01",
+    "name": "西岐起兵",
+    "description": "姬发举旗反商，封神大战序幕拉开",
+    "unlock_condition": {"min_power": 0},
+    "stages": 18,
+    "boss_stage": 18,
+    "rewards": {
+      "first_clear": {"gold": 50000, "exp": 10000, "gem": 100},
+      "chapter_complete": {"hero_shard": "jifa_sr", "gem": 500, "equipment": "bronze_weapon"}
+    },
+    "background_theme": "xiqi_palace",
+    "story_summary": "文王姬昌逝世，姬发继位，在姜子牙协助下举旗反商，联合各路诸侯共讨纣王"
+  },
+  {
+    "chapter_id": "ch02",
+    "name": "游魂关血战",
+    "description": "姜子牙破游魂关，商周第一次大战",
+    "unlock_condition": {"min_power": 50000},
+    "stages": 19,
+    "boss_stage": 19,
+    "rewards": {
+      "first_clear": {"gold": 75000, "exp": 15000, "gem": 150},
+      "chapter_complete": {"hero_shard": "jiangziya_sr", "gem": 600, "equipment": "silver_armor"}
+    },
+    "background_theme": "youhun_pass",
+    "story_summary": "周军攻打游魂关，遭遇商朝守将激烈抵抗，姜子牙施法破关而入"
+  },
+  {
+    "chapter_id": "ch03",
+    "name": "岐山会盟",
+    "description": "八百诸侯会盟岐山，共誓讨伐暴纣",
+    "unlock_condition": {"min_power": 150000},
+    "stages": 20,
+    "boss_stage": 20,
+    "rewards": {
+      "first_clear": {"gold": 100000, "exp": 20000, "gem": 200},
+      "chapter_complete": {"hero_shard": "huangfeihu_sr", "gem": 700, "equipment": "golden_spear"}
+    },
+    "background_theme": "qishan_alliance",
+    "story_summary": "各路诸侯汇聚岐山，共同立誓讨伐纣王，周军声势浩大"
+  },
+  {
+    "chapter_id": "ch04",
+    "name": "闻仲下山",
+    "description": "太师闻仲奉命下山，商朝反击开始",
+    "unlock_condition": {"min_power": 300000},
+    "stages": 18,
+    "boss_stage": 18,
+    "rewards": {
+      "first_clear": {"gold": 130000, "exp": 25000, "gem": 250},
+      "chapter_complete": {"hero_shard": "wenzhong_ssr", "gem": 800, "equipment": "thunder_whip"}
+    },
+    "background_theme": "juelong_ridge",
+    "story_summary": "闻太师下山统兵，展现强大的雷法神通，商朝开始强力反击"
+  },
+  {
+    "chapter_id": "ch05",
+    "name": "截教出山",
+    "description": "截教弟子下山助商，仙人斗法激烈",
+    "unlock_condition": {"min_power": 500000},
+    "stages": 21,
+    "boss_stage": 21,
+    "rewards": {
+      "first_clear": {"gold": 160000, "exp": 30000, "gem": 300},
+      "chapter_complete": {"hero_shard": "zhaogongming_ssr", "gem": 900, "equipment": "dinghaishen_pearl"}
+    },
+    "background_theme": "jiejiao_mount",
+    "story_summary": "截教众仙下山襄助商朝，赵公明、三霄娘娘等强者登场"
+  },
+  {
+    "chapter_id": "ch06",
+    "name": "阐教下山",
+    "description": "阐教十二金仙出山，正邪对决升级",
+    "unlock_condition": {"min_power": 800000},
+    "stages": 22,
+    "boss_stage": 22,
+    "rewards": {
+      "first_clear": {"gold": 200000, "exp": 35000, "gem": 350},
+      "chapter_complete": {"hero_shard": "guangchengzi_ssr", "gem": 1000, "equipment": "fantian_seal"}
+    },
+    "background_theme": "kunlun_mount",
+    "story_summary": "元始天尊命阐教十二金仙下山，与截教展开激烈的仙家斗法"
+  },
+  {
+    "chapter_id": "ch07",
+    "name": "万仙阵",
+    "description": "通天教主摆下万仙阵，封神大战白热化",
+    "unlock_condition": {"min_power": 1200000},
+    "stages": 20,
+    "boss_stage": 20,
+    "rewards": {
+      "first_clear": {"gold": 250000, "exp": 40000, "gem": 400},
+      "chapter_complete": {"hero_shard": "tongtian_jiaozhu_ssr", "gem": 1200, "equipment": "qingping_sword"}
+    },
+    "background_theme": "wanxian_array",
+    "story_summary": "通天教主亲自下场，摆下万仙阵与阐教决战，双方倾尽全力"
+  },
+  {
+    "chapter_id": "ch08",
+    "name": "圣人大战",
+    "description": "三清圣人参战，天地为之色变",
+    "unlock_condition": {"min_power": 1800000},
+    "stages": 23,
+    "boss_stage": 23,
+    "rewards": {
+      "first_clear": {"gold": 300000, "exp": 50000, "gem": 500},
+      "chapter_complete": {"hero_shard": "yuanshi_tianzun_ssr", "gem": 1500, "equipment": "pangu_banner"}
+    },
+    "background_theme": "chaos_void",
+    "story_summary": "三清圣人直接参战，太上老君、元始天尊、通天教主三兄弟反目成仇"
+  },
+  {
+    "chapter_id": "ch09",
+    "name": "西方助阵",
+    "description": "西方二圣参战，四教大战混元时空",
+    "unlock_condition": {"min_power": 2500000},
+    "stages": 19,
+    "boss_stage": 19,
+    "rewards": {
+      "first_clear": {"gold": 380000, "exp": 60000, "gem": 600},
+      "chapter_complete": {"hero_shard": "jieyin_daoren_ssr", "gem": 1800, "equipment": "lianhua_platform"}
+    },
+    "background_theme": "western_paradise",
+    "story_summary": "接引道人、准提道人参战助阐，四教混战，场面史无前例"
+  },
+  {
+    "chapter_id": "ch10",
+    "name": "朝歌之战",
+    "description": "周军兵临朝歌城下，最终决战开始",
+    "unlock_condition": {"min_power": 3500000},
+    "stages": 25,
+    "boss_stage": 25,
+    "rewards": {
+      "first_clear": {"gold": 450000, "exp": 70000, "gem": 700},
+      "chapter_complete": {"hero_shard": "nezha_ssr", "gem": 2000, "equipment": "qiankun_ring"}
+    },
+    "background_theme": "chaoge_city",
+    "story_summary": "周军攻打朝歌都城，与商朝残余力量展开最后的决战"
+  },
+  {
+    "chapter_id": "ch11",
+    "name": "纣王陨落",
+    "description": "纣王自焚摘星楼，商朝灭亡",
+    "unlock_condition": {"min_power": 5000000},
+    "stages": 18,
+    "boss_stage": 18,
+    "rewards": {
+      "first_clear": {"gold": 550000, "exp": 80000, "gem": 800},
+      "chapter_complete": {"hero_shard": "zhouwang_ssr", "gem": 2500, "equipment": "human_emperor_seal"}
+    },
+    "background_theme": "zhaixing_tower",
+    "story_summary": "纣王兵败如山倒，自焚于摘星楼，六百年商朝江山就此终结"
+  },
+  {
+    "chapter_id": "ch12",
+    "name": "封神榜定",
+    "description": "姜子牙封神榜定，三界秩序重建",
+    "unlock_condition": {"min_power": 7000000},
+    "stages": 30,
+    "boss_stage": 30,
+    "rewards": {
+      "first_clear": {"gold": 700000, "exp": 100000, "gem": 1000},
+      "chapter_complete": {"hero_shard": "fengshen_bang", "gem": 3000, "equipment": "dajiang_platform"}
+    },
+    "background_theme": "fengshen_altar",
+    "story_summary": "姜子牙在封神台念动封神榜，为战死英雄封神，重新确立三界秩序"
+  }
+]
